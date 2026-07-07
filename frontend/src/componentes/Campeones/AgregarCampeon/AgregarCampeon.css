@@ -1,0 +1,66 @@
+.campeones-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0; /* Un borde gris muy sutil */
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Estilo común para los inputs de texto y número */
+.campeones-form input[type="text"],
+.campeones-form input[type="number"] {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #1e293b;
+    background-color: #f8fafc; /* Fondo gris claro minimalista */
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+/* Ajuste específico para el input de año/temporada para que no ocupe tanto espacio */
+.campeones-form input[name="temporada"] {
+    flex: 0 0 90px;
+    min-width: 90px;
+}
+
+/* Efecto Focus al hacer clic en los inputs */
+.campeones-form input:focus {
+    background-color: #ffffff;
+    border-color: #64748b; /* Gris más oscuro al enfocar */
+    box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
+}
+
+/* Botón Guardar */
+.campeones-form .submit {
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    background-color: #0f172a; /* Negro/Azul marino oscuro minimalista */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    height: 42px; /* Alineado exacto con el padding de los inputs */
+}
+
+/* Efecto Hover del botón */
+.campeones-form .submit:hover {
+    background-color: #334155;
+}
+
+/* Opcional: Estilo por si usás el comportamiento nativo de validación de HTML5 */
+.campeones-form input:invalid {
+    box-shadow: none;
+}

@@ -1,0 +1,43 @@
+.muestra-banderas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--color-blanco-contraste);
+    padding: 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(4px);
+    box-shadow: var(--iluminacion);
+    .pais{
+        overflow: hidden;
+        height: 48px;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        margin: 4px;
+        box-shadow: var(--iluminacion);
+        animation: entrada 0.7s forwards ease-in-out;
+        opacity: 0;
+        transform: translateX(-180px);
+        img{
+            margin-top: 6px;
+            filter: drop-shadow(0 0 2px #00000060);
+            height: 24px;
+            aspect-ratio: 18 / 9;
+        }
+        h6{
+            margin-top: -4px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes entrada {
+    0%{
+        transform: translateX(-180px) rotateZ(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px) rotateZ(360deg);
+        opacity: 1;
+    }
+}

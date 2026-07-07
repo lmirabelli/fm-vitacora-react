@@ -1,0 +1,42 @@
+.titulo-tabla, .puesto-tabla{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--color-blanco-contraste);
+    border-radius: 4px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(16px);
+    text-decoration: none;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    div{
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+        font-family: var(--fuente-resultado);
+        text-transform: capitalize;
+        img{
+            height: 16px;
+            margin: 0 2px;
+        }
+        .periodo{
+            margin-left: 4px;
+        }
+    }
+}
+.titulo-tabla{
+    margin-bottom: 12px;
+    padding: 8px 0;
+}
+.puesto-tabla{
+    margin: 2px 0;
+    padding: 4px 0;
+    color: var(--color-1);
+    cursor: pointer;
+    transition: background 0.3s;
+    &:hover{
+        background-color: var(--color-5);
+    }
+}

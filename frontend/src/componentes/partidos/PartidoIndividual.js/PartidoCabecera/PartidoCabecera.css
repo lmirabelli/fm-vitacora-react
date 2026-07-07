@@ -1,0 +1,48 @@
+.partido-cabecera{
+    width: 100%;
+    padding: 16px 22px;
+    border-radius: 18px;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--iluminacion);
+    overflow: hidden;
+    h1{
+        margin: -10px 0;
+    }
+    h6{
+        margin-bottom: 12px;
+    }
+    .goles-partido{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        span{
+            background-color: #ffffff30;
+            font-family: var(--fuente-resultado);
+            font-size: 12px;
+            padding: 4px;
+            margin: 4px 0;
+            border-radius: 4px;
+            box-shadow: var(--sombra-standard);
+            text-transform: uppercase;
+            transform: rotateZ(-2deg);
+        }
+    }
+    &::before {
+        content: "";
+        background-image: var(--url-escudo);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: absolute;
+        top: 40%;   
+        left: 90%;
+        height: 150px;
+        width: auto;
+        min-width: 150px;
+        transform: rotateZ(-30deg);
+        opacity: 0.25;
+        z-index: -1;  
+    }
+}

@@ -1,0 +1,41 @@
+.agregar-imagen{
+    width: 49.5%;
+    background-color: var(--color-blanco-contraste);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2{
+        margin-bottom: 16px;
+    }
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        label{
+            width: 100%;
+            display: flex;
+            margin: 2px 0;
+            span, input{
+                font-family: var(--fuente-resultado);
+                padding: 2px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            span{
+                width: 35%;
+            }
+            input{
+                width: 65%;
+                border-radius: 6px;
+                border: 0;
+                background: var(--color-1);
+                box-shadow: var(--iluminacion);
+            }
+        }
+    }
+}

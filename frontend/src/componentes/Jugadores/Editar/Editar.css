@@ -1,0 +1,42 @@
+.form-editar{
+    width: 100%;
+    padding: 36px;
+    backdrop-filter: blur(4px);
+    border-radius: 30px;
+    box-shadow: var(--iluminacion);
+    display: flex;
+    flex-wrap: wrap;
+    h1,h3{
+        text-transform: capitalize;
+        color: var(--color-fuente);
+        margin: 4px 0;
+    }
+    label, input{
+                font-family: var(--fuente-resultado);
+    }
+    label{
+        width: 65%;
+        margin: 1px 1%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-wrap: wrap;
+        color: var(--color-fuente);
+        text-transform: capitalize;
+        img{
+            height: 18px;
+            margin-left: 4px;
+        }
+    }
+    input{
+        width: 40%;
+        margin-left: 24px;
+        border-radius: 4px;
+        padding: 4px;
+        border: none;
+        box-shadow: var(--sombra-standard);
+    }
+    .editar-etapa{
+        width: 100%;
+    }
+}

@@ -1,0 +1,33 @@
+.menu{
+    width: 50vw;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    h2, h6{
+        color: var(--color-5);
+    }
+    h6{
+        margin-top: -6px;
+        margin-bottom: 18px;
+    }
+    .item-menu{
+        display: block;
+        margin: 4px 0;
+        padding: 6px 0;
+        width: 70%;
+        text-align: center;
+        text-decoration: none;
+        background-color: var(--color-blanco-contraste);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        box-shadow: var(--iluminacion);
+        font-family: var(--fuente-resultado);
+        color: var(--color-1);
+        transition: background 0.3s;
+        &:hover{
+            background-color: var(--color-5);
+        }
+    }
+}

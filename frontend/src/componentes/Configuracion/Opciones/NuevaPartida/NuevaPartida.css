@@ -1,0 +1,97 @@
+/* Botón que dispara el modal */
+.btn-nueva-partida {
+    padding: 10px 20px;
+    background-color: #ef4444; /* Rojo peligro */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-nueva-partida:hover {
+    background-color: #dc2626;
+}
+
+/* Fondo oscuro translúcido que cubre el viewport */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    backdrop-filter: blur(4px); /* Aplica el blur para que combine con tu diseño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que flote arriba de todo */
+}
+
+/* Caja del modal */
+.modal-content {
+    background-color: #ffffff;
+    color: #1e293b;
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.modal-content p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 16px 0 24px 0;
+}
+
+/* Contenedor de botones del modal */
+.modal-acciones {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.modal-acciones button {
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.modal-acciones button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Botón Cancelar */
+.btn-cancelar {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.btn-cancelar:hover:not(:disabled) {
+    background-color: #e2e8f0;
+}
+
+/* Botón Confirmar Borrado */
+.btn-confirmar {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-confirmar:hover:not(:disabled) {
+    background-color: #dc2626;
+}

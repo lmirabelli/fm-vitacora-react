@@ -1,0 +1,67 @@
+.tarjeta-pais {
+    width: 98%;
+    margin: 4px 0;
+    backdrop-filter: blur(4px);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: var(--iluminacion);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto; 
+    max-height: 54px;        
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, width 0.5s ease-in-out; 
+
+    &:hover {
+        max-height: 8000px;  
+        width: 100%;
+    }
+    h2{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 24px;
+            margin-left: 16px;
+            transform: skewY(-8deg);
+        }
+    }
+    hr{
+        width: 100%;
+        margin: 8px 0;
+    }
+    .tarjeta-equipo{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 24%;
+        text-decoration: none;
+        box-shadow: var(--iluminacion);
+        padding: 8px;
+        border-radius: 8px;
+        margin: 6px 0;
+        &:hover{
+            background-color: var(--color-blanco-contraste);
+        }
+        h4,h6{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+            color: var(--color-pais);
+            img{
+                margin-left: 12px;
+                height: 24px;
+            }
+        }
+        div{
+            margin: 4px 0;
+            padding: 2px 0;
+            text-align: center;
+            font-family: var(--fuente-resultado);
+            text-transform: uppercase;
+        }
+    }
+}

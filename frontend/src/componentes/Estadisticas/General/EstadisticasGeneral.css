@@ -1,0 +1,50 @@
+.estadistica-general{
+    width: 48%;
+    min-width: 380px;
+    margin: 6px 0;
+    padding: 2%;
+    border-radius: 24px;
+    background-color: var(--color-blanco-contraste);
+    backdrop-filter: blur(24px);
+    box-shadow: var(--iluminacion);
+    text-decoration: none;
+    h2{
+        font-family: var(--fuente-resultado);
+        text-transform: uppercase;
+        color: var(--color-1);
+    }
+    .titulo{
+        margin-bottom: 12px;
+    }
+    .posicion-tabla{
+        margin: 4px 0;
+    }
+    .posicion-tabla, .titulo{
+        display: flex;
+        justify-content: space-between;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 1px var(--color-1);
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            font-family: var(--fuente-resultado);
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: var(--color-1);
+            img{
+                height: 12px;
+                transform: rotateZ(-30deg);
+                animation: giro 15s infinite alternate ease-in-out;
+            }
+        }
+    }
+}
+
+@media (max-width: 790px) {
+    .estadistica-general{
+        width: 100%;
+    }
+}

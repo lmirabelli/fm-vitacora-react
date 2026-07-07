@@ -1,0 +1,65 @@
+.partido-individual{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 120px;
+    gap: 10px;
+    grid-template-areas: 
+    "cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera"
+    "cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera cabecera"
+    "marcador marcador jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "otrosPartidos otrosPartidos jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "otrosPartidos otrosPartidos jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "otrosPartidos otrosPartidos jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "statsVS statsVS jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "statsVS statsVS jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "todos todos todos todos todos todos todos todos todos todos";
+
+    .partido-cabecera{
+        grid-area: cabecera;
+    }
+    .marcador{
+        grid-area: marcador;
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--color-blanco-contraste);
+        padding: 12px 0;
+        border-radius: 16px;
+        box-shadow: var(--iluminacion);
+        backdrop-filter: blur(4px);
+        overflow: hidden;
+    }
+
+    .jugadores-del-partido, .estadisticas-jugadores{
+        width: 100%;
+        background: var(--color-blanco-contraste);
+        box-shadow: var(--iluminacion);
+        backdrop-filter: blur(4px);
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .jugadores-del-partido{
+        grid-area: jugadores;
+        
+    }
+    .otros-partidos{
+        grid-area: otrosPartidos;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .estadisticas-jugadores{
+        grid-area: estJug;
+    }
+
+    .estadisticas-versus{
+        grid-area: statsVS;
+    }
+
+    .todos-partidos{
+        grid-area: todos;
+    }
+}

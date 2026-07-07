@@ -1,0 +1,27 @@
+.jugador-en-partido{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-bottom: 2px;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: var(--fuente-resultado);
+        color: var(--color-1);
+        text-transform: capitalize;
+        text-wrap: nowrap;
+        overflow: hidden;
+        img{
+            height: 12px;
+            transform: rotateZ(4deg);
+            border-radius: 2px;
+            filter: drop-shadow(0 0 4px var(--color-negro-contraste));
+        }
+    }
+    .semi-circular{
+        padding: 2px;
+        border-radius: 6px;
+        box-shadow: var(--iluminacion);
+    }
+}

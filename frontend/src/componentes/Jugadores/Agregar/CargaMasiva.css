@@ -1,0 +1,44 @@
+.jugador-formulario-CM, .upload-area{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 8px;
+    background: var(--color-blanco-contraste);
+    backdrop-filter: blur(4px);
+    .inputs-group{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        div{
+            margin: 4px;
+            .label-jugador{
+            font-size: 12px;
+            color: #393939;
+            letter-spacing: 1px;
+            display: block;
+            input{
+                background-color: var(--color-5);
+                margin-top: 2px;
+                padding: 4px;
+                border-radius: 6px;
+                width: 100%;
+                border: 1px solid var(--color-1);
+                box-shadow: var(--sombra-standard);
+                font-family: var(--fuente-resultado);
+            }
+        }
+        }
+    }
+}
+.upload-area{
+    width: 50%;
+    margin: 24px auto;
+    .inputs-group{
+        input{
+            margin: 4px 2px;
+            padding: 4px;
+            border-radius: 4px;
+            font-family: var(--fuente-resultado);
+        }
+    }
+}

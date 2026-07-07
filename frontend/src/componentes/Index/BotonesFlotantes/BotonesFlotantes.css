@@ -1,0 +1,70 @@
+.botonera-flotante{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(4px);
+    box-shadow: var(--sombra-standard), var(--iluminacion);
+    overflow: hidden;
+    padding: 6px 12px;
+    border-radius: 6px;
+    z-index: 10;
+    opacity: 0;
+    animation: entradaBotonera 1s ease-in-out forwards;
+    a{
+        width: 32px;
+        border-radius: 50%;
+        aspect-ratio: 1 / 1;
+        margin: 0 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        opacity: 0;
+        transition: transform 0.7s, scale 0.7s;
+        box-shadow: var(--sombra-standard);
+        animation: entradaBtn 1s ease-in-out forwards;
+        &:hover{
+            scale: 1.15;
+            transform: rotateZ(720deg);
+        }
+    }
+    .activo{
+        background: var(--color-4);
+        scale: 0.9;
+    }
+    .desactivo{
+        background: var(--color-5);
+    }
+}
+
+.bf-izquierda{
+    position: fixed;
+    top: 16px;
+    left: 16px;
+}
+
+.bf-derecha{
+    position: fixed;
+    top: 16px;
+    right: 16px;
+}
+
+@keyframes entradaBtn {
+    0%{
+        transform: translateX(-40px) rotateZ(-360deg);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0) rotateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes entradaBotonera {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

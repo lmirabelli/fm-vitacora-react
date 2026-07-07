@@ -1,0 +1,40 @@
+.form-plantel{
+    width: 100%;
+    padding: 22px;
+    background-color: var(--color-blanco-contraste);
+    border-radius: 20px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(4px);
+    h2{
+        color: var(--color-1);
+        letter-spacing: 2px;
+        margin: 12px 0;
+    }
+    .data-plantel, .jugador{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px 0;
+        margin: 2px 0;
+        img{
+            height: 22px;
+            margin-right: 18px;
+        }
+        input{
+            margin: 0 2px;
+            padding: 4px 0;
+            text-align: center;
+            font-family: var(--fuente-resultado);
+            color: var(--color-5);
+            border: 0;
+            border-radius: 4px;
+            background-color: var(--color-1);
+            text-transform: uppercase;
+            box-shadow: var(--iluminacion);
+            &::placeholder{
+                color: #0048da;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.plantel{
+    background-color: var(--color-blanco-contraste);
+    padding: 46px;
+    border-radius: 36px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(6px);
+    h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        img{
+            height: 60px;
+            margin-right: 64px;
+            transform: rotateZ(-24deg);
+            filter: drop-shadow(0 0 4px #000);
+            animation: giro 8s infinite ease-in-out alternate;
+        }
+    }
+    .jugador{
+        transition: background 0.5s;
+        z-index: 1;
+        &:hover{
+            background-color: var(--color-blanco-contraste);
+        }
+    }
+    .jugador, .titulo{
+        width: 100%;
+        text-decoration: none;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        box-shadow: var(--iluminacion);
+        margin-bottom: 4px;
+        border-radius: 4px;
+        .tcenter{
+            text-align: center;
+        }
+        div{
+            font-family: var(--fuente-resultado);
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            overflow: hidden;
+            img{
+                margin-left: 4px;
+                height: 12px;
+                transform: rotateZ(-10deg);
+            }
+        }
+    }
+    
+    .titulo{
+        font-size: 12px;
+        text-align: center;
+        margin: 32px 0 12px;
+        cursor: default;
+        padding: 6px 0;
+        position: sticky;
+        top: 60px;
+        background-color: var(--color-1);
+        color: var(--color-5);
+        backdrop-filter: blur(62px);
+        z-index: 2;
+    }
+}
+
+@keyframes giro {
+    0%{
+        transform: rotateY(0deg) rotateZ(-24deg);
+    }
+    100%{
+        transform: rotateY(1440deg) rotateZ(24deg);
+    }
+}

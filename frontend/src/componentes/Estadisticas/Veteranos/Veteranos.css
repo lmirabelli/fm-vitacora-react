@@ -1,0 +1,41 @@
+.container-veterano{
+    backdrop-filter: sepia(0.6) blur(6px);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: var(--iluminacion);
+    h2{
+        color: var(--color-5);
+    }
+    .titulo{
+        margin: 12px 0;
+        div{
+            text-transform: uppercase;
+        }
+    }
+    .goleador{
+        margin: 4px 0;
+        div{
+            text-transform: capitalize;
+        }
+    }
+    .titulo,.goleador{
+        display: flex;
+        justify-content: space-between;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            font-family: var(--fuente-resultado);
+            background-color: #ffffff25;
+            box-shadow: var(--iluminacion);
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            img{
+                height: 12px;
+                margin: 0 8px;
+            }
+        }
+    }
+}

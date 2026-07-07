@@ -1,0 +1,43 @@
+.tabla-multiples{
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: var(--color-blanco-contraste);
+    padding: 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--iluminacion);
+    margin: 16px 0;
+    .titulo{
+        margin-bottom: 8px;
+        div{
+            background-color: var(--color-1);
+            color: var(--color-blanco);
+        }
+    }
+    .puesto{
+        font-size: 12px;
+    }
+    .titulo, .puesto{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        overflow: hidden;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--iluminacion);
+            height: 22px;
+            font-family: var(--fuente-resultado);
+            text-transform: capitalize;
+            margin: 2px;
+            border-radius: 4px;
+            img{
+                height: 12px;
+            }
+        }
+    }
+}

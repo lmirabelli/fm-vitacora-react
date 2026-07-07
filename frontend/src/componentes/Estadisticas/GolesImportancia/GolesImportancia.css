@@ -1,0 +1,41 @@
+.tabla-importancia{
+    background-color: var(--color-blanco-contraste);
+    padding: 20px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--iluminacion);
+    h2{
+        margin: 18px 0;
+    }
+    .titulo{
+        background-color: var(--color-1);
+        color: var(--color-5);
+        margin-bottom: 10px;
+    }
+    .puesto{
+        margin: 2px 0;
+        color: var(--color-1);
+        box-shadow: 2px 0 6px 0px var(--color-negro-contraste);
+        border-radius: 6px;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                height: 18px;
+                transform: rotateZ(-2deg);
+                border-radius: 16px;
+            }
+        }
+    }
+    .titulo, .puesto{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        div{
+            text-align: center;
+            font-family: var(--fuente-resultado);
+            text-transform: capitalize;
+        }
+    }
+}
