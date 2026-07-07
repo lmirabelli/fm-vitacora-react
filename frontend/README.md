@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# 💻 Bitácora FM - Frontend (React.js)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el módulo de interfaz de usuario de la aplicación, desarrollado con **React** y estructurado mediante componentes modulares para gestionar estadísticas, planteles, jugadores y partidos de Football Manager.
 
-## Available Scripts
+## 🛠️ Tecnologías utilizadas
+* **React.js** (Create React App)
+* **React Router Dom** (Configurado con `HashRouter` para compatibilidad de escritorio)
+* **CSS3** (Estilos globales y por componente)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🗂️ Guía de Componentes del Sistema
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A continuación se detalla la responsabilidad de cada componente del árbol de vistas:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🏠 Estructura Base e Index
+* **`Index`**: Vista principal de bienvenida y panel de control de la bitácora.
+* **`BotonesFlotantes`**: Barra de herramientas flotante global que permite accesos rápidos a configuraciones o navegación desde cualquier pantalla.
+* **`Agradecimientos`**: Créditos y menciones del proyecto.
 
-### `npm test`
+### ⚽ Gestión de Partidos (`/componentes/partidos`)
+* **`Principal`**: Panel general con el listado de partidos jugados, resultados e historial.
+* **`Agregar`**: Formulario inicial para registrar la información básica de un nuevo partido (Rival, Competición, etc.).
+* **`AgregarGoles`**: Sub-pantalla complementaria para detallar los minutos, autores y asistencias de los goles del partido.
+* **`PartidoIndividual`**: Vista detallada de un partido específico mostrando la ficha técnica completa.
+* **`Eliminar`**: Ventana de confirmación y lógica para dar de baja un partido del registro.
+* **`Rivales`**: Historial y estadísticas acumuladas contra equipos específicos.
+* **`EstadisticasPartidos`**: Componente polimórfico reutilizable que renderiza métricas dinámicas basadas en una propiedad (`competicion`, `condicion`, `anio` o `miEquipo`).
+* **`Rendimientos`**: Análisis del rendimiento general del equipo basado en las rachas de partidos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🏃‍♂️ Gestión de Jugadores (`/componentes/Jugadores`)
+* **`PrincipalJugadores`**: Listado completo del plantel con filtros de búsqueda rápida.
+* **`Individual`**: Perfil detallado del jugador (historial de goles, partidos, promedios y atributos clave).
+* **`Agregar` / `CargaMasiva`**: Formularios para el alta de futbolistas (de forma individual o mediante procesamiento en bloque).
+* **`Editar`**: Actualización de datos del perfil del jugador.
+* **`Eliminar`**: Baja definitiva de un futbolista del sistema.
+* **`Vender` / `SalidaDelClub`**: Gestión de traspasos, bajas o desvinculaciones históricas del club.
 
-### `npm run build`
+### 📋 Gestión de Planteles (`/componentes/Planteles`)
+* **`PrincipalPlantel`**: Historial de temporadas guardadas en la bitácora.
+* **`AgregarPlantel`**: Permite conformar la plantilla oficial para una temporada específica.
+* **`PlantelIndividual`**: Muestra la foto del plantel, táctica y jugadores inscriptos combinando parámetros de `temporada` y `equipo`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📊 Módulo de Estadísticas Avanzadas (`/componentes/Estadisticas`)
+* **`PrincipalEstadisticas`**: Panel central de analítica del club.
+* **`AgregarEstadisticas`**: Registro de métricas manuales de fin de temporada.
+* **`EstadisticasEspecificas`**: Detalles de récords individuales o grupales.
+* **Sección Goles:**
+  * `GolesImportancia`: Clasificación de goles clave (puntos ganados, finales, etc.).
+  * `GolesMultiples`: Registro de Hat-tricks, dobletes o pókers.
+  * `Tiempo`: Análisis de goles convertidos divididos por franjas de minutos de juego.
+  * `Veteranos`: Métricas y rendimientos de los jugadores más longevos del club.
+  * `GolesStats`: Reportes dinámicos configurables por `rivales` o `asistentes`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🏆 Campeones y Copas
+* **`PrincipalCampeones` / `AgregarCampeon`**: Vitrina de trofeos virtual para registrar los títulos locales e internacionales obtenidos.
+* **`AgregarCopa`**: Gestión de torneos de formato copa.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ⚙️ Configuración (`/componentes/Configuracion`)
+* **`Configuracion`**: Ajustes generales de la bitácora (nombre del club, manager, preferencias).
+* **`EditarEscudo`**: Sistema para actualizar o personalizar de manera dinámica las insignias de los equipos por país y nombre.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Comandos de Desarrollo
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Instalar dependencias
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Correr en modo desarrollo (Navegador)
+npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Compilar para producción (Genera carpeta /build)
+npm run build
