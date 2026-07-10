@@ -24,7 +24,7 @@ export const PlantelIndividual = () => {
             );
         }
         let { plantel } = data;
-        console.log(plantel)
+        plantel.jugadores.sort((a,b) => a.dorsal - b.dorsal)
 
     return(
         <div className="standard plantel" style={{background: `${plantel.escudo.colorPrimario}80`}}>

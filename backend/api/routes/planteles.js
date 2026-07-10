@@ -43,6 +43,7 @@ router.post('/agregar', (req, res) => {
             }
         }
 
+
         fs.writeFileSync(archivoPlanteles, JSON.stringify(listaDePlanteles));
         res.status(200).json({ accion });
     } catch (err) {
@@ -99,17 +100,17 @@ router.get('/:temporada/:equipo', (req, res) => {
 
         for(let j of plantel.jugadores){
             let infoJugador = listaDeJugadores.find(a => a.id == j.id)
-            let statsJugadores = estadisticasTemporada.jugadores.find(a => a.id == j.id)
-            j.posicion = statsJugadores.posicion
-            j.tarjetasAmarilla = statsJugadores.tarjetasAmarilla
-            j.tarjetasRoja = statsJugadores.tarjetasRoja
-            j.xg = statsJugadores.xg
-            j.xa = statsJugadores.xa
-            j.xge = statsJugadores.xge
-            j.pj = statsJugadores.partidos
-            j.goles = statsJugadores.goles
-            j.asistencias = statsJugadores.asistencias
-            j.minutos = statsJugadores.minutos
+            let statsJugadores = estadisticasTemporada?.jugadores.find(a => a.id == j.id)
+            j.posicion = statsJugadores?.posicion || "-"
+            j.tarjetasAmarilla = statsJugadores?.tarjetasAmarilla || 0
+            j.tarjetasRoja = statsJugadores?.tarjetasRoja || 0
+            j.xg = statsJugadores?.xg || 0
+            j.xa = statsJugadores?.xa || 0
+            j.xge = statsJugadores?.xge || 0
+            j.pj = statsJugadores?.partidos || 0
+            j.goles = statsJugadores?.goles || 0
+            j.asistencias = statsJugadores?.asistencias || 0
+            j.minutos = statsJugadores?.minutos || 0
             j.bandera = services.busquedaBandera(listaDeBanderas,infoJugador.nacionalidad).bandera
         }
 

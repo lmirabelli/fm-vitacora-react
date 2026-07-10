@@ -34,7 +34,6 @@ export const Individual = () => {
         );
     }
 
-    console.log(data)
     let { jugador, partidos } = data;
 
     return (

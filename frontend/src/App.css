@@ -121,13 +121,16 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .victoria{
-    background: #007b3180;
+    background: var(--color-muybien);
+    color: var(--color-blanco);
 }
 .empate{
-    background: #BBA05C80;
+    background: var(--color-4);
+    color: var(--color-1);
 }
 .derrota{
-    background: #fa000080;
+    background: var(--color-muymalo);
+    color: var(--color-blanco);
 }
 
 .w-3{

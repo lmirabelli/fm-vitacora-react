@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AgregarPenales } from './AgregarPenales';
 import './Agregar.css'
 
@@ -149,7 +149,7 @@ export const AgregarGoles = () => {
                             </div>
                         ))
                     ) : (
-                        <p>No hay goles para registrar</p>
+                        <Link to="/partidos" className="btn-submit">No hay goles para registrar</Link>
                     )}
                 </div>
                 

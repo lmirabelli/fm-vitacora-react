@@ -7,6 +7,8 @@ export const cargarBaseDeDatos = (archivoDeDatos) => {
 };
 
 export const busquedaEscudo = (lista, club) => {
+
+    club = club.includes("(s21)") ? club.slice(6) : club
     club = club.includes(".-") ? club.slice(8) : club
     let buscarEscudo = lista.find((i) => i.equipo == club.slice(0, -6));
     let linkImagen = {escudo: buscarEscudo ? buscarEscudo.imagen : "https://i.ibb.co/Vtxh4dx/X.png",

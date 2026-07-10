@@ -117,7 +117,7 @@ router.post('/agregar', (req, res) => {
             
         }
         
-        
+        listaDePartidos.sort((a,b) => a.id - b.id)
         fs.writeFileSync(jsonPartidos, JSON.stringify(listaDePartidos));
         res.status(200).json({
             mensaje: 'Partido agregado correctamente',
@@ -246,9 +246,30 @@ router.get('/ultimoPartido', (req, res) => {
         const listaDeEscudos = services.cargarBaseDeDatos(jsonEscudos)
 
         let ultimoPartido = listaDePartidos[listaDePartidos.length - 1]
+        let listaDeEstadios = []
+
+        listaDePartidos.forEach( p => {
+
+            let club = p.condicion == "local" ? p.miEquipo : p.condicion == "visitante" ? p.rival : ""
+
+            if(club !== ""){
+                let estadio = p.estadio
+                let ciudad = p.ciudad
+                let pais = p.pais
+                let buscarEstadio = listaDeEstadios.find(a => a.club == club)
+
+                if(!buscarEstadio){
+                    listaDeEstadios.push({club,estadio,ciudad,pais})
+                }else{
+                    buscarEstadio.estadio = estadio
+                    buscarEstadio.ciudad = ciudad
+                    buscarEstadio.pais = pais
+                }
+            }
+        })
 
 
-        res.status(200).json({ ultimoPartido });
+        res.status(200).json({ ultimoPartido, listaDeEstadios });
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }
@@ -493,7 +514,7 @@ router.get('/:id', (req, res) => {
                 puntos += parseInt(p)
                 p > 0 && partidosPuntuados++
             }
-            j.promedio = puntos / partidosPuntuados
+            j.promedio = partidosPuntuados == 0 ? 0 :puntos / partidosPuntuados
             j.pje = j.promedio + j.pj / 1000 + j.goles / 1000000 + j.asistencias / 1000000
         });
         
@@ -512,12 +533,26 @@ router.get('/', (req, res) => {
         const listaDePaises = services.cargarBaseDeDatos(jsonPaises)
         const listaDeEscudos = services.cargarBaseDeDatos(jsonEscudos)
 
+        let mejorResultado = {diferencia: -1000}
+        let peorResultado = {diferencia: 1000}
+
         listaDePartidos.forEach(p => {
             p.escudoMiEquipo = services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`)
             p.escudoRival = services.busquedaEscudo(listaDeEscudos, `${p.rival} (xxx)`)
             p.banderaRival = services.busquedaBandera(listaDePaises, p.paisRival)
+            p.diferencia = (p.golesFavor - p. golesContra) + p.golesFavor / 1000 + p.fechaDecimal / 1000000
+
+            mejorResultado.diferencia < p.diferencia && (mejorResultado = p)
+            peorResultado.diferencia > p.diferencia && (peorResultado = p)
         });
-        res.status(200).json({ listaDePartidos });
+
+        const records = {
+            mejorResultado,
+            peorResultado
+        }
+
+
+        res.status(200).json({ listaDePartidos, records });
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

@@ -1,8 +1,11 @@
 import { useDatabaseList } from "../../../services/conexion";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import './AgregarPlantel.css'
 
 export const AgregarPlantel = () => {
+
+    const navigate = useNavigate()
     useEffect(() => {
         document.title = "AGREGAR PLANTEL";
 
@@ -68,6 +71,8 @@ export const AgregarPlantel = () => {
         } catch (error) {
             console.error("Error:", error);
         }
+
+        navigate('/planteles')
     };
 
     plantel.jugadores.sort((a,b) => {

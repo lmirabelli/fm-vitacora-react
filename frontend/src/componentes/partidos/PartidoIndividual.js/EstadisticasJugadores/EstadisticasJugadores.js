@@ -27,7 +27,7 @@ export const EstadisticasJugadores = ({lista, rival}) => {
                     <div className="w-10">{j.pj}</div>
                     <div className="w-10">{j.goles}</div>
                     <div className="w-10">{j.asistencias}</div>
-                    <div className="w-10">{parseInt(j.promedio)}</div>
+                    <div className="w-10">{parseInt(j.promedio) === 0 ? "-" : parseInt(j.promedio)}</div>
                 </Link>
             ))}
         </div>

@@ -21,6 +21,14 @@
             margin: 6px 22px;
         }
         h3{
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            overflow: hidden;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32px;
             img{
                 height: 16px;
                 margin-right: 4px;

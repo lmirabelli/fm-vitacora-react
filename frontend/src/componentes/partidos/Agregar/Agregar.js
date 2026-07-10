@@ -32,7 +32,28 @@ export const Agregar = () => {
     const { data: dataPartidos, loading: loadingPartido, error: errorPartido } = useDatabaseList("http://localhost:4001/partidos/ultimoPartido");
 
     const ultimoPartido = dataPartidos?.ultimoPartido;
+    const listaDeEstadios = dataPartidos?.listaDeEstadios;
     const listaDeJugadores = data?.listaDeJugadores || [];
+
+    const buscarEstadio = () => {
+
+        let estadiosFind = {estadio: "", ciudad: "", pais: ""}
+        if(dataPartido.condicion === "local"){
+            
+            estadiosFind = listaDeEstadios.find( a => a.club === dataPartido.miEquipo)
+        }else if(dataPartido.condicion === "visitante"){
+            
+            estadiosFind = listaDeEstadios.find( a => a.club === dataPartido.rival)
+        }
+
+        setDataPartido({
+            ...dataPartido,
+            estadio: estadiosFind?.estadio || "",
+            ciudad: estadiosFind?.ciudad || "",
+            pais: estadiosFind?.pais || ""
+        })
+        
+    }
 
     useEffect(() => {
         if (partidoAEditar) {
@@ -64,8 +85,8 @@ export const Agregar = () => {
                 estadio: p.estadio || '',
                 ciudad: p.ciudad || '',
                 pais: p.pais || '',
-                golesFavor: p.golesFavor !== undefined ? p.golesFavor : '',
-                golesContra: p.golesContra !== undefined ? p.golesContra : '',
+                golesFavor: '',
+                golesContra: '',
                 promedio: p.promedio || '',
                 jugadores: mapearJugadores,
                 penales: p.penales || [],
@@ -337,6 +358,7 @@ export const Agregar = () => {
                             />
                             <span>Neutral</span>
                         </label>
+                        <button type="button" onClick={buscarEstadio}>Buscar Estadio</button>
                     </div>
                     <input 
                         type="text" 

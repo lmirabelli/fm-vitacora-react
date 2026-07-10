@@ -37,6 +37,8 @@ router.post('/agregar', (req, res) => {
                     posicion: j["Mejor pos."]
                 }
             }else{
+
+                let minutos = j["Min"].indexOf(".") !== -1 ? j["Min"] * 1000 : j["Min"]
                 let separar = j["Part"].indexOf(" ")
                 let titular = separar == -1 ? j["Part"] : j["Part"].slice(0,separar)
                 let suplente = separar == -1 ? 0 : j["Part"].slice(separar + 2, -1)
@@ -69,7 +71,7 @@ router.post('/agregar', (req, res) => {
                     golesXerror: parseInt(j["Gl Err"]) || 0,
                     goles: parseInt(j["Gol"]) || 0,
                     jugadorDelPartido: parseInt(j["JPar"]) || 0,
-                    minutos: parseInt(j["Min"]) || 0,
+                    minutos: parseInt(minutos) || 0,
                     minutosAcordados: j["Minutos acordados"],
                     ocasionesClaves: parseInt(j["OCG"]) || 0,
                     partidos: parseInt(titular) + parseInt(suplente) || 0,
@@ -171,10 +173,10 @@ router.get('/goles/importancia', (req,res) => {
         })
 
         tablaGoles.forEach( g => {
-            g.importancia.pts = g.importancia.unoxcero * 5 + g.importancia.victoria * 3 + g.importancia.empate * 3 + g.importancia.madrugador + g.importancia.agonico
+            g.importancia.porcentaje = (((g.importancia.victoria + g.importancia.empate) / g.importancia.total) * 100)
         })
 
-        tablaGoles.sort((a,b) => b.importancia.pts - a.importancia.pts)
+        tablaGoles.sort((a,b) => b.importancia.total - a.importancia.total)
         
         res.status(200).json({tablaGoles, listaDePartidos, listaDeJugadores});
     }catch (err){
@@ -253,9 +255,12 @@ router.get('/goles/multiples', (req,res) => {
         }
 
         tablaGoles.sort((a,b) => b.puntos - a.puntos)
-        res.status(200).json({tablaGoles, listaDeGolesMultiples, masGoles: masGoles.goles});
+        res.status(200).json({tablaGoles, listaDeGolesMultiples, masGoles: masGoles?.goles || 0});
     }catch (err){
-    console.log(`error al mostrar los goles, ${err}`)
+    
+    console.log(`error al mostrar los goles, ${err.message}`)
+    console.log("---")
+    console.log(err)
         res.status(400)
 }})
 

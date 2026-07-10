@@ -36,7 +36,9 @@ export const GolesImportancia = () => {
                     <div className="w-5"></div>
                     <div className="w-5"></div>
                     <div className="w-15">Goleador</div>
+                    <div className="w-5">%</div>
                     <div className="w-5">Total</div>
+                    <div className="w-5">Imp</div>
                     <div className="w-5">1-0</div>
                     <div className="w-5">V</div>
                     <div className="w-5">E</div>
@@ -50,7 +52,9 @@ export const GolesImportancia = () => {
                         <div className="w-5">{idx + 1}</div>
                         <div className="w-5"><img src={g.bandera} alt="nacionalidad" className="bandera"/></div>
                         <div className="w-15">{g.goleador}</div>
+                        <div className="w-5">{g.importancia.porcentaje.toFixed(1)}%</div>
                         <div className="w-5">{g.importancia.total}</div>
+                        <div className="w-5">{g.importancia.victoria + g.importancia.empate}</div>
                         <div className="w-5">{g.importancia.unoxcero}</div>
                         <div className="w-5">{g.importancia.victoria}</div>
                         <div className="w-5">{g.importancia.empate}</div>
