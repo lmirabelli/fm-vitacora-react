@@ -102,7 +102,7 @@ export const Individual = () => {
                         <div className="w-20">{p.rival}</div>
                         <div className="w-15">{p.competicion}</div>
                         <div className="w-10">{p.resultado}</div>
-                        <div className="w-10">{p.puntaje}</div>
+                        <div className="w-10">{p.puntaje !== "0" ? p.puntaje : ""}</div>
                         <div className={p.goles > 0 ? "circuleado" : "no-circuleado"}>{p.goles > 0 ? p.goles : ""}</div>
                         <div className={p.asistencias > 0 ? "circuleado" : "no-circuleado"}>{p.asistencias > 0 ? p.asistencias : ""}</div>
                     </Link>

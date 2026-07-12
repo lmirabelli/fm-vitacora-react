@@ -31,7 +31,7 @@ export const Principal = () => {
     return(
         <div className="standard">
             <SubNavBar />
-            <Records records={records} />
+            {listaDePartidos.length > 0 && <Records records={records} />}
             <ListadoPartidos lista={listaDePartidos} />
         </div>
     )

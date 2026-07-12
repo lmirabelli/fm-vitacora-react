@@ -75,14 +75,14 @@ router.post('/agregar', (req, res) => {
                 fechaDecimal: fechas.fechaDecimal,
                 fecha: fechas.fecha,
                 temporada: datos.temporada,
-                miEquipo: datos.miEquipo,
-                rival: datos.rival,
-                paisRival: datos.paisRival,
-                competicion: datos.competicion,
-                condicion: datos.condicion,
-                estadio: datos.estadio,
-                ciudad: datos.ciudad,
-                pais: datos.pais,
+                miEquipo: datos.miEquipo.toLowerCase(),
+                rival: datos.rival.toLowerCase(),
+                paisRival: datos.paisRival.toLowerCase(),
+                competicion: datos.competicion.toLowerCase(),
+                condicion: datos.condicion.toLowerCase(),
+                estadio: datos.estadio.toLowerCase(),
+                ciudad: datos.ciudad.toLowerCase(),
+                pais: datos.pais.toLowerCase(),
                 golesFavor: parseInt(datos.golesFavor),
                 golesContra: parseInt(datos.golesContra),
                 promedio: parseFloat(datos.promedio),
@@ -99,15 +99,15 @@ router.post('/agregar', (req, res) => {
                 partido.id = fechas.fechaDecimal
                 partido.fechaDecimal = fechas.fechaDecimal
                 partido.fecha = fechas.fecha
-                partido.temporada = datos.temporada
-                partido.miEquipo = datos.miEquipo
-                partido.rival = datos.rival
-                partido.paisRival = datos.paisRival
-                partido.competicion = datos.competicion
-                partido.condicion = datos.condicion
-                partido.estadio = datos.estadio
-                partido.ciudad = datos.ciudad
-                partido.pais = datos.pais
+                partido.temporada = datos.temporada.toLowerCase()
+                partido.miEquipo = datos.miEquipo.toLowerCase()
+                partido.rival = datos.rival.toLowerCase()
+                partido.paisRival = datos.paisRival.toLowerCase()
+                partido.competicion = datos.competicion.toLowerCase()
+                partido.condicion = datos.condicion.toLowerCase()
+                partido.estadio = datos.estadio.toLowerCase()
+                partido.ciudad = datos.ciudad.toLowerCase()
+                partido.pais = datos.pais.toLowerCase()
                 partido.golesFavor = parseInt(datos.golesFavor)
                 partido.golesContra = parseInt(datos.golesContra)
                 partido.promedio = parseFloat(datos.promedio)
@@ -147,6 +147,8 @@ router.post('/agregar/goles', (req, res) => {
 
             for(let g of datos.golesDetalle){
                 g.diferencia = parseInt(g.gfParcial) - parseInt(g.gcParcial)
+                g.goleador = g.goleador.toLowerCase()
+                g.asistente = g.asistente.toLowerCase()
             }
             if (!listaDePartidos[idxPartido].goles) {
                 listaDePartidos[idxPartido].goles = [];
@@ -181,6 +183,15 @@ router.post('/agregar/penales', (req, res) => {
         const idxPartido = listaDePartidos.findIndex(a => a.fechaDecimal == fechas.fechaDecimal);
         
         let partidoActualizado;
+
+        const penalesLowerCase = datos.penales.map( pk => {
+            return{
+                ...pk,
+                pateador: pk.pateador.toLowerCase(),
+                arqueroRival: pk.arqueroRival.toLowerCase(),
+                rival: pk.rival.toLowerCase()
+            }
+        })
         
         if (idxPartido !== -1) {
 
@@ -188,13 +199,13 @@ router.post('/agregar/penales', (req, res) => {
             if (!listaDePartidos[idxPartido].penales) {
                 listaDePartidos[idxPartido].penales = [];
             }
-            listaDePartidos[idxPartido].penales = datos.penales;
+            listaDePartidos[idxPartido].penales = penalesLowerCase;
             partidoActualizado = listaDePartidos[idxPartido];
         }else{
             let partidoProvisorio = {
                 id: fechas.fechaDecimal,
                 fechaDecimal: fechas.fechaDecimal,
-                penales: datos.penales,
+                penales: penalesLowerCase,
             }
 
             listaDePartidos.push(partidoProvisorio)

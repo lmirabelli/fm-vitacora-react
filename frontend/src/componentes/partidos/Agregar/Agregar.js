@@ -204,11 +204,13 @@ export const Agregar = () => {
 
     const guardar = (e) => {
         e.preventDefault();
-        const URL = partidoAEditar 
-            ? `http://localhost:4001/partidos/editar/${partidoAEditar.partido.id}` 
-            : 'http://localhost:4001/partidos/agregar';
+        // const URL = partidoAEditar 
+        //     ? `http://localhost:4001/partidos/agregar/${partidoAEditar.partido.id}` 
+        //     : 'http://localhost:4001/partidos/agregar';
+
+        const URL = 'http://localhost:4001/partidos/agregar'
             
-        const METODO = partidoAEditar ? 'PUT' : 'POST';
+        const METODO =  'POST';
 
         fetch(URL, {
             method: METODO,
