@@ -54,11 +54,14 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .btn-submit {
     background: #007b31;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
     color: white;
     padding: 12px 30px;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 12px;
     cursor: pointer;
     transition: background 0.3s ease;
     width: 50%;

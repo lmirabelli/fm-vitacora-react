@@ -39,6 +39,8 @@ router.post('/agregar', (req, res) => {
             }else{
 
                 let minutos = j["Min"].indexOf(".") !== -1 ? j["Min"] * 1000 : j["Min"]
+                let pasesIntentados = j["Pas I"].indexOf(".") !== -1 ? j["Pas I"] * 1000 : j["Pas I"]
+                let pasesCompletados = j["Pas C"].indexOf(".") !== -1 ? j["Pas C"] * 1000 : j["Pas C"]
                 let separar = j["Part"].indexOf(" ")
                 let titular = separar == -1 ? j["Part"] : j["Part"].slice(0,separar)
                 let suplente = separar == -1 ? 0 : j["Part"].slice(separar + 2, -1)
@@ -78,8 +80,8 @@ router.post('/agregar', (req, res) => {
                     titular,
                     suplente,
                     pasesClaves: parseInt(j["Pas Cl"]) || 0,
-                    pasesCompletados: parseInt(j["Pas C"]) || 0,
-                    pasesIntentados: parseInt(j["Pas I"]) || 0,
+                    pasesCompletados: parseInt(pasesCompletados) || 0,
+                    pasesIntentados: parseInt(pasesIntentados) || 0,
                     pasesProgresivos: parseInt(j["Pases prog"]) || 0,
                     penalesMarcados: parseInt(j["Pen M"]) || 0,
                     penalesParados: parseInt(j["Pen. parados"]) || 0,
