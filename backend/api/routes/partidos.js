@@ -365,8 +365,8 @@ router.get('/stats/:id', (req, res) => {
                     pg,
                     pe,
                     pp,
-                    gf: p.golesFavor,
-                    gc: p.golesContra,
+                    gf: parseInt(p.golesFavor),
+                    gc: parseInt(p.golesContra),
                     ultimoPartido: `${p.fecha} ${p.rival} ${p.golesFavor}-${p.golesContra}`,
                     escudo: id == "miEquipo" ? services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`) : ""
                 }
@@ -376,8 +376,8 @@ router.get('/stats/:id', (req, res) => {
                 buscarEnTabla.pg += pg
                 buscarEnTabla.pe += pe
                 buscarEnTabla.pp += pp
-                buscarEnTabla.gf += p.golesFavor
-                buscarEnTabla.gc += p.golesContra
+                buscarEnTabla.gf += parseInt(p.golesFavor)
+                buscarEnTabla.gc += parseInt(p.golesContra)
                 buscarEnTabla.ultimoPartido= `${p.fecha} ${p.rival} ${p.golesFavor}-${p.golesContra}`
             }
         }
