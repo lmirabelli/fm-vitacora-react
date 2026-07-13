@@ -546,6 +546,8 @@ router.get('/', (req, res) => {
 
         let mejorResultado = {diferencia: -1000}
         let peorResultado = {diferencia: 1000}
+        let invicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
+        let contarInvicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
 
         listaDePartidos.forEach(p => {
             p.escudoMiEquipo = services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`)
@@ -555,11 +557,25 @@ router.get('/', (req, res) => {
 
             mejorResultado.diferencia < p.diferencia && (mejorResultado = p)
             peorResultado.diferencia > p.diferencia && (peorResultado = p)
+
+            //contar invicto
+            if(p.golesFavor >= p.golesContra){
+                contarInvicto.partidos == 0 && (contarInvicto.fechaInicio = `${p.fecha} vs. ${p.rival}`)
+                contarInvicto.partidos++
+                p.golesFavor > p.golesContra ? contarInvicto.victorias++ : contarInvicto.empates++
+                contarInvicto.gf += parseInt(p.golesFavor)
+                contarInvicto.gc += parseInt(p.golesContra)
+                contarInvicto.fechaFinal = `${p.fecha} vs. ${p.rival}`
+            }else{
+                invicto = {...contarInvicto}
+                contarInvicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
+            }
         });
 
         const records = {
             mejorResultado,
-            peorResultado
+            peorResultado,
+            invicto
         }
 
 

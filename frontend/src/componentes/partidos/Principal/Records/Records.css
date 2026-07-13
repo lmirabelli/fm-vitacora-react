@@ -7,7 +7,7 @@
     box-shadow: var(--iluminacion);
     backdrop-filter: blur(12px);
     .record{
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: start;
         text-decoration: none;
