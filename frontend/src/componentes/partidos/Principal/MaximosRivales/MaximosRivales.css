@@ -1,0 +1,34 @@
+.maximos-rivales{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 16px;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--iluminacion);
+    background-color: var(--color-blanco-contraste);
+    .rival-minicard{
+        padding: 8px;
+        width: 19%;
+        text-decoration: none;
+        background-color: #750000;
+        border-radius: 8px;
+        box-shadow: var(--iluminacion);
+        overflow: hidden;
+        div{
+            font-family: var(--fuente-resultado);
+            font-size: 12px;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            color: var(--color-blanco-contraste);
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            img{
+                height: 18px;
+            }
+        }
+    }
+}

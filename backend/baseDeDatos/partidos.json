@@ -1,1 +1,2104 @@
-[{"anio":"2023","id":19574,"fechaDecimal":19574,"fecha":"05.08.2023","temporada":"2024","miEquipo":"mansfield town","rival":"crewe alexandra","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"alexandra stadium","ciudad":"crewe","pais":"inglaterra","golesFavor":3,"golesContra":0,"promedio":7.19,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"75"},{"nombre":"johnson, callum","id":"29122000","puntaje":"67"},{"nombre":"flint, aden","id":"30026218","puntaje":"71"},{"nombre":"cargill, baily","id":"29087654","puntaje":"75"},{"nombre":"macdonald, calum","id":"215471","puntaje":"89"},{"nombre":"reed, louis","id":"29123130","puntaje":"68"},{"nombre":"maris, george","id":"29110261","puntaje":"77"},{"nombre":"akins, lucas","id":"28000593","puntaje":"65"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"69"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"66"},{"nombre":"gale, james","id":"2000142754","puntaje":"71"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"72"},{"nombre":"williams, george","id":"29063515","puntaje":"69"},{"nombre":"kokkinos, ronnie","id":"2000201756","puntaje":"66"},{"nombre":"flanagan, finn","id":"2000140849","puntaje":"76"},{"nombre":"abdullah, mckeal","id":"2000140851","puntaje":"0"}],"goles":[{"id":1,"minuto":"17","goleador":"maris, george","asistente":".","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"21","goleador":"gale, james","asistente":"macdonald, calum","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"82","goleador":"flanagan, finn","asistente":"lewis, aaron","gfParcial":"3","gcParcial":"0","diferencia":3}],"penales":[]},{"anio":"2023","id":19577,"fechaDecimal":19577,"fecha":"08.08.2023","temporada":"2024","miEquipo":"mansfield town","rival":"carlisle united","paisRival":"inglaterra","competicion":"league cup","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":1,"golesContra":2,"promedio":6.74,"jugadores":[{"nombre":"flinders, scott","id":"5118761","puntaje":"63"},{"nombre":"johnson, callum","id":"29122000","puntaje":"67"},{"nombre":"flint, aden","id":"30026218","puntaje":"64"},{"nombre":"cargill, baily","id":"29087654","puntaje":"64"},{"nombre":"macdonald, calum","id":"215471","puntaje":"75"},{"nombre":"reed, louis","id":"29123130","puntaje":"76"},{"nombre":"maris, george","id":"29110261","puntaje":"64"},{"nombre":"akins, lucas","id":"28000593","puntaje":"66"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"65"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"gale, james","id":"2000142754","puntaje":"75"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"0"},{"nombre":"williams, george","id":"29063515","puntaje":"67"},{"nombre":"cooper, george","id":"29236202","puntaje":"63"},{"nombre":"kokkinos, ronnie","id":"2000201756","puntaje":"64"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"63"}],"goles":[{"id":1,"minuto":"17","goleador":"gale, james","asistente":"reed, louis","gfParcial":"1","gcParcial":"0","diferencia":1}],"penales":[]},{"anio":"2023","id":19581,"fechaDecimal":19581,"fecha":"12.08.2023","temporada":"2024","miEquipo":"mansfield town","rival":"morecambe","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":4,"golesContra":0,"promedio":7.44,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"81"},{"nombre":"johnson, callum","id":"29122000","puntaje":"74"},{"nombre":"flint, aden","id":"30026218","puntaje":"74"},{"nombre":"cargill, baily","id":"29087654","puntaje":"71"},{"nombre":"macdonald, calum","id":"215471","puntaje":"75"},{"nombre":"reed, louis","id":"29123130","puntaje":"67"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"71"},{"nombre":"akins, lucas","id":"28000593","puntaje":"67"},{"nombre":"maris, george","id":"29110261","puntaje":"76"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"100"},{"nombre":"gale, james","id":"2000142754","puntaje":"66"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"0"},{"nombre":"williams, george","id":"29063515","puntaje":"0"},{"nombre":"flanagan, finn","id":"2000140849","puntaje":"67"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"66"},{"nombre":"abdullah, mckeal","id":"2000140851","puntaje":"67"}],"goles":[{"id":1,"minuto":"38","goleador":"keillor-dunn, davis","asistente":"johnson, callum","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"45.2","goleador":"keillor-dunn, davis","asistente":"clarke, ollie","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"66","goleador":"maris, george","asistente":".","gfParcial":"3","gcParcial":"0","diferencia":3},{"id":4,"minuto":"85","goleador":"keillor-dunn, davis","asistente":".","gfParcial":"4","gcParcial":"0","diferencia":4}],"penales":[]},{"anio":"2023","id":19584,"fechaDecimal":19584,"fecha":"15.08.2023","temporada":"2024","miEquipo":"mansfield town","rival":"doncaster rovers","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"eco-power stadium","ciudad":"doncaster","pais":"inglaterra","golesFavor":1,"golesContra":1,"promedio":6.73,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"65"},{"nombre":"johnson, callum","id":"29122000","puntaje":"74"},{"nombre":"flint, aden","id":"30026218","puntaje":"66"},{"nombre":"cargill, baily","id":"29087654","puntaje":"69"},{"nombre":"macdonald, calum","id":"215471","puntaje":"67"},{"nombre":"reed, louis","id":"29123130","puntaje":"77"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"63"},{"nombre":"akins, lucas","id":"28000593","puntaje":"64"},{"nombre":"maris, george","id":"29110261","puntaje":"73"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"62"},{"nombre":"gale, james","id":"2000142754","puntaje":"61"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"62"},{"nombre":"williams, george","id":"29063515","puntaje":"69"},{"nombre":"flanagan, finn","id":"2000140849","puntaje":"0"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"swan, will","id":"29189402","puntaje":"67"}],"goles":[{"id":1,"minuto":"67","goleador":"reed, louis","asistente":"maris, george","gfParcial":"1","gcParcial":"1","diferencia":0}],"penales":[]},{"anio":"2023","id":19588,"fechaDecimal":19588,"fecha":"19.08.2023","temporada":"2024","miEquipo":"mansfield town","rival":"grimsby town","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"blundell park","ciudad":"cleethorpes","pais":"inglaterra","golesFavor":4,"golesContra":1,"promedio":7.33,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"68"},{"nombre":"johnson, callum","id":"29122000","puntaje":"66"},{"nombre":"flint, aden","id":"30026218","puntaje":"70"},{"nombre":"cargill, baily","id":"29087654","puntaje":"67"},{"nombre":"macdonald, calum","id":"215471","puntaje":"72"},{"nombre":"reed, louis","id":"29123130","puntaje":"82"},{"nombre":"maris, george","id":"29110261","puntaje":"67"},{"nombre":"akins, lucas","id":"28000593","puntaje":"78"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"100"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"66"},{"nombre":"gale, james","id":"2000142754","puntaje":"70"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"68"},{"nombre":"williams, george","id":"29063515","puntaje":"69"},{"nombre":"cooper, george","id":"29236202","puntaje":"70"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"0"},{"nombre":"swan, will","id":"29189402","puntaje":"65"}],"goles":[{"id":1,"minuto":"3","goleador":"keillor-dunn, davis","asistente":"akins, lucas","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"21","goleador":"keillor-dunn, davis","asistente":"reed, louis","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"30","goleador":"gale, james","asistente":"keillor-dunn, davis","gfParcial":"3","gcParcial":"0","diferencia":3},{"id":4,"minuto":"49","goleador":"akins, lucas","asistente":"reed, louis","gfParcial":"4","gcParcial":"0","diferencia":4}],"penales":[]},{"anio":"2023","id":19597,"fechaDecimal":19597,"fecha":"28.08.2023","temporada":"2024","miEquipo":"mansfield town","rival":"stockport county","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":0,"golesContra":3,"promedio":6.53,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"64"},{"nombre":"johnson, callum","id":"29122000","puntaje":"64"},{"nombre":"flint, aden","id":"30026218","puntaje":"62"},{"nombre":"cargill, baily","id":"29087654","puntaje":"65"},{"nombre":"macdonald, calum","id":"215471","puntaje":"67"},{"nombre":"reed, louis","id":"29123130","puntaje":"72"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"62"},{"nombre":"akins, lucas","id":"28000593","puntaje":"67"},{"nombre":"maris, george","id":"29110261","puntaje":"61"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"65"},{"nombre":"gale, james","id":"2000142754","puntaje":"64"},{"nombre":"brunt, lewis","id":"29193664","puntaje":"65"},{"nombre":"williams, george","id":"29063515","puntaje":"0"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"66"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"64"},{"nombre":"swan, will","id":"29189402","puntaje":"64"}],"goles":[],"penales":[]},{"anio":"2023","id":19602,"fechaDecimal":19602,"fecha":"02.09.2023","temporada":"2024","miEquipo":"mansfield town","rival":"bradford city","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":3,"golesContra":3,"promedio":6.82,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"65"},{"nombre":"johnson, callum","id":"29122000","puntaje":"61"},{"nombre":"flint, aden","id":"30026218","puntaje":"72"},{"nombre":"brunt, lewis","id":"29193664","puntaje":"65"},{"nombre":"macdonald, calum","id":"215471","puntaje":"58"},{"nombre":"reed, louis","id":"29123130","puntaje":"75"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"62"},{"nombre":"akins, lucas","id":"28000593","puntaje":"71"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"78"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"swan, will","id":"29189402","puntaje":"64"},{"nombre":"williams, george","id":"29063515","puntaje":"67"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"67"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"66"},{"nombre":"maris, george","id":"29110261","puntaje":"69"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"65"}],"goles":[{"id":1,"minuto":"23","goleador":"keillor-dunn, davis","asistente":"akins, lucas","gfParcial":"1","gcParcial":"1","diferencia":0},{"id":2,"minuto":"49","goleador":"flint, aden","asistente":"maris, george","gfParcial":"2","gcParcial":"2","diferencia":0},{"id":3,"minuto":"89","goleador":"reed, louis","asistente":"keillor-dunn, davis","gfParcial":"3","gcParcial":"3","diferencia":0}],"penales":[]},{"anio":"2023","temporada":"2024","miEquipo":"mansfield town","rival":"(s21) manchester city","paisRival":"inglaterra","competicion":"league trophy","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":3,"golesContra":2,"promedio":7.03,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"66"},{"nombre":"johnson, callum","id":"29122000","puntaje":"67"},{"nombre":"flint, aden","id":"30026218","puntaje":"67"},{"nombre":"brunt, lewis","id":"29193664","puntaje":"74"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"66"},{"nombre":"reed, louis","id":"29123130","puntaje":"66"},{"nombre":"maris, george","id":"29110261","puntaje":"66"},{"nombre":"akins, lucas","id":"28000593","puntaje":"91"},{"nombre":"robson, max","id":"28127319","puntaje":"67"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"71"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"80"},{"nombre":"flanagan, finn","id":"2000140849","puntaje":"65"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"65"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"65"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"swan, will","id":"29189402","puntaje":"0"}],"penales":[],"goles":[{"id":1,"minuto":"27","goleador":"bowery, jordan","asistente":"akins, lucas","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"36","goleador":"bowery, jordan","asistente":"akins, lucas","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"40","goleador":"keillor-dunn, davis","asistente":"brunt, lewis","gfParcial":"3","gcParcial":"0","diferencia":3}],"id":19605,"fecha":"05.09.2023","fechaDecimal":19605},{"anio":"2023","id":19609,"fechaDecimal":19609,"fecha":"09.09.2023","temporada":"2024","miEquipo":"mansfield town","rival":"accrington stanley","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"store first stadium","ciudad":"accrington","pais":"inglaterra","golesFavor":3,"golesContra":2,"promedio":7.08,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"65"},{"nombre":"johnson, callum","id":"29122000","puntaje":"74"},{"nombre":"flint, aden","id":"30026218","puntaje":"65"},{"nombre":"cargill, baily","id":"29087654","puntaje":"67"},{"nombre":"macdonald, calum","id":"215471","puntaje":"71"},{"nombre":"reed, louis","id":"29123130","puntaje":"72"},{"nombre":"maris, george","id":"29110261","puntaje":"85"},{"nombre":"akins, lucas","id":"28000593","puntaje":"68"},{"nombre":"robson, max","id":"28127319","puntaje":"65"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"75"},{"nombre":"gale, james","id":"2000142754","puntaje":"76"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"75"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"0"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"65"},{"nombre":"swan, will","id":"29189402","puntaje":"66"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"0"}],"goles":[{"id":1,"minuto":"4","goleador":"gale, james","asistente":"johnson, callum","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"53","goleador":"keillor-dunn, davis","asistente":"maris, george","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"73","goleador":"kruszynski, jakub","asistente":"maris, george","gfParcial":"3","gcParcial":"1","diferencia":2}],"penales":[]},{"anio":"2023","id":19616,"fechaDecimal":19616,"fecha":"16.09.2023","temporada":"2024","miEquipo":"mansfield town","rival":"colchester united","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"the weston homes community stadium","ciudad":"colchester","pais":"inglaterra","golesFavor":1,"golesContra":3,"promedio":6.63,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"75"},{"nombre":"johnson, callum","id":"29122000","puntaje":"65"},{"nombre":"flint, aden","id":"30026218","puntaje":"60"},{"nombre":"cargill, baily","id":"29087654","puntaje":"65"},{"nombre":"macdonald, calum","id":"215471","puntaje":"64"},{"nombre":"reed, louis","id":"29123130","puntaje":"68"},{"nombre":"maris, george","id":"29110261","puntaje":"71"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"63"},{"nombre":"swan, will","id":"29189402","puntaje":"68"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"63"},{"nombre":"gale, james","id":"2000142754","puntaje":"64"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"64"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"64"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"66"},{"nombre":"robson, max","id":"28127319","puntaje":"65"},{"nombre":"akins, lucas","id":"28000593","puntaje":"65"}],"goles":[{"id":1,"minuto":"14","goleador":"maris, george","asistente":".","gfParcial":"1","gcParcial":"1","diferencia":0}],"penales":[]},{"anio":"2023","id":19623,"fechaDecimal":19623,"fecha":"23.09.2023","temporada":"2024","miEquipo":"mansfield town","rival":"barrow","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":3,"golesContra":2,"promedio":6.82,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"65"},{"nombre":"johnson, callum","id":"29122000","puntaje":"74"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"63"},{"nombre":"cargill, baily","id":"29087654","puntaje":"65"},{"nombre":"macdonald, calum","id":"215471","puntaje":"64"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"76"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"65"},{"nombre":"akins, lucas","id":"28000593","puntaje":"64"},{"nombre":"maris, george","id":"29110261","puntaje":"69"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"81"},{"nombre":"swan, will","id":"29189402","puntaje":"63"},{"nombre":"flint, aden","id":"30026218","puntaje":"65"},{"nombre":"williams, george","id":"29063515","puntaje":"67"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"67"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"73"},{"nombre":"gale, james","id":"2000142754","puntaje":"63"}],"goles":[{"id":1,"minuto":"28","goleador":"boateng, hiram","asistente":"keillor-dunn, davis","gfParcial":"1","gcParcial":"1","diferencia":0},{"id":2,"minuto":"66","goleador":"maris, george","asistente":".","gfParcial":"2","gcParcial":"1","diferencia":1},{"id":3,"minuto":"75","goleador":"bowery, jordan","asistente":"...penal","gfParcial":"3","gcParcial":"1","diferencia":2}],"penales":[{"id":1783520745300,"pateador":"bowery, jordan","arqueroRival":"lillis, josh","momentum":"partido","final":"convertido","rival":"barrow","dia":"23","mes":"9","anio":"2023"}]},{"anio":"2023","id":19630,"fechaDecimal":19630,"fecha":"30.09.2023","temporada":"2024","miEquipo":"mansfield town","rival":"gillingham","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"priestfield","ciudad":"gillingham","pais":"inglaterra","golesFavor":1,"golesContra":1,"promedio":6.69,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"67"},{"nombre":"johnson, callum","id":"29122000","puntaje":"67"},{"nombre":"flint, aden","id":"30026218","puntaje":"67"},{"nombre":"cargill, baily","id":"29087654","puntaje":"64"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"66"},{"nombre":"reed, louis","id":"29123130","puntaje":"68"},{"nombre":"maris, george","id":"29110261","puntaje":"67"},{"nombre":"akins, lucas","id":"28000593","puntaje":"70"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"72"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"64"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"65"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"0"},{"nombre":"williams, george","id":"29063515","puntaje":"64"},{"nombre":"macdonald, calum","id":"215471","puntaje":"64"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"67"},{"nombre":"swan, will","id":"29189402","puntaje":"65"}],"goles":[{"id":1,"minuto":"27","goleador":"boateng, hiram","asistente":"akins, lucas","gfParcial":"1","gcParcial":"0","diferencia":1}],"penales":[]},{"anio":"2023","id":19633,"fechaDecimal":19633,"fecha":"03.10.2023","temporada":"2024","miEquipo":"mansfield town","rival":"wrexham","paisRival":"gales","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":2,"golesContra":3,"promedio":6.67,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"64"},{"nombre":"johnson, callum","id":"29122000","puntaje":"63"},{"nombre":"flint, aden","id":"30026218","puntaje":"63"},{"nombre":"simpson, jack","id":"29149937","puntaje":"65"},{"nombre":"macdonald, calum","id":"215471","puntaje":"63"},{"nombre":"maris, george","id":"29110261","puntaje":"64"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"64"},{"nombre":"swan, will","id":"29189402","puntaje":"69"},{"nombre":"robson, max","id":"28127319","puntaje":"64"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"78"},{"nombre":"gale, james","id":"2000142754","puntaje":"71"},{"nombre":"williams, george","id":"29063515","puntaje":"74"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"65"},{"nombre":"akins, lucas","id":"28000593","puntaje":"67"},{"nombre":"reed, louis","id":"29123130","puntaje":"68"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"0"}],"goles":[{"id":1,"minuto":"5","goleador":"gale, james","asistente":"keillor-dunn, davis","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"64","goleador":"keillor-dunn, davis","asistente":"williams, george","gfParcial":"2","gcParcial":"2","diferencia":0}],"penales":[]},{"anio":"2023","id":19637,"fechaDecimal":19637,"fecha":"07.10.2023","temporada":"2024","miEquipo":"mansfield town","rival":"afc wimbledon","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":2,"golesContra":1,"promedio":6.89,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"67"},{"nombre":"williams, george","id":"29063515","puntaje":"72"},{"nombre":"flint, aden","id":"30026218","puntaje":"66"},{"nombre":"simpson, jack","id":"29149937","puntaje":"66"},{"nombre":"macdonald, calum","id":"215471","puntaje":"75"},{"nombre":"reed, louis","id":"29123130","puntaje":"72"},{"nombre":"maris, george","id":"29110261","puntaje":"65"},{"nombre":"akins, lucas","id":"28000593","puntaje":"65"},{"nombre":"robson, max","id":"28127319","puntaje":"80"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"swan, will","id":"29189402","puntaje":"64"},{"nombre":"johnson, callum","id":"29122000","puntaje":"64"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"0"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"66"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"69"},{"nombre":"gale, james","id":"2000142754","puntaje":"66"}],"goles":[{"id":1,"minuto":"32","goleador":"macdonald, calum","asistente":"robson, max","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"69","goleador":"robson, max","asistente":".","gfParcial":"2","gcParcial":"0","diferencia":2}],"penales":[]},{"anio":"2023","id":19640,"fechaDecimal":19640,"fecha":"10.10.2023","temporada":"2024","miEquipo":"mansfield town","rival":"bolton wanderers","paisRival":"inglaterra","competicion":"league trophy","condicion":"visitante","estadio":"the toughsheet community","ciudad":"bolton","pais":"inglaterra","golesFavor":1,"golesContra":2,"promedio":6.59,"jugadores":[{"nombre":"flinders, scott","id":"5118761","puntaje":"68"},{"nombre":"williams, george","id":"29063515","puntaje":"66"},{"nombre":"flint, aden","id":"30026218","puntaje":"63"},{"nombre":"cargill, baily","id":"29087654","puntaje":"63"},{"nombre":"macdonald, calum","id":"215471","puntaje":"66"},{"nombre":"maris, george","id":"29110261","puntaje":"71"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"66"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"65"},{"nombre":"akins, lucas","id":"28000593","puntaje":"66"},{"nombre":"swan, will","id":"29189402","puntaje":"62"},{"nombre":"simpson, jack","id":"29149937","puntaje":"64"},{"nombre":"johnson, callum","id":"29122000","puntaje":"68"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"67"},{"nombre":"reed, louis","id":"29123130","puntaje":"65"},{"nombre":"gale, james","id":"2000142754","puntaje":"74"}],"goles":[{"id":1,"minuto":"86","goleador":"maris, george","asistente":"gale, james","gfParcial":"1","gcParcial":"1","diferencia":0}],"penales":[]},{"anio":"2023","id":19644,"fechaDecimal":19644,"fecha":"14.10.2023","temporada":"2024","miEquipo":"mansfield town","rival":"notts county","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"meadow lane","ciudad":"nottingham","pais":"inglaterra","golesFavor":2,"golesContra":0,"promedio":7.24,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"76"},{"nombre":"johnson, callum","id":"29122000","puntaje":"73"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"65"},{"nombre":"simpson, jack","id":"29149937","puntaje":"71"},{"nombre":"macdonald, calum","id":"215471","puntaje":"76"},{"nombre":"reed, louis","id":"29123130","puntaje":"83"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"68"},{"nombre":"akins, lucas","id":"28000593","puntaje":"66"},{"nombre":"robson, max","id":"28127319","puntaje":"67"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"64"},{"nombre":"gale, james","id":"2000142754","puntaje":"84"},{"nombre":"cargill, baily","id":"29087654","puntaje":"69"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"67"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"0"},{"nombre":"maris, george","id":"29110261","puntaje":"67"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"68"}],"goles":[{"id":1,"minuto":"6","goleador":"gale, james","asistente":".","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"90.3","goleador":"gale, james","asistente":"reed, louis","gfParcial":"2","gcParcial":"0","diferencia":2}],"penales":[]},{"anio":"2023","id":19651,"fechaDecimal":19651,"fecha":"21.10.2023","temporada":"2024","miEquipo":"mansfield town","rival":"forest green rovers","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":5,"golesContra":1,"promedio":7.29,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"68"},{"nombre":"johnson, callum","id":"29122000","puntaje":"75"},{"nombre":"flint, aden","id":"30026218","puntaje":"67"},{"nombre":"simpson, jack","id":"29149937","puntaje":"66"},{"nombre":"cargill, baily","id":"29087654","puntaje":"73"},{"nombre":"reed, louis","id":"29123130","puntaje":"75"},{"nombre":"maris, george","id":"29110261","puntaje":"71"},{"nombre":"akins, lucas","id":"28000593","puntaje":"91"},{"nombre":"robson, max","id":"28127319","puntaje":"75"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"78"},{"nombre":"gale, james","id":"2000142754","puntaje":"68"},{"nombre":"cooper, george","id":"29236202","puntaje":"66"},{"nombre":"williams, george","id":"29063515","puntaje":"72"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"67"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"0"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"74"}],"goles":[{"id":1,"minuto":"5","goleador":"robson, max","asistente":"keillor-dunn, davis","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"12","goleador":"reed, louis","asistente":"johnson, callum","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"29","goleador":"akins, lucas","asistente":"maris, george","gfParcial":"3","gcParcial":"0","diferencia":3},{"id":4,"minuto":"57","goleador":"akins, lucas","asistente":"keillor-dunn, davis","gfParcial":"4","gcParcial":"0","diferencia":4},{"id":5,"minuto":"83","goleador":"bowery, jordan","asistente":"williams, george","gfParcial":"5","gcParcial":"1","diferencia":4}],"penales":[]},{"anio":"2023","temporada":"2024","miEquipo":"mansfield town","rival":"harrogate town","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"cng stadium","ciudad":"harrogate","pais":"inglaterra","golesFavor":"1","golesContra":"0","promedio":6.99,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"75"},{"nombre":"johnson, callum","id":"29122000","puntaje":"78"},{"nombre":"flint, aden","id":"30026218","puntaje":"66"},{"nombre":"simpson, jack","id":"29149937","puntaje":"70"},{"nombre":"cargill, baily","id":"29087654","puntaje":"65"},{"nombre":"reed, louis","id":"29123130","puntaje":"69"},{"nombre":"maris, george","id":"29110261","puntaje":"68"},{"nombre":"akins, lucas","id":"28000593","puntaje":"65"},{"nombre":"robson, max","id":"28127319","puntaje":"66"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"68"},{"nombre":"gale, james","id":"2000142754","puntaje":"81"},{"nombre":"macdonald, calum","id":"215471","puntaje":"67"},{"nombre":"williams, george","id":"29063515","puntaje":"66"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"64"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"67"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"0"},{"nombre":"","puntaje":"","id":""}],"penales":[],"goles":[{"id":1,"minuto":"33","goleador":"gale, james","asistente":"johnson, callum","gfParcial":"1","gcParcial":"0","diferencia":1}],"id":19654,"fecha":"24.10.2023","fechaDecimal":19654},{"anio":"2023","id":19658,"fechaDecimal":19658,"fecha":"28.10.2023","temporada":"2024","miEquipo":"mansfield town","rival":"walsall","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":2,"golesContra":0,"promedio":7.1,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"73"},{"nombre":"johnson, callum","id":"29122000","puntaje":"66"},{"nombre":"flint, aden","id":"30026218","puntaje":"72"},{"nombre":"simpson, jack","id":"29149937","puntaje":"65"},{"nombre":"macdonald, calum","id":"215471","puntaje":"71"},{"nombre":"reed, louis","id":"29123130","puntaje":"73"},{"nombre":"maris, george","id":"29110261","puntaje":"68"},{"nombre":"akins, lucas","id":"28000593","puntaje":"66"},{"nombre":"robson, max","id":"28127319","puntaje":"74"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"74"},{"nombre":"gale, james","id":"2000142754","puntaje":"82"},{"nombre":"cargill, baily","id":"29087654","puntaje":"68"},{"nombre":"williams, george","id":"29063515","puntaje":"70"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"69"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"69"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"65"}],"goles":[{"id":1,"minuto":"3","goleador":"gale, james","asistente":"robson, max","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"34","goleador":"keillor-dunn, davis","asistente":"gale, james","gfParcial":"2","gcParcial":"0","diferencia":2}],"penales":[]},{"anio":"2023","id":19666,"fechaDecimal":19666,"fecha":"05.11.2023","temporada":"2024","miEquipo":"mansfield town","rival":"port vale","paisRival":"inglaterra","competicion":"fa cup","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":5,"golesContra":2,"promedio":7.28,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"65"},{"nombre":"johnson, callum","id":"29122000","puntaje":"73"},{"nombre":"flint, aden","id":"30026218","puntaje":"64"},{"nombre":"simpson, jack","id":"29149937","puntaje":"70"},{"nombre":"cargill, baily","id":"29087654","puntaje":"72"},{"nombre":"reed, louis","id":"29123130","puntaje":"68"},{"nombre":"maris, george","id":"29110261","puntaje":"78"},{"nombre":"akins, lucas","id":"28000593","puntaje":"86"},{"nombre":"robson, max","id":"28127319","puntaje":"82"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"75"},{"nombre":"gale, james","id":"2000142754","puntaje":"72"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"72"},{"nombre":"williams, george","id":"29063515","puntaje":"0"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"65"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"64"},{"nombre":"flanagan, finn","id":"2000140849","puntaje":"65"}],"goles":[{"id":1,"minuto":"4","goleador":"simpson, jack","asistente":"keillor-dunn, davis","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"12","goleador":"akins, lucas","asistente":"cargill, baily","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"15","goleador":"akins, lucas","asistente":"robson, max","gfParcial":"3","gcParcial":"0","diferencia":3},{"id":4,"minuto":"22","goleador":"gale, james","asistente":"maris, george","gfParcial":"4","gcParcial":"0","diferencia":4},{"id":5,"minuto":"81","goleador":"robson, max","asistente":"lewis, aaron","gfParcial":"5","gcParcial":"0","diferencia":5}],"penales":[]},{"anio":"2023","id":19672,"fechaDecimal":19672,"fecha":"11.11.2023","temporada":"2024","miEquipo":"mansfield town","rival":"salford city","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"moor lane","ciudad":"salford","pais":"inglaterra","golesFavor":3,"golesContra":0,"promedio":7.2,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"75"},{"nombre":"williams, george","id":"29063515","puntaje":"80"},{"nombre":"o'toole, john-joe","id":"28006092","puntaje":"70"},{"nombre":"simpson, jack","id":"29149937","puntaje":"76"},{"nombre":"cargill, baily","id":"29087654","puntaje":"65"},{"nombre":"maris, george","id":"29110261","puntaje":"74"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"69"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"64"},{"nombre":"robson, max","id":"28127319","puntaje":"68"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"65"},{"nombre":"gale, james","id":"2000142754","puntaje":"86"},{"nombre":"flint, aden","id":"30026218","puntaje":"69"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"71"},{"nombre":"reed, louis","id":"29123130","puntaje":"69"},{"nombre":"akins, lucas","id":"28000593","puntaje":"68"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"0"}],"goles":[{"id":1,"minuto":"5","goleador":"gale, james","asistente":"williams, george","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"20","goleador":"o'toole, john-joe","asistente":"...penal","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"84","goleador":"gale, james","asistente":"lewis, aaron","gfParcial":"3","gcParcial":"0","diferencia":3}],"penales":[{"id":1783776754378,"pateador":"o'toole, john-joe","arqueroRival":"cairns, alex","momentum":"partido","final":"convertido","rival":"salford city","dia":"11","mes":"11","anio":"2023"}]},{"anio":"2023","temporada":"2024","miEquipo":"mansfield town","rival":"blackpool","paisRival":"inglaterra","competicion":"league trophy","condicion":"visitante","estadio":"bloomfield road","ciudad":"blackpool","pais":"inglaterra","golesFavor":3,"golesContra":3,"promedio":7,"jugadores":[{"nombre":"flinders, scott","id":"5118761","puntaje":"68"},{"nombre":"williams, george","id":"29063515","puntaje":"63"},{"nombre":"flint, aden","id":"30026218","puntaje":"63"},{"nombre":"simpson, jack","id":"29149937","puntaje":"66"},{"nombre":"macdonald, calum","id":"215471","puntaje":"85"},{"nombre":"reed, louis","id":"29123130","puntaje":"70"},{"nombre":"maris, george","id":"29110261","puntaje":"69"},{"nombre":"akins, lucas","id":"28000593","puntaje":"82"},{"nombre":"robson, max","id":"28127319","puntaje":"65"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"72"},{"nombre":"gale, james","id":"2000142754","puntaje":"64"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"70"},{"nombre":"cargill, baily","id":"29087654","puntaje":"70"},{"nombre":"johnson, callum","id":"29122000","puntaje":"70"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"66"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"66"}],"penales":[{"id":1783868380292,"pateador":"akins, lucas","arqueroRival":"grimshaw, daniel","momentum":"partido","final":"convertido","rival":"blackpool","dia":"14","mes":"11","anio":"2023"},{"id":1783868390604,"pateador":"akins, lucas","arqueroRival":"grimshaw, daniel","momentum":"tanda","final":"convertido","rival":"blackpool","dia":"14","mes":"11","anio":"2023"},{"id":1783868400481,"pateador":"bowery, jordan","arqueroRival":"grimshaw, daniel","momentum":"tanda","final":"fallado","rival":"blackpool","dia":"14","mes":"11","anio":"2023"},{"id":1783868410048,"pateador":"lewis, aaron","arqueroRival":"grimshaw, daniel","momentum":"tanda","final":"convertido","rival":"blackpool","dia":"14","mes":"11","anio":"2023"},{"id":1783868417036,"pateador":"reed, louis","arqueroRival":"grimshaw, daniel","momentum":"tanda","final":"convertido","rival":"blackpool","dia":"14","mes":"11","anio":"2023"},{"id":1783868423680,"pateador":"maris, george","arqueroRival":"grimshaw, daniel","momentum":"tanda","final":"convertido","rival":"blackpool","dia":"14","mes":"11","anio":"2023"}],"goles":[{"id":1,"minuto":"60","goleador":"akins, lucas","asistente":"macdonald, calum","gfParcial":"1","gcParcial":"2","diferencia":-1},{"id":2,"minuto":"63","goleador":"keillor-dunn, davis","asistente":"johnson, callum","gfParcial":"2","gcParcial":"2","diferencia":0},{"id":3,"minuto":"90.3","goleador":"akins, lucas","asistente":"...penal","gfParcial":"3","gcParcial":"3","diferencia":0}],"id":19675,"fecha":"14.11.2023","fechaDecimal":19675},{"anio":"2023","id":19686,"fechaDecimal":19686,"fecha":"25.11.2023","temporada":"2024","miEquipo":"mansfield town","rival":"swindon town","paisRival":"inglaterra","competicion":"league two","condicion":"visitante","estadio":"the county ground","ciudad":"swindon","pais":"inglaterra","golesFavor":0,"golesContra":1,"promedio":6.63,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"66"},{"nombre":"johnson, callum","id":"29122000","puntaje":"68"},{"nombre":"cargill, baily","id":"29087654","puntaje":"64"},{"nombre":"simpson, jack","id":"29149937","puntaje":"64"},{"nombre":"macdonald, calum","id":"215471","puntaje":"63"},{"nombre":"reed, louis","id":"29123130","puntaje":"65"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"67"},{"nombre":"akins, lucas","id":"28000593","puntaje":"71"},{"nombre":"maris, george","id":"29110261","puntaje":"65"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"64"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"63"},{"nombre":"flint, aden","id":"30026218","puntaje":"70"},{"nombre":"mclaughlin, stephen","id":"52025487","puntaje":"67"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"67"},{"nombre":"robson, max","id":"28127319","puntaje":"69"},{"nombre":"gale, james","id":"2000142754","puntaje":"68"}],"goles":[],"penales":[]},{"anio":"2023","id":19689,"fechaDecimal":19689,"fecha":"28.11.2023","temporada":"2024","miEquipo":"mansfield town","rival":"tranmere rovers","paisRival":"inglaterra","competicion":"league two","condicion":"local","estadio":"field mill","ciudad":"mansfield","pais":"inglaterra","golesFavor":1,"golesContra":1,"promedio":6.76,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"71"},{"nombre":"williams, george","id":"29063515","puntaje":"63"},{"nombre":"flint, aden","id":"30026218","puntaje":"69"},{"nombre":"simpson, jack","id":"29149937","puntaje":"68"},{"nombre":"mclaughlin, stephen","id":"52025487","puntaje":"62"},{"nombre":"reed, louis","id":"29123130","puntaje":"70"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"66"},{"nombre":"akins, lucas","id":"28000593","puntaje":"63"},{"nombre":"robson, max","id":"28127319","puntaje":"70"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"74"},{"nombre":"gale, james","id":"2000142754","puntaje":"66"},{"nombre":"lewis, aaron","id":"28100469","puntaje":"66"},{"nombre":"macdonald, calum","id":"215471","puntaje":"70"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"64"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"65"},{"nombre":"abdullah, mckeal","id":"2000140851","puntaje":"0"}],"goles":[{"id":1,"minuto":"47","goleador":"robson, max","asistente":"kruszynski, jakub","gfParcial":"1","gcParcial":"0","diferencia":1}],"penales":[]},{"anio":"2023","id":19693,"fechaDecimal":19693,"fecha":"02.12.2023","temporada":"2024","miEquipo":"mansfield town","rival":"wycombe wanderers","paisRival":"inglaterra","competicion":"fa cup","condicion":"visitante","estadio":"adams park","ciudad":"high wycombe","pais":"inglaterra","golesFavor":5,"golesContra":0,"promedio":7.71,"jugadores":[{"nombre":"pym, christy","id":"29086052","puntaje":"84"},{"nombre":"johnson, callum","id":"29122000","puntaje":"80"},{"nombre":"flint, aden","id":"30026218","puntaje":"72"},{"nombre":"simpson, jack","id":"29149937","puntaje":"67"},{"nombre":"macdonald, calum","id":"215471","puntaje":"93"},{"nombre":"reed, louis","id":"29123130","puntaje":"71"},{"nombre":"boateng, hiram","id":"29087451","puntaje":"72"},{"nombre":"akins, lucas","id":"28000593","puntaje":"68"},{"nombre":"robson, max","id":"28127319","puntaje":"82"},{"nombre":"kruszynski, jakub","id":"2000140843","puntaje":"89"},{"nombre":"gale, james","id":"2000142754","puntaje":"74"},{"nombre":"cargill, baily","id":"29087654","puntaje":"69"},{"nombre":"keillor-dunn, davis","id":"61080421","puntaje":"66"},{"nombre":"bowery, jordan","id":"5112501","puntaje":"65"},{"nombre":"clarke, ollie","id":"29071123","puntaje":"0"},{"nombre":"flanagan, finn","id":"2000140849","puntaje":"73"}],"goles":[{"id":1,"minuto":"6","goleador":"kruszynski, jakub","asistente":"boateng, hiram","gfParcial":"1","gcParcial":"0","diferencia":1},{"id":2,"minuto":"45","goleador":"macdonald, calum","asistente":"robson, max","gfParcial":"2","gcParcial":"0","diferencia":2},{"id":3,"minuto":"60","goleador":"gale, james","asistente":"johnson, callum","gfParcial":"3","gcParcial":"0","diferencia":3},{"id":4,"minuto":"60","goleador":"robson, max","asistente":"macdonald, calum","gfParcial":"4","gcParcial":"0","diferencia":4},{"id":5,"minuto":"90.2","goleador":"kruszynski, jakub","asistente":"macdonald, calum","gfParcial":"5","gcParcial":"0","diferencia":5}],"penales":[]}]
+[
+    {
+        "anio": "2023",
+        "id": 19574,
+        "fechaDecimal": 19574,
+        "fecha": "05.08.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "crewe alexandra",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "alexandra stadium",
+        "ciudad": "crewe",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 0,
+        "promedio": 7.19,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "75" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "67" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "71" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "75" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "89" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "77" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "65" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "69"
+            },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "66"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "71" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "72" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "69" },
+            {
+                "nombre": "kokkinos, ronnie",
+                "id": "2000201756",
+                "puntaje": "66"
+            },
+            { "nombre": "flanagan, finn", "id": "2000140849", "puntaje": "76" },
+            { "nombre": "abdullah, mckeal", "id": "2000140851", "puntaje": "0" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "17",
+                "goleador": "maris, george",
+                "asistente": ".",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "21",
+                "goleador": "gale, james",
+                "asistente": "macdonald, calum",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "82",
+                "goleador": "flanagan, finn",
+                "asistente": "lewis, aaron",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19577,
+        "fechaDecimal": 19577,
+        "fecha": "08.08.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "carlisle united",
+        "paisRival": "inglaterra",
+        "competicion": "league cup",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 2,
+        "promedio": 6.74,
+        "jugadores": [
+            { "nombre": "flinders, scott", "id": "5118761", "puntaje": "63" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "67" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "64" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "64" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "75" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "76" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "64" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "66" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "65"
+            },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "75" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "0" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "67" },
+            { "nombre": "cooper, george", "id": "29236202", "puntaje": "63" },
+            {
+                "nombre": "kokkinos, ronnie",
+                "id": "2000201756",
+                "puntaje": "64"
+            },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "63" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "17",
+                "goleador": "gale, james",
+                "asistente": "reed, louis",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19581,
+        "fechaDecimal": 19581,
+        "fecha": "12.08.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "morecambe",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 4,
+        "golesContra": 0,
+        "promedio": 7.44,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "81" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "74" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "74" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "71" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "75" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "67" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "71" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "67" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "76" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "100"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "66" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "0" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "0" },
+            { "nombre": "flanagan, finn", "id": "2000140849", "puntaje": "67" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "66"
+            },
+            {
+                "nombre": "abdullah, mckeal",
+                "id": "2000140851",
+                "puntaje": "67"
+            }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "38",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "johnson, callum",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "45.2",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "clarke, ollie",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "66",
+                "goleador": "maris, george",
+                "asistente": ".",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            },
+            {
+                "id": 4,
+                "minuto": "85",
+                "goleador": "keillor-dunn, davis",
+                "asistente": ".",
+                "gfParcial": "4",
+                "gcParcial": "0",
+                "diferencia": 4
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19584,
+        "fechaDecimal": 19584,
+        "fecha": "15.08.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "doncaster rovers",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "eco-power stadium",
+        "ciudad": "doncaster",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 1,
+        "promedio": 6.73,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "74" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "66" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "69" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "67" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "77" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "63" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "64" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "73" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "62"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "61" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "62" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "69" },
+            { "nombre": "flanagan, finn", "id": "2000140849", "puntaje": "0" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "67" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "67",
+                "goleador": "reed, louis",
+                "asistente": "maris, george",
+                "gfParcial": "1",
+                "gcParcial": "1",
+                "diferencia": 0
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19588,
+        "fechaDecimal": 19588,
+        "fecha": "19.08.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "grimsby town",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "blundell park",
+        "ciudad": "cleethorpes",
+        "pais": "inglaterra",
+        "golesFavor": 4,
+        "golesContra": 1,
+        "promedio": 7.33,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "68" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "66" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "70" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "67" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "72" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "82" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "67" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "78" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "100"
+            },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "66"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "70" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "68" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "69" },
+            { "nombre": "cooper, george", "id": "29236202", "puntaje": "70" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "0" },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "65" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "3",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "akins, lucas",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "21",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "reed, louis",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "30",
+                "goleador": "gale, james",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            },
+            {
+                "id": 4,
+                "minuto": "49",
+                "goleador": "akins, lucas",
+                "asistente": "reed, louis",
+                "gfParcial": "4",
+                "gcParcial": "0",
+                "diferencia": 4
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19597,
+        "fechaDecimal": 19597,
+        "fecha": "28.08.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "stockport county",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 0,
+        "golesContra": 3,
+        "promedio": 6.53,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "64" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "64" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "62" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "65" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "67" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "72" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "62" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "67" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "61" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "65"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "64" },
+            { "nombre": "brunt, lewis", "id": "29193664", "puntaje": "65" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "0" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "66" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "64"
+            },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "64" }
+        ],
+        "goles": [],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19602,
+        "fechaDecimal": 19602,
+        "fecha": "02.09.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "bradford city",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 3,
+        "promedio": 6.82,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "61" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "72" },
+            { "nombre": "brunt, lewis", "id": "29193664", "puntaje": "65" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "58" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "75" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "62" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "71" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "78"
+            },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "64" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "67" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "67" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "66"
+            },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "69" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "65" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "23",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "akins, lucas",
+                "gfParcial": "1",
+                "gcParcial": "1",
+                "diferencia": 0
+            },
+            {
+                "id": 2,
+                "minuto": "49",
+                "goleador": "flint, aden",
+                "asistente": "maris, george",
+                "gfParcial": "2",
+                "gcParcial": "2",
+                "diferencia": 0
+            },
+            {
+                "id": 3,
+                "minuto": "89",
+                "goleador": "reed, louis",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "3",
+                "gcParcial": "3",
+                "diferencia": 0
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "(s21) manchester city",
+        "paisRival": "inglaterra",
+        "competicion": "league trophy",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 2,
+        "promedio": 7.03,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "66" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "67" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "67" },
+            { "nombre": "brunt, lewis", "id": "29193664", "puntaje": "74" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "66" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "66" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "66" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "91" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "67" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "71"
+            },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "80" },
+            { "nombre": "flanagan, finn", "id": "2000140849", "puntaje": "65" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "65"
+            },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "65" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "0" }
+        ],
+        "penales": [],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "27",
+                "goleador": "bowery, jordan",
+                "asistente": "akins, lucas",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "36",
+                "goleador": "bowery, jordan",
+                "asistente": "akins, lucas",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "40",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "brunt, lewis",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            }
+        ],
+        "id": 19605,
+        "fecha": "05.09.2023",
+        "fechaDecimal": 19605
+    },
+    {
+        "anio": "2023",
+        "id": 19609,
+        "fechaDecimal": 19609,
+        "fecha": "09.09.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "accrington stanley",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "store first stadium",
+        "ciudad": "accrington",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 2,
+        "promedio": 7.08,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "74" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "65" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "67" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "71" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "72" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "85" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "68" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "65" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "75"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "76" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "75"
+            },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "0" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "65" },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "66" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "0" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "4",
+                "goleador": "gale, james",
+                "asistente": "johnson, callum",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "53",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "maris, george",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "73",
+                "goleador": "kruszynski, jakub",
+                "asistente": "maris, george",
+                "gfParcial": "3",
+                "gcParcial": "1",
+                "diferencia": 2
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19616,
+        "fechaDecimal": 19616,
+        "fecha": "16.09.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "colchester united",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "the weston homes community stadium",
+        "ciudad": "colchester",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 3,
+        "promedio": 6.63,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "75" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "65" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "60" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "65" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "64" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "71" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "63" },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "68" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "63"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "64" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "64"
+            },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "64"
+            },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "66" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "65" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "65" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "14",
+                "goleador": "maris, george",
+                "asistente": ".",
+                "gfParcial": "1",
+                "gcParcial": "1",
+                "diferencia": 0
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19623,
+        "fechaDecimal": 19623,
+        "fecha": "23.09.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "barrow",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 2,
+        "promedio": 6.82,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "74" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "63"
+            },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "65" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "64" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "76" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "65" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "64" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "69" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "81"
+            },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "63" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "65" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "67" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "67" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "73" },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "63" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "28",
+                "goleador": "boateng, hiram",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "1",
+                "gcParcial": "1",
+                "diferencia": 0
+            },
+            {
+                "id": 2,
+                "minuto": "66",
+                "goleador": "maris, george",
+                "asistente": ".",
+                "gfParcial": "2",
+                "gcParcial": "1",
+                "diferencia": 1
+            },
+            {
+                "id": 3,
+                "minuto": "75",
+                "goleador": "bowery, jordan",
+                "asistente": "...penal",
+                "gfParcial": "3",
+                "gcParcial": "1",
+                "diferencia": 2
+            }
+        ],
+        "penales": [
+            {
+                "id": 1783520745300,
+                "pateador": "bowery, jordan",
+                "arqueroRival": "lillis, josh",
+                "momentum": "partido",
+                "final": "convertido",
+                "rival": "barrow",
+                "dia": "23",
+                "mes": "9",
+                "anio": "2023"
+            }
+        ]
+    },
+    {
+        "anio": "2023",
+        "id": 19630,
+        "fechaDecimal": 19630,
+        "fecha": "30.09.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "gillingham",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "priestfield",
+        "ciudad": "gillingham",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 1,
+        "promedio": 6.69,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "67" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "67" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "67" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "64" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "66" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "67" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "70" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "72" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "64"
+            },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "65" },
+            { "nombre": "o'toole, john-joe", "id": "28006092", "puntaje": "0" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "64" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "64" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "67" },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "65" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "27",
+                "goleador": "boateng, hiram",
+                "asistente": "akins, lucas",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19633,
+        "fechaDecimal": 19633,
+        "fecha": "03.10.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "wrexham",
+        "paisRival": "gales",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 2,
+        "golesContra": 3,
+        "promedio": 6.67,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "64" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "63" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "63" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "65" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "63" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "64" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "64" },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "69" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "64" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "78"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "71" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "74" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "65" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "67" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "0" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "5",
+                "goleador": "gale, james",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "64",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "williams, george",
+                "gfParcial": "2",
+                "gcParcial": "2",
+                "diferencia": 0
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19637,
+        "fechaDecimal": 19637,
+        "fecha": "07.10.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "afc wimbledon",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 2,
+        "golesContra": 1,
+        "promedio": 6.89,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "67" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "72" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "66" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "66" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "75" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "72" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "65" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "65" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "80" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "64" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "64" },
+            { "nombre": "o'toole, john-joe", "id": "28006092", "puntaje": "0" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "66" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "69" },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "66" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "32",
+                "goleador": "macdonald, calum",
+                "asistente": "robson, max",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "69",
+                "goleador": "robson, max",
+                "asistente": ".",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19640,
+        "fechaDecimal": 19640,
+        "fecha": "10.10.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "bolton wanderers",
+        "paisRival": "inglaterra",
+        "competicion": "league trophy",
+        "condicion": "visitante",
+        "estadio": "the toughsheet community",
+        "ciudad": "bolton",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 2,
+        "promedio": 6.59,
+        "jugadores": [
+            { "nombre": "flinders, scott", "id": "5118761", "puntaje": "68" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "66" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "63" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "63" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "66" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "71" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "66" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "65"
+            },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "66" },
+            { "nombre": "swan, will", "id": "29189402", "puntaje": "62" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "64" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "68" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "67"
+            },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "65" },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "74" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "86",
+                "goleador": "maris, george",
+                "asistente": "gale, james",
+                "gfParcial": "1",
+                "gcParcial": "1",
+                "diferencia": 0
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19644,
+        "fechaDecimal": 19644,
+        "fecha": "14.10.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "notts county",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "meadow lane",
+        "ciudad": "nottingham",
+        "pais": "inglaterra",
+        "golesFavor": 2,
+        "golesContra": 0,
+        "promedio": 7.24,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "76" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "73" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "65"
+            },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "71" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "76" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "83" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "68" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "66" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "67" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "64"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "84" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "69" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "67"
+            },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "0" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "67" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "68" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "6",
+                "goleador": "gale, james",
+                "asistente": ".",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "90.3",
+                "goleador": "gale, james",
+                "asistente": "reed, louis",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19651,
+        "fechaDecimal": 19651,
+        "fecha": "21.10.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "forest green rovers",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 5,
+        "golesContra": 1,
+        "promedio": 7.29,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "68" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "75" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "67" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "66" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "73" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "75" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "71" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "91" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "75" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "78"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "68" },
+            { "nombre": "cooper, george", "id": "29236202", "puntaje": "66" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "72" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "67"
+            },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "0" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "74" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "5",
+                "goleador": "robson, max",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "12",
+                "goleador": "reed, louis",
+                "asistente": "johnson, callum",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "29",
+                "goleador": "akins, lucas",
+                "asistente": "maris, george",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            },
+            {
+                "id": 4,
+                "minuto": "57",
+                "goleador": "akins, lucas",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "4",
+                "gcParcial": "0",
+                "diferencia": 4
+            },
+            {
+                "id": 5,
+                "minuto": "83",
+                "goleador": "bowery, jordan",
+                "asistente": "williams, george",
+                "gfParcial": "5",
+                "gcParcial": "1",
+                "diferencia": 4
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "harrogate town",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "cng stadium",
+        "ciudad": "harrogate",
+        "pais": "inglaterra",
+        "golesFavor": "1",
+        "golesContra": "0",
+        "promedio": 6.99,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "75" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "78" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "66" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "70" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "65" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "69" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "68" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "65" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "66" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "68"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "81" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "67" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "66" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "64"
+            },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "67" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "0" },
+            { "nombre": "", "puntaje": "", "id": "" }
+        ],
+        "penales": [],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "33",
+                "goleador": "gale, james",
+                "asistente": "johnson, callum",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            }
+        ],
+        "id": 19654,
+        "fecha": "24.10.2023",
+        "fechaDecimal": 19654
+    },
+    {
+        "anio": "2023",
+        "id": 19658,
+        "fechaDecimal": 19658,
+        "fecha": "28.10.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "walsall",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 2,
+        "golesContra": 0,
+        "promedio": 7.1,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "73" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "66" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "72" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "65" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "71" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "73" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "68" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "66" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "74" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "74"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "82" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "68" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "70" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "69" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "69" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "65" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "3",
+                "goleador": "gale, james",
+                "asistente": "robson, max",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "34",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "gale, james",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19666,
+        "fechaDecimal": 19666,
+        "fecha": "05.11.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "port vale",
+        "paisRival": "inglaterra",
+        "competicion": "fa cup",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 5,
+        "golesContra": 2,
+        "promedio": 7.28,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "73" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "64" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "70" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "72" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "78" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "86" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "82" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "75"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "72" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "72" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "0" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "64"
+            },
+            { "nombre": "flanagan, finn", "id": "2000140849", "puntaje": "65" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "4",
+                "goleador": "simpson, jack",
+                "asistente": "keillor-dunn, davis",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "12",
+                "goleador": "akins, lucas",
+                "asistente": "cargill, baily",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "15",
+                "goleador": "akins, lucas",
+                "asistente": "robson, max",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            },
+            {
+                "id": 4,
+                "minuto": "22",
+                "goleador": "gale, james",
+                "asistente": "maris, george",
+                "gfParcial": "4",
+                "gcParcial": "0",
+                "diferencia": 4
+            },
+            {
+                "id": 5,
+                "minuto": "81",
+                "goleador": "robson, max",
+                "asistente": "lewis, aaron",
+                "gfParcial": "5",
+                "gcParcial": "0",
+                "diferencia": 5
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19672,
+        "fechaDecimal": 19672,
+        "fecha": "11.11.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "salford city",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "moor lane",
+        "ciudad": "salford",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 0,
+        "promedio": 7.2,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "75" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "80" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "70"
+            },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "76" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "65" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "74" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "69" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "64"
+            },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "68" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "65"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "86" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "69" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "71" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "69" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "68" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "0" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "5",
+                "goleador": "gale, james",
+                "asistente": "williams, george",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "20",
+                "goleador": "o'toole, john-joe",
+                "asistente": "...penal",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "84",
+                "goleador": "gale, james",
+                "asistente": "lewis, aaron",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            }
+        ],
+        "penales": [
+            {
+                "id": 1783776754378,
+                "pateador": "o'toole, john-joe",
+                "arqueroRival": "cairns, alex",
+                "momentum": "partido",
+                "final": "convertido",
+                "rival": "salford city",
+                "dia": "11",
+                "mes": "11",
+                "anio": "2023"
+            }
+        ]
+    },
+    {
+        "anio": "2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "blackpool",
+        "paisRival": "inglaterra",
+        "competicion": "league trophy",
+        "condicion": "visitante",
+        "estadio": "bloomfield road",
+        "ciudad": "blackpool",
+        "pais": "inglaterra",
+        "golesFavor": 3,
+        "golesContra": 3,
+        "promedio": 7,
+        "jugadores": [
+            { "nombre": "flinders, scott", "id": "5118761", "puntaje": "68" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "63" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "63" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "66" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "85" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "70" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "69" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "82" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "65" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "72"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "64" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "70" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "70" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "70" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "66"
+            },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "66" }
+        ],
+        "penales": [
+            {
+                "id": 1783868380292,
+                "pateador": "akins, lucas",
+                "arqueroRival": "grimshaw, daniel",
+                "momentum": "partido",
+                "final": "convertido",
+                "rival": "blackpool",
+                "dia": "14",
+                "mes": "11",
+                "anio": "2023"
+            },
+            {
+                "id": 1783868390604,
+                "pateador": "akins, lucas",
+                "arqueroRival": "grimshaw, daniel",
+                "momentum": "tanda",
+                "final": "convertido",
+                "rival": "blackpool",
+                "dia": "14",
+                "mes": "11",
+                "anio": "2023"
+            },
+            {
+                "id": 1783868400481,
+                "pateador": "bowery, jordan",
+                "arqueroRival": "grimshaw, daniel",
+                "momentum": "tanda",
+                "final": "fallado",
+                "rival": "blackpool",
+                "dia": "14",
+                "mes": "11",
+                "anio": "2023"
+            },
+            {
+                "id": 1783868410048,
+                "pateador": "lewis, aaron",
+                "arqueroRival": "grimshaw, daniel",
+                "momentum": "tanda",
+                "final": "convertido",
+                "rival": "blackpool",
+                "dia": "14",
+                "mes": "11",
+                "anio": "2023"
+            },
+            {
+                "id": 1783868417036,
+                "pateador": "reed, louis",
+                "arqueroRival": "grimshaw, daniel",
+                "momentum": "tanda",
+                "final": "convertido",
+                "rival": "blackpool",
+                "dia": "14",
+                "mes": "11",
+                "anio": "2023"
+            },
+            {
+                "id": 1783868423680,
+                "pateador": "maris, george",
+                "arqueroRival": "grimshaw, daniel",
+                "momentum": "tanda",
+                "final": "convertido",
+                "rival": "blackpool",
+                "dia": "14",
+                "mes": "11",
+                "anio": "2023"
+            }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "60",
+                "goleador": "akins, lucas",
+                "asistente": "macdonald, calum",
+                "gfParcial": "1",
+                "gcParcial": "2",
+                "diferencia": -1
+            },
+            {
+                "id": 2,
+                "minuto": "63",
+                "goleador": "keillor-dunn, davis",
+                "asistente": "johnson, callum",
+                "gfParcial": "2",
+                "gcParcial": "2",
+                "diferencia": 0
+            },
+            {
+                "id": 3,
+                "minuto": "90.3",
+                "goleador": "akins, lucas",
+                "asistente": "...penal",
+                "gfParcial": "3",
+                "gcParcial": "3",
+                "diferencia": 0
+            }
+        ],
+        "id": 19675,
+        "fecha": "14.11.2023",
+        "fechaDecimal": 19675
+    },
+    {
+        "anio": "2023",
+        "id": 19686,
+        "fechaDecimal": 19686,
+        "fecha": "25.11.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "swindon town",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "the county ground",
+        "ciudad": "swindon",
+        "pais": "inglaterra",
+        "golesFavor": 0,
+        "golesContra": 1,
+        "promedio": 6.63,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "66" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "68" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "64" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "64" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "63" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "65" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "67" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "71" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "65" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "64"
+            },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "63" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "70" },
+            {
+                "nombre": "mclaughlin, stephen",
+                "id": "52025487",
+                "puntaje": "67"
+            },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "67" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "69" },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "68" }
+        ],
+        "goles": [],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19689,
+        "fechaDecimal": 19689,
+        "fecha": "28.11.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "tranmere rovers",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 1,
+        "promedio": 6.76,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "71" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "63" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "69" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "68" },
+            {
+                "nombre": "mclaughlin, stephen",
+                "id": "52025487",
+                "puntaje": "62"
+            },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "70" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "66" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "63" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "70" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "74"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "66" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "66" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "70" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "64" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "65" },
+            { "nombre": "abdullah, mckeal", "id": "2000140851", "puntaje": "0" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "47",
+                "goleador": "robson, max",
+                "asistente": "kruszynski, jakub",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19693,
+        "fechaDecimal": 19693,
+        "fecha": "02.12.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "wycombe wanderers",
+        "paisRival": "inglaterra",
+        "competicion": "fa cup",
+        "condicion": "visitante",
+        "estadio": "adams park",
+        "ciudad": "high wycombe",
+        "pais": "inglaterra",
+        "golesFavor": 5,
+        "golesContra": 0,
+        "promedio": 7.71,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "84" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "80" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "72" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "67" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "93" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "71" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "72" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "68" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "82" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "89"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "74" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "69" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "66"
+            },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "65" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "0" },
+            { "nombre": "flanagan, finn", "id": "2000140849", "puntaje": "73" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "6",
+                "goleador": "kruszynski, jakub",
+                "asistente": "boateng, hiram",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "45",
+                "goleador": "macdonald, calum",
+                "asistente": "robson, max",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            },
+            {
+                "id": 3,
+                "minuto": "60",
+                "goleador": "gale, james",
+                "asistente": "johnson, callum",
+                "gfParcial": "3",
+                "gcParcial": "0",
+                "diferencia": 3
+            },
+            {
+                "id": 4,
+                "minuto": "60",
+                "goleador": "robson, max",
+                "asistente": "macdonald, calum",
+                "gfParcial": "4",
+                "gcParcial": "0",
+                "diferencia": 4
+            },
+            {
+                "id": 5,
+                "minuto": "90.2",
+                "goleador": "kruszynski, jakub",
+                "asistente": "macdonald, calum",
+                "gfParcial": "5",
+                "gcParcial": "0",
+                "diferencia": 5
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19697,
+        "fechaDecimal": 19697,
+        "fecha": "06.12.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "stockport county",
+        "paisRival": "inglaterra",
+        "competicion": "league trophy",
+        "condicion": "visitante",
+        "estadio": "edgeley park",
+        "ciudad": "stockport",
+        "pais": "inglaterra",
+        "golesFavor": 2,
+        "golesContra": 1,
+        "promedio": 7.19,
+        "jugadores": [
+            { "nombre": "flinders, scott", "id": "5118761", "puntaje": "92" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "85" },
+            {
+                "nombre": "o'toole, john-joe",
+                "id": "28006092",
+                "puntaje": "65"
+            },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "64" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "72" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "66" },
+            { "nombre": "akins, lucas", "id": "28000593", "puntaje": "69" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "69" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "78" },
+            { "nombre": "cooper, george", "id": "29236202", "puntaje": "64" },
+            {
+                "nombre": "mclaughlin, stephen",
+                "id": "52025487",
+                "puntaje": "68"
+            },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "66" },
+            { "nombre": "clarke, ollie", "id": "29071123", "puntaje": "66" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "66" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "15",
+                "goleador": "williams, george",
+                "asistente": "gale, james",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "35",
+                "goleador": "gale, james",
+                "asistente": "williams, george",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19700,
+        "fechaDecimal": 19700,
+        "fecha": "09.12.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "mk dons",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 2,
+        "promedio": 6.82,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "65" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "79" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "67" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "68" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "71" },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "69" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "73"
+            },
+            {
+                "nombre": "mclaughlin, stephen",
+                "id": "52025487",
+                "puntaje": "64"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "69" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "65" },
+            { "nombre": "cargill, baily", "id": "29087654", "puntaje": "66" },
+            { "nombre": "lewis, aaron", "id": "28100469", "puntaje": "65" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "66" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "66" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "15",
+                "goleador": "gale, james",
+                "asistente": "flint, aden",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            }
+        ],
+        "penales": []
+    },
+    {
+        "anio": "2023",
+        "id": 19707,
+        "fechaDecimal": 19707,
+        "fecha": "16.12.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "crawley town",
+        "paisRival": "inglaterra",
+        "competicion": "league two",
+        "condicion": "visitante",
+        "estadio": "the checktrade.com stadium",
+        "ciudad": "crawley",
+        "pais": "inglaterra",
+        "golesFavor": 1,
+        "golesContra": 1,
+        "promedio": 6.78,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "66" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "63" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "65" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "73" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "82" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "68" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "70" },
+            { "nombre": "bowery, jordan", "id": "5112501", "puntaje": "62" },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "65" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "65"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "71" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "67" },
+            {
+                "nombre": "mclaughlin, stephen",
+                "id": "52025487",
+                "puntaje": "0"
+            },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "65" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "60"
+            },
+            { "nombre": "oates, rhys", "id": "29087368", "puntaje": "67" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "25",
+                "goleador": "gale, james",
+                "asistente": "macdonald, calum",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            }
+        ],
+        "penales": [
+            {
+                "id": 1783989822964,
+                "pateador": "keillor-dunn, davis",
+                "arqueroRival": "ashby-hammond, luca",
+                "momentum": "partido",
+                "final": "fallado",
+                "rival": "crawley town",
+                "dia": "16",
+                "mes": "12",
+                "anio": "2023"
+            }
+        ]
+    },
+    {
+        "anio": "2023",
+        "id": 19710,
+        "fechaDecimal": 19710,
+        "fecha": "19.12.2023",
+        "temporada": "2024",
+        "miEquipo": "mansfield town",
+        "rival": "newport county",
+        "paisRival": "gales",
+        "competicion": "league two",
+        "condicion": "local",
+        "estadio": "field mill",
+        "ciudad": "mansfield",
+        "pais": "inglaterra",
+        "golesFavor": 2,
+        "golesContra": 1,
+        "promedio": 6.73,
+        "jugadores": [
+            { "nombre": "pym, christy", "id": "29086052", "puntaje": "66" },
+            { "nombre": "williams, george", "id": "29063515", "puntaje": "64" },
+            { "nombre": "flint, aden", "id": "30026218", "puntaje": "71" },
+            { "nombre": "simpson, jack", "id": "29149937", "puntaje": "66" },
+            { "nombre": "macdonald, calum", "id": "215471", "puntaje": "71" },
+            { "nombre": "reed, louis", "id": "29123130", "puntaje": "70" },
+            { "nombre": "maris, george", "id": "29110261", "puntaje": "66" },
+            {
+                "nombre": "kruszynski, jakub",
+                "id": "2000140843",
+                "puntaje": "66"
+            },
+            { "nombre": "robson, max", "id": "28127319", "puntaje": "66" },
+            {
+                "nombre": "keillor-dunn, davis",
+                "id": "61080421",
+                "puntaje": "67"
+            },
+            { "nombre": "gale, james", "id": "2000142754", "puntaje": "65" },
+            { "nombre": "johnson, callum", "id": "29122000", "puntaje": "67" },
+            {
+                "nombre": "mclaughlin, stephen",
+                "id": "52025487",
+                "puntaje": "71"
+            },
+            { "nombre": "boateng, hiram", "id": "29087451", "puntaje": "65" },
+            { "nombre": "oates, rhys", "id": "29087368", "puntaje": "66" },
+            { "nombre": "bonser, louis", "id": "2000201762", "puntaje": "67" }
+        ],
+        "goles": [
+            {
+                "id": 1,
+                "minuto": "17",
+                "goleador": "flint, aden",
+                "asistente": "macdonald, calum",
+                "gfParcial": "1",
+                "gcParcial": "0",
+                "diferencia": 1
+            },
+            {
+                "id": 2,
+                "minuto": "25",
+                "goleador": "mclaughlin, stephen",
+                "asistente": "...penal",
+                "gfParcial": "2",
+                "gcParcial": "0",
+                "diferencia": 2
+            }
+        ],
+        "penales": [
+            {
+                "id": 1783991821428,
+                "pateador": "mclaughlin, stephen",
+                "arqueroRival": "maxted, jonny",
+                "momentum": "partido",
+                "final": "convertido",
+                "rival": "newport county",
+                "dia": "19",
+                "mes": "12",
+                "anio": "2023"
+            }
+        ]
+    }
+]

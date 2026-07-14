@@ -430,7 +430,7 @@ export const Agregar = () => {
                     />
                 </div>
                 
-                <div className='modulo-formulario'>
+                <div className='modulo-formulario jugadores-disponibles'>
                     <h4>Jugadores Disponibles:</h4>
                     <p style={{fontSize: '12px', color: '#666'}}>
                         {jugadoresAsignados}/17 jugadores asignados

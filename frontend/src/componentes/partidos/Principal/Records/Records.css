@@ -13,10 +13,6 @@
         text-decoration: none;
         border-bottom: 1px solid transparent;
         transition: transform 0.7s, border-bottom 0.7s;
-        &:hover{
-            transform: translateX(24px);
-            border-bottom: 1px solid var(--color-negro-contraste);
-        }
         .data-titulo{
             text-transform: uppercase;
         }
@@ -33,6 +29,12 @@
             text-transform: capitalize;
             font-family: var(--fuente-resultado);
             color: var(--color-1);
+        }
+    }
+    a.record{
+        &:hover{
+            transform: translateX(24px);
+            border-bottom: 1px solid var(--color-negro-contraste);
         }
     }
 }

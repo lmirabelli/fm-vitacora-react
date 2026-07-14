@@ -465,6 +465,7 @@ router.get('/:id', (req, res) => {
         let partidosVersus = listaDePartidos.filter(a => a.rival == partido.rival)
         partidosVersus.forEach(p => {
             p.miEscudo = services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`)
+            p.escudo = services.busquedaEscudo(listaDeEscudos,`${partido.rival} (xxx)`)
             parseInt(p.golesFavor) > parseInt(p.golesContra) ? estadisticasVersus.pg++ :  parseInt(p.golesFavor) < parseInt(p.golesContra) ? estadisticasVersus.pp++ : estadisticasVersus.pe++
             estadisticasVersus.gf += parseInt(p.golesFavor)
             estadisticasVersus.gc += parseInt(p.golesContra)
@@ -548,6 +549,8 @@ router.get('/', (req, res) => {
         let peorResultado = {diferencia: 1000}
         let invicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
         let contarInvicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
+        let comienzoVictoria = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
+        let comienzoDerrota = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
 
         listaDePartidos.forEach(p => {
             p.escudoMiEquipo = services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`)
@@ -567,15 +570,43 @@ router.get('/', (req, res) => {
                 contarInvicto.gc += parseInt(p.golesContra)
                 contarInvicto.fechaFinal = `${p.fecha} vs. ${p.rival}`
             }else{
-                invicto = {...contarInvicto}
-                contarInvicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
+                if(invicto.partidos <= contarInvicto.partidos){
+                    invicto = {...contarInvicto}
+                    contarInvicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
+                }
+            }
+
+            if(p.goles.length > 0){
+                if(p.goles[0].gfParcial == 1 && p.goles[0].gcParcial == 0 ){
+                    comienzoVictoria.veces++
+                    parseInt(p.golesFavor) > parseInt(p.golesContra) && comienzoVictoria.pg++
+                    parseInt(p.golesFavor) == parseInt(p.golesContra) && comienzoVictoria.pe++
+                    parseInt(p.golesFavor) < parseInt(p.golesContra) && comienzoVictoria.pp++
+                    comienzoVictoria.gf += parseInt(p.golesFavor)
+                    comienzoVictoria.gc += parseInt(p.golesContra)
+                }else if(p.goles[0].gfParcial == 1 && parseInt(p.goles[0].gcParcial) > 0 ){
+                    comienzoDerrota.veces++
+                    parseInt(p.golesFavor) > parseInt(p.golesContra) && comienzoDerrota.pg++
+                    parseInt(p.golesFavor) == parseInt(p.golesContra) && comienzoDerrota.pe++
+                    parseInt(p.golesFavor) < parseInt(p.golesContra) && comienzoDerrota.pp++
+                    comienzoDerrota.gf += parseInt(p.golesFavor)
+                    comienzoDerrota.gc += parseInt(p.golesContra)
+                }
+            }else if(p.goles.length == 0){
+                if(parseInt(p.golesContra) > 0){
+                    comienzoDerrota.veces++
+                    comienzoDerrota.pp++
+                    comienzoDerrota.gc += parseInt(p.golesContra)
+                }
             }
         });
 
         const records = {
             mejorResultado,
             peorResultado,
-            invicto
+            invicto,
+            comienzoVictoria,
+            comienzoDerrota
         }
 
 

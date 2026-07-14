@@ -3,6 +3,7 @@ import {useDatabaseList} from '../../../services/conexion'
 import { useEffect } from "react";
 import { ListadoPartidos } from "./ListadoPartidos";
 import { Records } from "./Records/Records";
+import { MaximosRivales } from "./MaximosRivales/MaximosRivales";
 
 
 export const Principal = () => {
@@ -31,6 +32,7 @@ export const Principal = () => {
         <div className="standard">
             <SubNavBar />
             {listaDePartidos.length > 0 && <Records records={records} />}
+            {listaDePartidos.length > 4 && <MaximosRivales />}
             <ListadoPartidos lista={listaDePartidos} />
         </div>
     )
