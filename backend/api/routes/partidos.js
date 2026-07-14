@@ -458,10 +458,8 @@ router.get('/:id', (req, res) => {
         partidoAnterior && (partidoAnterior.escudo = services.busquedaEscudo(listaDeEscudos,`${partidoAnterior.rival} (xxx)`))
         partidoPosterior && (partidoPosterior.escudo = services.busquedaEscudo(listaDeEscudos,`${partidoPosterior.rival} (xxx)`))
 
-        // ---------------------- ANALIZA ESTADISTICAS DE PARTIDOS -----------------------------
-
         let estadisticasVersus = {pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, dif: 0, efectividad: 0, ultimoPartido: "", maximaGoleada: "",difmaxGoleada: -1000}
-
+        let partidosJugadores = []
         let partidosVersus = listaDePartidos.filter(a => a.rival == partido.rival)
         partidosVersus.forEach(p => {
             p.miEscudo = services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`)
@@ -473,13 +471,7 @@ router.get('/:id', (req, res) => {
                 estadisticasVersus.difmaxGoleada = parseInt(p.golesFavor) - parseInt(p.golesContra) + parseInt(p.golesFavor) / 1000
                 estadisticasVersus.maximaGoleada = `${p.fecha} - ${p.competicion} ${p.golesFavor}-${p.golesContra}`
             }
-        });
-        estadisticasVersus.dif = estadisticasVersus.gf - estadisticasVersus.gc
-
-        // ---------------------- ANALIZA ESTADISTICAS DE JUGADORES -----------------------------
-
-        let partidosJugadores = []
-        partido.jugadores.forEach(j => {
+            p.jugadores.forEach(j => {
             if(j.nombre !== ""){
                 const jugadorBD = listaDeJugadores.find(a => a.id == j.id)
                 j.bandera = services.busquedaBandera(listaDePaises, jugadorBD.nacionalidad).bandera
@@ -509,15 +501,15 @@ router.get('/:id', (req, res) => {
                     buscarPJ.pj++
                 }
             }
+            });
+            p.goles.forEach(g => {
+                let gol = partidosJugadores.find(a => a.nombre == g.goleador)
+                let asistencia = partidosJugadores.find(a => a.nombre == g.asistente)
+                gol && gol.goles++
+                asistencia && asistencia.asistencias++
+            });
         });
-
-        partido.goles.forEach(g => {
-            let gol = partidosJugadores.find(a => a.nombre == g.goleador)
-            let asistencia = partidosJugadores.find(a => a.nombre == g.asistente)
-            gol && gol.goles++
-            asistencia && asistencia.asistencias++
-
-        });
+        estadisticasVersus.dif = estadisticasVersus.gf - estadisticasVersus.gc
 
         partidosJugadores.forEach(j => {
             let puntos = 0
@@ -527,11 +519,10 @@ router.get('/:id', (req, res) => {
                 p > 0 && partidosPuntuados++
             }
             j.promedio = partidosPuntuados == 0 ? 0 :puntos / partidosPuntuados
-            j.pje = j.promedio + j.pj / 1000 + j.goles / 1000000 + j.asistencias / 1000000
+            j.pje = j.pj + j.promedio / 1000 + j.goles / 1000000 + j.asistencias / 1000000
         });
         
         partidosJugadores.sort((a,b) => b.pje - a.pje)
-        // --------------------------------------------------------------------------------------
         res.status(200).json({ partido,partidoAnterior,partidoPosterior, partidosJugadores, partidosVersus, estadisticasVersus, plantel });
     } catch (err) {
         console.log(err)
