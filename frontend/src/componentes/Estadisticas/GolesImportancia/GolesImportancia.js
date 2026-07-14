@@ -2,6 +2,7 @@ import { SubNavBar } from "../SubNavBar/SubNavBar"
 import { useEffect } from "react";
 import { useDatabaseList } from "../../../services/conexion";
 import './GolesImportancia.css'
+import { Link } from "react-router-dom";
 
 
 
@@ -26,6 +27,7 @@ export const GolesImportancia = () => {
                     return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                 }
                 let { tablaGoles } = data
+                console.log(data)
 
     return(
         <div className="standard">
@@ -48,7 +50,7 @@ export const GolesImportancia = () => {
                     <div className="w-10">{"> 80mins"}</div>
                 </div>
                 {tablaGoles.map((g,idx) => (
-                    <div className="puesto" key={idx}>
+                    <Link to={`/jugadores/${g.id}`} className="puesto" key={idx}>
                         <div className="w-5">{idx + 1}</div>
                         <div className="w-5"><img src={g.bandera} alt="nacionalidad" className="bandera"/></div>
                         <div className="w-15">{g.goleador}</div>
@@ -62,7 +64,7 @@ export const GolesImportancia = () => {
                         <div className="w-5">{g.importancia.relleno}</div>
                         <div className="w-10">{g.importancia.madrugador}</div>
                         <div className="w-10">{g.importancia.agonico}</div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

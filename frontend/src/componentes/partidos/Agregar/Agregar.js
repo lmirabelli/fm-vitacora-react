@@ -433,7 +433,7 @@ export const Agregar = () => {
                 <div className='modulo-formulario jugadores-disponibles'>
                     <h4>Jugadores Disponibles:</h4>
                     <p style={{fontSize: '12px', color: '#666'}}>
-                        {jugadoresAsignados}/17 jugadores asignados
+                        {jugadoresAsignados}/16 jugadores asignados
                     </p>
                     <div style={{display: 'flex', flexWrap: 'wrap', gap: '5px'}}>
                         {jugadoresActuales.map((j, idx) => {
@@ -455,7 +455,7 @@ export const Agregar = () => {
                                     }}
                                     title={yaAsignado ? 'Ya está asignado' : 'Click para asignar'}
                                 >
-                                    {j.nombreCompleto} {yaAsignado && '✓'}
+                                    {j.nombreCompleto}
                                 </div>
                             );
                         })}

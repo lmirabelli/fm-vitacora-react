@@ -180,7 +180,7 @@ router.get('/goles/importancia', (req,res) => {
 
         tablaGoles.sort((a,b) => b.importancia.total - a.importancia.total)
         
-        res.status(200).json({tablaGoles, listaDePartidos, listaDeJugadores});
+        res.status(200).json({tablaGoles});
     }catch (err){
     console.log(`error al mostrar los goles, ${err}`)
         res.status(400)
@@ -210,7 +210,8 @@ router.get('/goles/multiples', (req,res) => {
                         fecha: p.fecha,
                         rival: p.rival,
                         competicion: p.competicion,
-                        resultado: `${p.golesFavor}-${p.golesContra}`
+                        resultado: `${p.golesFavor}-${p.golesContra}`,
+                        id: p.fechaDecimal
                     }
                     golesDelPartido.push(nuevoGoleador)
                 }else{
@@ -339,7 +340,7 @@ router.get('/goles/minutos', (req,res) => {
 
         tabla.sort((a,b) => b.total - a.total)
 
-        res.status(200).json({tabla, listaDePartidos});
+        res.status(200).json({tabla});
     }catch (err){
     console.log(`error al mostrar los goles, ${err}`)
         res.status(400)

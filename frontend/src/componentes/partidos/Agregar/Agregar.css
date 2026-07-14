@@ -92,8 +92,3 @@
     }
 }
 
-.jugadores-disponibles{
-    position: sticky;
-    top: 64px;
-    z-index: 2;
-}

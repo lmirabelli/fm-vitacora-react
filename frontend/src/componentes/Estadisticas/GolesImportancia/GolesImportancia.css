@@ -18,6 +18,11 @@
         box-shadow: 2px 0 6px 0px var(--color-negro-contraste);
         border-radius: 6px;
         font-size: 14px;
+        text-decoration: none;
+        transition: background 0.3s;
+        &:hover{
+            background-color: var(--color-blanco-contraste);
+        }
         div{
             display: flex;
             justify-content: center;

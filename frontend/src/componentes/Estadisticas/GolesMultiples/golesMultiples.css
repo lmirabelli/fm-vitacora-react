@@ -16,6 +16,12 @@
     }
     .puesto{
         font-size: 12px;
+        cursor: pointer;
+        &:hover{
+            div{
+                background-color: var(--color-blanco-contraste);
+            }
+        }
     }
     .titulo, .puesto{
         width: 100%;
@@ -25,6 +31,9 @@
         text-overflow: ellipsis;
         text-wrap: nowrap;
         overflow: hidden;
+        text-decoration: none;
+        color: var(--color-1);
+        
         div{
             display: flex;
             justify-content: center;
@@ -33,6 +42,7 @@
             height: 22px;
             font-family: var(--fuente-resultado);
             text-transform: capitalize;
+            overflow: hidden;
             margin: 2px;
             border-radius: 4px;
             img{

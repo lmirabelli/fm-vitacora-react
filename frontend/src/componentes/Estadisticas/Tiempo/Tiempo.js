@@ -2,6 +2,7 @@ import { SubNavBar } from "../SubNavBar/SubNavBar"
 import { useEffect } from "react";
 import { useDatabaseList } from "../../../services/conexion";
 import './Tiempo.css'
+import { Link } from "react-router-dom";
 
 
 export const Tiempo = () => {
@@ -26,6 +27,7 @@ export const Tiempo = () => {
                     }
                     let { tabla } = data
 
+
     return(
         <>
         <SubNavBar activar={"minutos"}/>
@@ -47,7 +49,7 @@ export const Tiempo = () => {
                 <div className="w-5" style={{background:"#80000098"}}>TE2</div>
             </div>
             {tabla.map((j, idx) => (
-                <div className="goleador" key={idx}>
+                <Link to={`/jugadores/${j.id}`} className="goleador" key={idx}>
                     <div className="w-5">{idx + 1}</div>
                     <div className="w-5"><img src={j.bandera} alt="bandera" className="bandera"/></div>
                     <div className="w-25">{j.goleador}</div>
@@ -61,7 +63,7 @@ export const Tiempo = () => {
                     <div className="w-5" style={{background:"#806b0098"}}>{j.tramo6}</div>
                     <div className="w-5" style={{background:"#80000098"}}>{j.extra1}</div>
                     <div className="w-5" style={{background:"#80000098"}}>{j.extra2}</div>
-                </div>
+                </Link>
             ))}
         </div>
         </>)

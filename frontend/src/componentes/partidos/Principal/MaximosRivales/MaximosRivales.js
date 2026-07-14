@@ -31,7 +31,6 @@ export const MaximosRivales = () => {
 
                 tabla.sort((a,b) => b.ptsPos - a.ptsPos)
                 const topCinco = tabla.slice(0,5)
-                console.log(topCinco)
 
                 const calcularPartidos = (pg,pp) => {
                     let color = '#00000032'

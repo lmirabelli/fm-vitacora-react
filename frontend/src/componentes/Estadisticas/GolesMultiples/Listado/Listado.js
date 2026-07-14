@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 
@@ -16,7 +17,7 @@ export const Listado = ({listaDeGolesMultiples}) => {
                     <div className="w-10">resultado</div>
                 </div>
                 {listaDeGolesMultiples.map((g,idx) => (
-                    <div className="puesto" key={idx}>
+                    <Link to={`/partidos/${g.id}`} className="puesto" key={idx}>
                         <div className="w-5">{idx+1}</div>
                         <div className="w-10">{g.fecha}</div>
                         <div className="w-5">{g.goles}</div>
@@ -24,7 +25,7 @@ export const Listado = ({listaDeGolesMultiples}) => {
                         <div className="w-20">{g.goleador}</div>
                         <div className="w-15">{g.rival}</div>
                         <div className="w-10">{g.resultado}</div>
-                    </div>
+                    </Link>
                 ))}
             </div>
     )

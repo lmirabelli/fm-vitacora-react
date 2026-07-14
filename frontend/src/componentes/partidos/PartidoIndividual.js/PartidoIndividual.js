@@ -31,7 +31,6 @@ export const PartidoIndividual = () => {
                     return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                 }
                 let { partido, partidoAnterior, partidoPosterior,partidosJugadores, estadisticasVersus, partidosVersus } = data
-                console.log(partidosVersus)
 
     return(
         <div className="standard">
