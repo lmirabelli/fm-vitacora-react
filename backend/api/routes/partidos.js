@@ -542,6 +542,7 @@ router.get('/', (req, res) => {
         let contarInvicto = {partidos: 0, victorias: 0, empates: 0, gf: 0, gc: 0, fechaInicio: "-", fechaFinal: "-"}
         let comienzoVictoria = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
         let comienzoDerrota = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
+        let resultadosRepetidos = []
 
         listaDePartidos.forEach(p => {
             p.escudoMiEquipo = services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`)
@@ -590,6 +591,25 @@ router.get('/', (req, res) => {
                     comienzoDerrota.gc += parseInt(p.golesContra)
                 }
             }
+
+            //resultados repetidos
+
+            let buscarResultado = resultadosRepetidos.find( a => a.gf == p.golesFavor && a.gc == p.golesContra)
+
+            if(!buscarResultado){
+                let nuevoResultado = {
+                    gf: parseInt(p.golesFavor),
+                    gc: parseInt(p.golesContra),
+                    dif: parseInt(p.golesFavor) - parseInt(p.golesContra),
+                    repeticiones: 1,
+                    partidos: [p]
+                }
+
+                resultadosRepetidos.push(nuevoResultado)
+            }else{
+                buscarResultado.repeticiones++
+                buscarResultado.partidos.push(p)
+            }
         });
 
         const records = {
@@ -601,7 +621,7 @@ router.get('/', (req, res) => {
         }
 
 
-        res.status(200).json({ listaDePartidos, records });
+        res.status(200).json({ listaDePartidos, records, resultadosRepetidos });
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

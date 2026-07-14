@@ -1,0 +1,22 @@
+.repeticion-resultados{
+    background-color: var(--color-blanco-contraste);
+    width: 23%;
+    padding: 8px;
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    box-shadow: var(--iluminacion);
+    .resultado{
+        display: flex;
+        box-shadow: var(--iluminacion);
+        padding: 4px 12px;
+        margin: 4px 0;
+        border-radius: 4px;
+        div{
+            font-family: var(--fuente-resultado);
+            font-size: 12px;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+}
