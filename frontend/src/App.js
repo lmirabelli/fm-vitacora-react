@@ -36,6 +36,7 @@ import { PrincipalCampeones } from './componentes/Campeones/PrincipalCampeones/P
 import { Configuracion } from './componentes/Configuracion/Configuracion';
 import { EditarEscudo } from './componentes/Configuracion/EditarEscudo/EditarEscudo';
 import { Agradecimientos } from './componentes/Agradecimientos/Agradecimientos';
+import { Resultados } from './componentes/partidos/Resultados/Resultados';
 
 
 
@@ -56,6 +57,7 @@ function App() {
           <Route path='/partidos/tiempo' element={<EstadisticasPartidos dato={'anio'} />} />
           <Route path='/partidos/misEquipos' element={<EstadisticasPartidos dato={'miEquipo'} />} />
           <Route path='/partidos/rendimientos' element={<Rendimientos />} />
+          <Route path='/partidos/resultados' element={<Resultados/>} />
           <Route path='/partidos/eliminar/:id' element={<EliminarPartido />} />
           <Route path='/partidos/:id' element={<PartidoIndividual />} />
           {/* jugadores */}

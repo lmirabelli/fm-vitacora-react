@@ -5,6 +5,14 @@
     border-radius: 24px;
     backdrop-filter: blur(16px);
     box-shadow: var(--iluminacion);
+    text-decoration: none;
+    transition: scale 0.5s;
+    &:hover{
+        scale: 0.95;
+    }
+    h3{
+        color: var(--color-negro);
+    }
     .resultado{
         display: flex;
         box-shadow: var(--iluminacion);
