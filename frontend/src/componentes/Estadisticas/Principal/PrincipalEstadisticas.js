@@ -1,8 +1,7 @@
+import './PrincipalEstadisticas.css'
 import { SubNavBar } from "../SubNavBar/SubNavBar"
 import { useEffect } from "react";
-import {useDatabaseList} from '../../../services/conexion'
-import { EstadisticasGeneral } from "../General/EstadisticasGeneral";
-import './PrincipalEstadisticas.css'
+import { Link } from 'react-router-dom'
 
 
 export const PrincipalEstadisticas = () => {
@@ -15,27 +14,20 @@ export const PrincipalEstadisticas = () => {
             };
         }, []);
 
-            const { data, loading, error } = useDatabaseList(
-            "http://localhost:4001/estadisticas"
-        );
-    
-        if (loading) {
-            return <div className='aviso'>cargando...</div>;
-        }
-        if (error) {
-            return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
-        }
-        let { estadisticas } = data
-
     return(
         <div className="standard">
             <SubNavBar />
             <div className="tablas">
                 <h2>Estadisticas</h2>
-                <EstadisticasGeneral stats={estadisticas} titulo="goles" />
-                <EstadisticasGeneral stats={estadisticas} titulo="partidos" />
-                <EstadisticasGeneral stats={estadisticas} titulo="asistencias" />
-                <EstadisticasGeneral stats={estadisticas} titulo="minutos" />
+                <Link className="btn-estadisticas" to="./partidos">partidos</Link>
+                <Link className="btn-estadisticas" to="./minutos">minutos</Link>
+                <Link className="btn-estadisticas" to="./jugadorDelPartido">mvp</Link>
+                <Link className="btn-estadisticas" to="./goles">Goles</Link>
+                <Link className="btn-estadisticas" to="./asistencias">asistencias</Link>
+                <Link className="btn-estadisticas" to="./penales">penales</Link>
+                <Link className="btn-estadisticas" to="./tirosPuerta">tiros a puerta</Link>
+                <Link className="btn-estadisticas" to="./pasesIntentados">pases</Link>
+                <Link className="btn-estadisticas" to="./terminator">terminator</Link>
             </div>
         </div>
     )

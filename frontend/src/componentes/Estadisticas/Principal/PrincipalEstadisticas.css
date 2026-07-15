@@ -1,7 +1,27 @@
 .tablas{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    .btn-estadisticas{
+        width: 15%;
+        background-color: var(--color-blanco-contraste);
+        text-align: center;
+        text-decoration: none;
+        color: var(--color-1);
+        text-transform: uppercase;
+        font-family: var(--fuente-resultado);
+        padding: 6px 0;
+        margin: 4px 0;
+        backdrop-filter: blur(16px);
+        border-radius: 8px;
+        box-shadow: var(--iluminacion);
+        transform: rotateZ(-2deg);
+        transition: transform 0.5s, background 0.5s;
+        &:hover{
+            transform: rotateZ(0) scale(0.98);
+            background: var(--color-muybien);
+        }
+    }
     > h2{
         background: var(--color-blanco-contraste);
         padding: 24px 0;

@@ -28,7 +28,6 @@ router.post('/agregar', (req, res) => {
         }
 
         for(const j of datos.jugadores){
-
             let nuevoJugador = {}
             if(j.Part === "-"){
                 nuevoJugador = {
@@ -37,7 +36,6 @@ router.post('/agregar', (req, res) => {
                     posicion: j["Mejor pos."]
                 }
             }else{
-
                 let minutos = j["Min"].indexOf(".") !== -1 ? j["Min"] * 1000 : j["Min"]
                 let pasesIntentados = j["Pas I"].indexOf(".") !== -1 ? j["Pas I"] * 1000 : j["Pas I"]
                 let pasesCompletados = j["Pas C"].indexOf(".") !== -1 ? j["Pas C"] * 1000 : j["Pas C"]
@@ -86,14 +84,14 @@ router.post('/agregar', (req, res) => {
                     penalesMarcados: parseInt(j["Pen M"]) || 0,
                     penalesParados: parseInt(j["Pen. parados"]) || 0,
                     penalesRecibidos: parseInt(j["Pen. recibidos"]) || 0,
-                    partidosPerdidos: parseInt(j["perdido"]) || 0,
+                    partidosPerdidos: parseInt(j["Perdido"]) || 0,
                     vallaInvicta: parseInt(j["Portería imbatida"]) || 0,
                     presionesCompletadas: parseInt(j["Pres C"]) || 0,
                     presionesIntentadas: parseInt(j["Pres Int"]) || 0,
                     recuperaciones: parseInt(j["Rec"]) || 0,
                     regates: parseInt(j["Reg"]) || 0,
                     robos: parseInt(j["Rob"]) || 0,
-                    tarjetasRojas: parseInt(j["Roj"]) || 0,
+                    tarjetasRojas: parseInt(j["Roj."]) || 0,
                     tirosPuerta: parseInt(j["TaP"]) || 0,
                     partidosEmpatados: parseInt(j["X"]) || 0,
                     xa: parseFloat(j["xA"]) || 0,
@@ -107,7 +105,15 @@ router.post('/agregar', (req, res) => {
         let buscarEstadisticas = listaDeEstadisticas.find(a => a.temporada == datos.temporada && a.competicion == estadisticas.competicion)
 
         if(buscarEstadisticas){
-            buscarEstadisticas.jugadores = estadisticas.jugadores
+            for(let j of estadisticas.jugadores){
+                let indexJugador = buscarEstadisticas.jugadores.findIndex(a => a.id == j.id);
+
+                if (indexJugador !== -1) {
+                    buscarEstadisticas.jugadores[indexJugador] = j;
+                } else {
+                    buscarEstadisticas.jugadores.push(j);
+                }
+            }
         }else{
             listaDeEstadisticas.push(estadisticas)
         }
@@ -530,7 +536,7 @@ router.get('/', (req,res) => {
             j.minutosxgol = (j.minutos / j.goles).toFixed(0)
             j.influencias = j.goles + j.asistencias
             j.faltasxpartido = (j.faltasCometidas / j.partidos).toFixed(2)
-            j.puntosTerminator = j.faltasCometidas + j.tarjetaAmarilla * 3 + j.tarjetasRojas * 10
+            j.terminator = j.faltasCometidas + j.tarjetaAmarilla * 3 + j.tarjetasRojas * 10
             j.punteria = (j.tirosPuerta / j.disparos * 100).toFixed(1)
             j.efectividadPases = (j.pasesCompletados / j.pasesIntentados * 100).toFixed(1)
             j.efectividadGoles = (j.goles / j.disparos * 100).toFixed(1)
