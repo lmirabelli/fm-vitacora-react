@@ -37,6 +37,7 @@ import { Configuracion } from './componentes/Configuracion/Configuracion';
 import { EditarEscudo } from './componentes/Configuracion/EditarEscudo/EditarEscudo';
 import { Agradecimientos } from './componentes/Agradecimientos/Agradecimientos';
 import { Resultados } from './componentes/partidos/Resultados/Resultados';
+import { EstadisticasPenales } from './componentes/Estadisticas/EstadisticasPenales/EstadisticasPenales';
 
 
 
@@ -82,6 +83,7 @@ function App() {
           <Route path='/estadisticas/goles/veteranos' element={<Veteranos />} />
           <Route path='/estadisticas/goles/rivales'  element={<GolesStats stats={"rivales"} />} />
           <Route path='/estadisticas/goles/asistentes'  element={<GolesStats stats={"asistentes"} />} />
+          <Route path='/estadisticas/penales' element={<EstadisticasPenales />} />
           <Route path='/estadisticas/:id' element={<EstadisticasEspecificas />} />
           {/* CAMPEON */}
           <Route path='/campeones/agregar' element={<AgregarCampeon />} />

@@ -470,6 +470,77 @@ router.get('/goles/stats', (req,res) => {
         res.status(400)
 }})
 
+router.get('/penales', (req,res) => {
+
+    try{
+
+        let listaDePartidos = services.cargarBaseDeDatos(archivoPartidos)
+        let listaDeJugadores = services.cargarBaseDeDatos(archivoJugadores)
+        let listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
+        let listaDeEscudos = services.cargarBaseDeDatos(archivoEscudos)
+
+        let tabla = []
+        let lista = []
+        let tablaArqueros = []
+
+        listaDePartidos.forEach( p => {
+            p.penales.forEach( pk => {
+                pk.escudo = services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`).escudo
+                pk.escudoRival = services.busquedaEscudo(listaDeEscudos,`${p.rival} (xxx)`).escudo
+                pk.fechaDecimal = p.fechaDecimal
+                pk.fecha = p.fecha
+                lista.push(pk)
+                let buscarPateador = tabla.find(a => a.pateador == pk.pateador)
+                let buscarArquero = tablaArqueros.find(a => a.arquero == pk.arqueroRival)
+
+                if(!buscarPateador){
+
+                    const buscarJugador = listaDeJugadores.find(a => a.nombreCompleto === pk.pateador)
+                    let nuevoPateador = {
+                        id: buscarJugador.id,
+                        pateador: pk.pateador,
+                        convertido: pk.final === "convertido" ? 1 : 0,
+                        fallado: pk.final === "convertido" ? 0 : 1,
+                        ultimoPenal: `${pk.dia}.${pk.mes}.${pk.anio} ${pk.rival} (${pk.arqueroRival})`,
+                        ultimoPenalF: pk.final
+                    }
+                    tabla.push(nuevoPateador)
+                }else{
+                    pk.final == "convertido" ? buscarPateador.convertido++ : buscarPateador.fallado++
+                    buscarPateador.ultimoPenal = `${pk.dia}.${pk.mes}.${pk.anio} ${pk.rival} (${pk.arqueroRival})`,
+                    buscarPateador.ultimoPenalF = pk.final
+                }
+
+                if(!buscarArquero){
+                    let nuevoArquero = {
+                        arquero: pk.arqueroRival,
+                        convertido: pk.final === "convertido" ? 1 : 0,
+                        fallado: pk.final === "convertido" ? 0 : 1,
+                        ultimoPenal: `${pk.dia}.${pk.mes}.${pk.anio} ${pk.rival} (${pk.pateador})`,
+                        ultimoPenalF: pk.final
+                    }
+                    tablaArqueros.push(nuevoArquero)
+                }else{
+                    pk.final == "convertido" ? buscarArquero.convertido++ : buscarArquero.fallado++
+                    buscarArquero.ultimoPenal = `${pk.dia}.${pk.mes}.${pk.anio} ${pk.rival} (${pk.arqueroRival})`,
+                    buscarArquero.ultimoPenalF = pk.final
+                }
+            })
+        })
+
+        const posicionar = (tabla) => {
+            tabla.sort((a,b) => (b.convertido + b.fallado) - (a.convertido + a.fallado))
+        }
+
+        posicionar(tabla)
+        posicionar(tablaArqueros)
+        
+        res.status(200).json({tabla,lista, tablaArqueros});
+    }catch (err){
+    console.log(`error al mostrar los goles, ${err}`)
+        res.status(400)
+}})
+
 router.get('/', (req,res) => {
 
     try{
