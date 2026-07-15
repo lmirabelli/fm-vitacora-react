@@ -19,15 +19,15 @@ export const PrincipalEstadisticas = () => {
             <SubNavBar />
             <div className="tablas">
                 <h2>Estadisticas</h2>
-                <Link className="btn-estadisticas" to="./partidos">partidos</Link>
-                <Link className="btn-estadisticas" to="./minutos">minutos</Link>
-                <Link className="btn-estadisticas" to="./jugadorDelPartido">mvp</Link>
-                <Link className="btn-estadisticas" to="./goles">Goles</Link>
-                <Link className="btn-estadisticas" to="./asistencias">asistencias</Link>
-                <Link className="btn-estadisticas" to="./penales">penales</Link>
-                <Link className="btn-estadisticas" to="./tirosPuerta">tiros a puerta</Link>
-                <Link className="btn-estadisticas" to="./pasesIntentados">pases</Link>
-                <Link className="btn-estadisticas" to="./terminator">terminator</Link>
+                <Link className="btn-estadisticas" state={"partidos"}to="./partidos">partidos</Link>
+                <Link className="btn-estadisticas" state={""}to="./minutos">minutos</Link>
+                <Link className="btn-estadisticas" state={""}to="./jugadorDelPartido">mvp</Link>
+                <Link className="btn-estadisticas" state={""}to="./goles">Goles</Link>
+                <Link className="btn-estadisticas" state={""}to="./asistencias">asistencias</Link>
+                <Link className="btn-estadisticas" state={""}to="./penales">penales</Link>
+                <Link className="btn-estadisticas" state={""}to="./tirosPuerta">tiros a puerta</Link>
+                <Link className="btn-estadisticas" state={""}to="./pasesIntentados">pases</Link>
+                <Link className="btn-estadisticas" state={""}to="./terminator">terminator</Link>
             </div>
         </div>
     )
