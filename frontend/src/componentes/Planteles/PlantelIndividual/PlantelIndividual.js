@@ -56,7 +56,7 @@ export const PlantelIndividual = () => {
                     <div className="w-5 tcenter">{j.asistencias > 0 ? j.asistencias : "-"}</div>
                     <div className="w-5 tcenter">{j.xg > 0 ? j.xg : "-"}</div>
                     <div className="w-5 tcenter">{j.xa > 0 ? j.xa : "-"}</div>
-                    <div className="w-5 tcenter">{j.xge < 0 ? j.xge : "-"}</div>
+                    <div className="w-5 tcenter">{j.xge !== 0 ? j.xge : "-"}</div>
                 </Link>
             ))}
         </div>

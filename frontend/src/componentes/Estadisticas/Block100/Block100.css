@@ -1,0 +1,58 @@
+.menu-block{
+    width: 80%;
+    height: 32px;
+    margin: 16px auto;
+    display: flex;
+    justify-content: space-evenly;
+    .btn-block{
+        width: 12%;
+        font-family: var(--fuente-resultado);
+        font-size: 18px;
+        border-radius: 8px;
+        box-shadow: var(--iluminacion);
+        border: 0;
+    }
+    .inactivo{
+        background: #380000;
+        color: #e30000;
+        cursor: no-drop;
+    }
+    .activo{
+        background: #003800;
+        color: #00e300;
+        cursor: pointer;
+    }
+}
+.info{
+    width: 100%;
+    margin: 54px 0;
+    background-color: var(--color-blanco-contraste);
+    padding: 32px;
+    border-radius: 32px;
+    backdrop-filter: blur(16px);
+    box-shadow: var(--iluminacion);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .bloque{
+        min-width: 18%;
+        margin: 14px 0;
+        padding: 12px;
+        border-radius: 12px;
+        box-shadow: var(--iluminacion), 2px 2px 16px 1px #00000035;
+        background-color: #00af0012;
+        h5{
+            margin-bottom: 20px;
+        }
+        .jugador{
+            display: flex;
+            justify-content: space-between;
+            div{
+                font-family: var(--fuente-resultado);
+                font-size: 12px;
+                text-transform: capitalize;
+                text-align: center;
+            }
+        }
+    }
+}

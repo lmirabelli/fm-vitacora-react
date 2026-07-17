@@ -400,6 +400,63 @@ router.get('/goles/veteranos', (req,res) => {
         res.status(400)
 }})
 
+router.get('/goles/block/:bloque', (req,res) => {
+
+    console.log(req.params)
+    try{
+        let tamanoBloque = parseInt(req.params.bloque)
+        let listaDePartidos = services.cargarBaseDeDatos(archivoPartidos)
+        let listaDeJugadores = services.cargarBaseDeDatos(archivoJugadores)
+        let listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
+        let listaDeEscudos = services.cargarBaseDeDatos(archivoEscudos)
+
+        let lista = []
+        for(let p of listaDePartidos){
+            for(let g of p.goles){
+                g.fecha = p.fecha
+                lista.push(g)
+            }
+        }
+
+        let listaReversa = [...lista.reverse()]
+        let tablaGoleadores = []
+        let bloques = []
+        let contador = 0
+        for(let g of listaReversa){
+            contador++
+
+            let buscarGoleador = tablaGoleadores.find(a => a.goleador === g.goleador)
+
+            if(!buscarGoleador){
+                let nuevoGoleador = {
+                    goleador: g.goleador,
+                    goles: 1,
+                    fecha: g.fecha
+                }
+
+                tablaGoleadores.push(nuevoGoleador)
+            }else{
+                buscarGoleador.goles++
+            }
+
+            if(contador === tamanoBloque){
+                bloques.push(tablaGoleadores)
+                tablaGoleadores = []
+                contador = 0
+            }
+        }
+        bloques.push(tablaGoleadores)
+
+        for(let bk of bloques){
+            bk.sort((a,b) => b.goles - a.goles)
+        }
+
+        res.status(200).json({bloques});
+    }catch (err){
+    console.log(`error al mostrar los goles, ${err}`)
+        res.status(400)
+}})
+
 router.get('/goles/stats', (req,res) => {
 
     try{

@@ -21,7 +21,7 @@ export const JugadoresDelPartido = ({jugadores}) => {
                     <div className="w-10">{j.nombre !== "" && <img src={j.bandera} alt="bandera" />}</div>
                     <div className="w-10">{j.nombre !== "" ? j.dorsal : "-"}</div>
                     <div className="w-50">{j.nombre}</div>
-                    <div className="w-10 semi-circular" style={{background: obtenerColorPuntaje(j.puntaje,j.nombre)}}>{j.puntaje}</div>
+                    <div className="w-10 semi-circular" style={{background: obtenerColorPuntaje(j.puntaje,j.nombre)}}>{j.puntaje === "0" ? "-" : j.puntaje}</div>
                 </Link>
                 {idx === 10 && <hr style={{opacity: "0.25", margin: "6px 0"}}/>}
                 </Fragment>

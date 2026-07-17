@@ -38,6 +38,7 @@ import { EditarEscudo } from './componentes/Configuracion/EditarEscudo/EditarEsc
 import { Agradecimientos } from './componentes/Agradecimientos/Agradecimientos';
 import { Resultados } from './componentes/partidos/Resultados/Resultados';
 import { EstadisticasPenales } from './componentes/Estadisticas/EstadisticasPenales/EstadisticasPenales';
+import { Block100 } from './componentes/Estadisticas/Block100/Block100';
 
 
 
@@ -81,6 +82,7 @@ function App() {
           <Route path='/estadisticas/goles/multiples' element={<GolesMultiples />} />
           <Route path='/estadisticas/goles/minutos' element={<Tiempo />} />
           <Route path='/estadisticas/goles/veteranos' element={<Veteranos />} />
+          <Route path='/estadisticas/goles/block100' element={<Block100 />} />
           <Route path='/estadisticas/goles/rivales'  element={<GolesStats stats={"rivales"} />} />
           <Route path='/estadisticas/goles/asistentes'  element={<GolesStats stats={"asistentes"} />} />
           <Route path='/estadisticas/penales' element={<EstadisticasPenales />} />

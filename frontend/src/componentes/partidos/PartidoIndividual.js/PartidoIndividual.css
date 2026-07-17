@@ -49,6 +49,11 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        background: var(--color-blanco-contraste);
+        padding: 0 8px;
+        border-radius: 8px;
+        box-shadow: var(--iluminacion);
+        backdrop-filter: blur(2px);
     }
 
     .estadisticas-jugadores{

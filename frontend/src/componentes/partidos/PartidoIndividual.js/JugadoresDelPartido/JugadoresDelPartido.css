@@ -3,6 +3,7 @@
     justify-content: space-between;
     text-decoration: none;
     margin-bottom: 2px;
+    max-width: 600px;
     div{
         display: flex;
         justify-content: center;
