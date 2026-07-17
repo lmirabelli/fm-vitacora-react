@@ -16,6 +16,7 @@ export const BotonesFlotantes = () => {
                 <Link to="/planteles" className={`btn-flotante ${location === "/planteles" ? "activo" : "desactivo"}`} style={{animationDelay: '0.4s'}}>📑</Link>
                 <Link to="/estadisticas/partidos" className={`btn-flotante ${location === "/estadisticas" ? "activo" : "desactivo"}`} style={{animationDelay: '0.5s'}}>🔢</Link>
                 <Link to="/campeones" className={`btn-flotante ${location === "/campeones" ? "activo" : "desactivo"}`} style={{animationDelay: '0.6s'}}>🥇</Link>
+                <Link to="/copas" className={`btn-flotante ${location === "/copas" ? "activo" : "desactivo"}`} style={{animationDelay: '0.7s'}}>🏆</Link>
         </div>
             )
         }

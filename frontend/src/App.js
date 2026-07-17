@@ -39,6 +39,7 @@ import { Resultados } from './componentes/partidos/Resultados/Resultados';
 import { EstadisticasPenales } from './componentes/Estadisticas/EstadisticasPenales/EstadisticasPenales';
 import { Block100 } from './componentes/Estadisticas/Block100/Block100';
 import { Arqueros } from './componentes/Estadisticas/Arqueros/Arqueros';
+import { Copas } from './componentes/Copas/Copas';
 
 
 
@@ -92,6 +93,7 @@ function App() {
           <Route path='/campeones' element={<PrincipalCampeones />} />
           {/* COPAS */}
           <Route path='/copas/agregar' element={<AgregarCopa />} />
+          <Route path='/copas' element={<Copas />} />
           {/* CONFIGURACION */}
           <Route path='/configuracion' element={<Configuracion />} />
           <Route path='/editarEscudo/:pais/:equipo' element={<EditarEscudo />} /> 

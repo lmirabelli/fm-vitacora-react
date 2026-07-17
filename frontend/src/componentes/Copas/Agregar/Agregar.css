@@ -1,0 +1,120 @@
+.agregador-copas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .infoCopa{
+    width: 100%;
+    background-color: var(--color-blanco-contraste);
+    margin: 16px 0;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    box-shadow: var(--iluminacion);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h3{
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .grupo-radio{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 12px;
+        font-family: var(--fuente-resultado);
+        text-transform: uppercase;
+        .opciones-radio{
+            span{
+                font-family: var(--fuente-resultado);
+                margin-left: 4px;
+            }
+            width: 15%;
+            margin-left: 4px;
+            text-align: center;
+        }
+    }
+    .input-info{
+        background-color: var(--color-5);
+        border: 0;
+        border-radius: 8px;
+        min-width: 250px;
+        min-height: 32px;
+        text-align: center;
+        font-family: var(--fuente-resultado);
+        text-transform: uppercase;
+        color: var(--color-1);
+        box-shadow: var(--iluminacion);
+    }
+}
+
+.ronda{
+    margin: 2px;
+    width: 100%;
+    background-color: var(--color-blanco-contraste);
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    border-radius: 4px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(4px);
+    label{
+        display: flex;
+        justify-content: center;
+        font-family: var(--fuente-resultado);
+        color: var(--color-1);
+        input{
+            font-family: var(--fuente-resultado);
+            text-align: center;
+            text-transform: uppercase;
+            padding: 2px 0;
+            border: 0;
+            border-radius: 4px;
+            box-shadow: var(--iluminacion);
+            background-color: var(--color-1);
+            color: var(--color-blanco);
+        }
+    }
+    .labelRonda{
+        width: 15%;
+        input{
+            width: 95%;
+        }
+    }
+    .labelTexto{
+        width: 30%;
+        input{
+            width: 45%;
+            margin: 0 2px;
+        }
+    }
+    .labelResultados{
+        width: 10%;
+        input{
+            width: 45%;
+            margin: 0 2px;
+        }
+    }
+}
+button{
+    width: 320px;
+    margin: 16px 0;
+    height: 48px;
+    border-radius: 12px;
+    border: 0;
+    box-shadow: var(--iluminacion);
+    background-color: #c11f1f;
+    color: var(--color-blanco);
+    font-family: var(--fuente-resultado);
+    font-size: 22px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px #000;
+    cursor: pointer;
+    transition: background 0.5s, box-shadow 0.5s;
+    &:hover{
+        background-color: #6b0d0d;
+        box-shadow: inset 0 0 8px 1px #000;
+    }
+}
+}

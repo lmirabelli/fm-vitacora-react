@@ -19,6 +19,7 @@ import estadisticasRoutes from './routes/estadisticas.js'
 import campeonesRoutes from './routes/campeones.js'
 import imagenesRoutes from './routes/imagenes.js'
 import configuracionRoutes from './routes/configuracion.js'
+import copasRoutes from './routes/copas.js'
 
 
 app.use('/partidos', partidosRoutes)
@@ -28,6 +29,7 @@ app.use('/estadisticas', estadisticasRoutes)
 app.use('/campeones', campeonesRoutes)
 app.use('/imagenes', imagenesRoutes)
 app.use('/configuracion', configuracionRoutes)
+app.use('/copas', copasRoutes)
 
 
 app.listen(port, () => {
