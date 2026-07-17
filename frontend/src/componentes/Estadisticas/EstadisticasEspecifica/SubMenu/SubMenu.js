@@ -16,6 +16,7 @@ export const SubMenu = () => {
             <Link className={`btn-estadisticas ${location === "/estadisticas/tirosPuerta" ? "activo" : "inactivo"}`} to="/estadisticas/tirosPuerta">tiros a puerta</Link>
             <Link className={`btn-estadisticas ${location === "/estadisticas/pasesIntentados" ? "activo" : "inactivo"}`} to="/estadisticas/pasesIntentados">pases</Link>
             <Link className={`btn-estadisticas ${location === "/estadisticas/terminator" ? "activo" : "inactivo"}`} to="/estadisticas/terminator">terminator</Link>
+            <Link className={`btn-estadisticas ${location === "/estadisticas/arqueros" ? "activo" : "inactivo"}`} to="/estadisticas/arqueros">arqueros</Link>
         </div>
     )
 }

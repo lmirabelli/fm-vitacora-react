@@ -20,7 +20,6 @@ import { SalidaDelClub } from './componentes/Jugadores/SalidaDelClub/SalidaDelCl
 import { PrincipalPlantel } from './componentes/Planteles/Principal/Principal';
 import { AgregarPlantel } from './componentes/Planteles/AgregarPlantel/AgregarPlantel';
 import { PlantelIndividual } from './componentes/Planteles/PlantelIndividual/PlantelIndividual';
-import { PrincipalEstadisticas } from './componentes/Estadisticas/Principal/PrincipalEstadisticas';
 import { AgregarEstadisticas } from './componentes/Estadisticas/AgregarEstadisticas/AgregarEstadisticas';
 import { EstadisticasEspecificas } from './componentes/Estadisticas/EstadisticasEspecifica/EstadisticasEspecifica';
 import { Rivales } from './componentes/partidos/Rivales/Rivales';
@@ -39,6 +38,7 @@ import { Agradecimientos } from './componentes/Agradecimientos/Agradecimientos';
 import { Resultados } from './componentes/partidos/Resultados/Resultados';
 import { EstadisticasPenales } from './componentes/Estadisticas/EstadisticasPenales/EstadisticasPenales';
 import { Block100 } from './componentes/Estadisticas/Block100/Block100';
+import { Arqueros } from './componentes/Estadisticas/Arqueros/Arqueros';
 
 
 
@@ -76,7 +76,6 @@ function App() {
           <Route path='/planteles/agregar' element={<AgregarPlantel />} />
           <Route path='/planteles/:temporada/:equipo' element={<PlantelIndividual />} />
           {/* ESTADISTICAS */}
-          <Route path='/estadisticas' element={<PrincipalEstadisticas />} />
           <Route path='/estadisticas/agregar' element={<AgregarEstadisticas />} />
           <Route path='/estadisticas/goles/importancia' element={<GolesImportancia />} />
           <Route path='/estadisticas/goles/multiples' element={<GolesMultiples />} />
@@ -86,6 +85,7 @@ function App() {
           <Route path='/estadisticas/goles/rivales'  element={<GolesStats stats={"rivales"} />} />
           <Route path='/estadisticas/goles/asistentes'  element={<GolesStats stats={"asistentes"} />} />
           <Route path='/estadisticas/penales' element={<EstadisticasPenales />} />
+          <Route path='/estadisticas/arqueros' element={<Arqueros />} />
           <Route path='/estadisticas/:id' element={<EstadisticasEspecificas />} />
           {/* CAMPEON */}
           <Route path='/campeones/agregar' element={<AgregarCampeon />} />

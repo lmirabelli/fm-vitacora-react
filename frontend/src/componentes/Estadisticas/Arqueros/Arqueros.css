@@ -1,0 +1,54 @@
+.tabla-arqueros{
+    width: 100%;
+    padding: 40px 22px;
+    background: var(--color-blanco-contraste);
+    backdrop-filter: blur(12px);
+    border-radius: 36px;
+    box-shadow: var(--iluminacion);
+    .titulo{
+        margin-bottom: 12px;
+
+        div{
+            text-transform: uppercase;
+            background-color: var(--color-5);
+            padding: 4px 0;
+        }
+    }
+    .arquero{
+        margin-bottom: 4px;
+        div{
+            padding: 2px 0;
+            background-color: var(--color-blanco-contraste);
+            transition: background 0.5s, transform 0.5s;
+        }
+        &:hover{
+            div{
+                background-color: var(--color-4);
+                transform: rotateZ(2deg);
+            }
+        }
+    }
+    .arquero, .titulo{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            font-size: 12px;
+            font-family: var(--fuente-resultado);
+            color: var(--color-1);
+            border-radius: 4px;
+            box-shadow: var(--iluminacion);
+            img{
+                margin-left: 6px;
+                height: 8px;
+                transform: rotateZ(12deg);
+            }
+        }
+    }
+}

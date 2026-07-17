@@ -402,7 +402,6 @@ router.get('/goles/veteranos', (req,res) => {
 
 router.get('/goles/block/:bloque', (req,res) => {
 
-    console.log(req.params)
     try{
         let tamanoBloque = parseInt(req.params.bloque)
         let listaDePartidos = services.cargarBaseDeDatos(archivoPartidos)
@@ -522,6 +521,86 @@ router.get('/goles/stats', (req,res) => {
         
         tablaDeGoles.sort((a,b) => b.goles - a.goles)
         res.status(200).json({tablaDeGoles});
+    }catch (err){
+    console.log(`error al mostrar los goles, ${err}`)
+        res.status(400)
+}})
+
+router.get('/arqueros', (req,res) => {
+
+    try{
+
+        let listaDeEstadisticas = services.cargarBaseDeDatos(archivoEstadisticas)
+        let listaDeJugadores = services.cargarBaseDeDatos(archivoJugadores)
+        let listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
+
+        let listaDeArqueros = []
+        listaDeEstadisticas.forEach( p => {
+            let arquerosT = p.jugadores.filter(a => a.posicion === "POR")
+            listaDeArqueros.push(...arquerosT)
+        })
+        let tablaEstadisticas = []
+        listaDeArqueros.forEach(gk => {
+            let buscarArquero = tablaEstadisticas.find(a => a.id === gk.id)
+
+            if(!buscarArquero){
+
+                let buscarData = listaDeJugadores.find(a => a.id === gk.id)
+                let bandera = services.busquedaBandera(listaDeBanderas,buscarData.nacionalidad)
+                console.log(buscarData.nacionalidad)
+                let anioInicio = buscarData.etapas[0].fechaLlegada.slice(-4)
+                let anioFinal = buscarData.etapas[buscarData.etapas.length - 1].fechaSalida.slice(-4)
+                let etapa = anioFinal === "0000" ? `${anioInicio}-Act` : anioFinal === anioInicio ? anioInicio : `${anioInicio}-${anioFinal}`
+                let nuevoArquero = {
+                    id: gk.id,
+                    nacionalidad: bandera.bandera,
+                    jugador: gk.jugador,
+                    partidos: gk.partidos,
+                    minutos: gk.minutos,
+                    golesEncajados: gk.golesEncajados,
+                    balonesAtajados: gk.balonesAtajados,
+                    balonesDesviados: gk.balonesDesviados,
+                    balonesRechazados: gk.balonesRechazados,
+                    penalesRecibidos: gk.penalesRecibidos,
+                    penalesParados: gk.penalesParados,
+                    pasesIntentados: gk.pasesIntentados,
+                    pasesCompletados: gk.pasesCompletados,
+                    partidosGanados: gk.partidosGanados,
+                    partidosEmpatados: gk.partidosEmpatados,
+                    partidosPerdidos: gk.partidosPerdidos,
+                    jugadorDelPartido: gk.jugadorDelPartido,
+                    tarjetaAmarilla: gk.tarjetaAmarilla,
+                    tarjetasRojas: gk.tarjetasRojas,
+                    vallaInvicta: gk.vallaInvicta,
+                    etapa
+                }
+
+                tablaEstadisticas.push(nuevoArquero)
+            }else{
+                buscarData.partidos += gk.partidos
+                buscarData.minutos += gk.minutos
+                buscarData.golesEncajados += gk.golesEncajados
+                buscarData.balonesAtajados += gk.balonesAtajados
+                buscarData.balonesDesviados += gk.balonesDesviados
+                buscarData.balonesRechazados += gk.balonesRechazados
+                buscarData.penalesRecibidos += gk.penalesRecibidos
+                buscarData.penalesParados += gk.penalesParados
+                buscarData.pasesIntentados += gk.pasesIntentados
+                buscarData.pasesCompletados += gk.pasesCompletados
+                buscarData.partidosGanados += gk.partidosGanados
+                buscarData.partidosEmpatados += gk.partidosEmpatados
+                buscarData.partidosPerdidos += gk.partidosPerdidos
+                buscarData.jugadorDelPartido += gk.jugadorDelPartido
+                buscarData.tarjetaAmarilla += gk.tarjetaAmarilla
+                buscarData.tarjetasRojas += gk.tarjetasRojas
+                buscarData.vallaInvicta += gk.vallaInvicta
+            }
+        })
+        tablaEstadisticas.sort((a,b) => b.partidos - a.partidos)
+
+        
+        
+        res.status(200).json({tablaEstadisticas});
     }catch (err){
     console.log(`error al mostrar los goles, ${err}`)
         res.status(400)

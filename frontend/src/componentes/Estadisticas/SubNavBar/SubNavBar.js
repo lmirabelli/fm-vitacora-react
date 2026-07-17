@@ -7,7 +7,7 @@ export const SubNavBar = ({activar}) => {
 
     return(
         <div className="botonera-flotante bf-derecha">
-            {location === "/estadisticas" && <Link to="/estadisticas/agregar" className={`btn-flotante ${activar === "agregar" ? "activo" : "desactivo"}`} style={{animationDelay: `${0.25 * 1}s`}} title="agregar">➕​</Link>}
+            {location !== "/estadisticas" && <Link to="/estadisticas/agregar" className={`btn-flotante ${activar === "agregar" ? "activo" : "desactivo"}`} style={{animationDelay: `${0.25 * 1}s`}} title="agregar">➕​</Link>}
             {location !== "/estadisticas" && <Link to="/estadisticas/goles/importancia" className={`btn-flotante ${activar === "importancia" ? "activo" : "desactivo"}`} style={{animationDelay: `${0.25 * 2}s`}} title="importancia">⬆️​</Link>}
             {location !== "/estadisticas" && <Link to="/estadisticas/goles/multiples" className={`btn-flotante ${activar === "multiples" ? "activo" : "desactivo"}`} style={{animationDelay: `${0.25 * 3}s`}} title="multiples">*️⃣​</Link>}
             {location !== "/estadisticas" && <Link to="/estadisticas/goles/asistentes" className={`btn-flotante ${activar === "asistentes" ? "activo" : "desactivo"}`} style={{animationDelay: `${0.25 * 4}s`}} title="asistentes">🫂​</Link>}
