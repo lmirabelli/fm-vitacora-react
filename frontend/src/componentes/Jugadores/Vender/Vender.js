@@ -1,5 +1,5 @@
 import { useDatabaseList } from "../../../services/conexion";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 
@@ -8,13 +8,6 @@ export const Vender = () => {
     const { id } = useParams()
     const navigate = useNavigate()
 
-    const [dataVenta, setDataVenta] = useState({
-        diaSalida: "",
-        mesSalida: "",
-        anioSalida: "",
-        equipoComprador: "",
-        precioVenta: ""
-    })
 
     const { data, loading, error } = useDatabaseList(
             `http://localhost:4001/jugadores/${id}`
@@ -40,33 +33,33 @@ export const Vender = () => {
 
 
         const vender = async (e) => {
-            e.preventDefault()
-            const formData = new FormData(e.currentTarget)
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
 
-            setDataVenta({
-            id: id,
-            diaSalida: formData.get("diaSalida"),
-            mesSalida: formData.get("mesSalida"),
-            anioSalida: formData.get("anioSalida"),
-            clubComprador: formData.get("clubComprador"),
-            precioVenta: formData.get("precioVenta")
-        })
+    const payload = {
+        id: id,
+        diaSalida: formData.get("diaSalida"),
+        mesSalida: formData.get("mesSalida"),
+        anioSalida: formData.get("anioSalida"),
+        clubComprador: formData.get("clubComprador"),
+        precioVenta: formData.get("precioVenta")
+    };
 
-        try {
-            const response = await fetch("http://localhost:4001/jugadores/vender", {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(dataVenta)
-            })
+    try {
+        const response = await fetch("http://localhost:4001/jugadores/vender", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
 
-            if (!response.ok) throw new Error("Error al procesar la venta")
-            navigate("/jugadores")
-        } catch (err) {
-            console.error(err)
-        }
-        }
+        if (!response.ok) throw new Error("Error al procesar la venta");
+        navigate("/jugadores");
+    } catch (err) {
+        console.error(err);
+    }
+};
 
     return(
         <div className="standard">
