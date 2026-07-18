@@ -1,0 +1,89 @@
+.submenu-temporadas{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .inactivo{
+        background-color: #268f06;
+        color: #3bfb00;
+        cursor: pointer;
+        transition: background 0.3s, box-shadow 0.3s;
+        &:hover{
+            background-color: #114003;
+            box-shadow: inset 0 0 4px 1px #000;
+        }
+    }
+    .activo{
+        background-color: #8f0606;
+        color: #fb0000;
+        cursor: no-drop;
+    }
+    .btn-temp{
+        width: 7%;
+        text-align: center;
+        text-decoration: none;
+        font-family: var(--fuente-resultado);
+        border-radius: 4px;
+        box-shadow: var(--iluminacion);
+    }
+}
+.copa-tabla, .copa-partidos{
+    margin: 24px auto;
+    padding: 16px;
+    background-color: var(--color-blanco-contraste);
+    border-radius: 16px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(12px);
+    .partido, .posicion{
+        display: flex;
+        justify-content: space-around;
+        margin: 2px 0;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--fuente-resultado);
+            text-transform: capitalize;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            overflow: hidden;
+            span{
+                font-family: var(--fuente-resultado);
+                font-size: 10px;
+                margin: 0 2px;
+            }
+            img{
+                height: 12px;
+            }
+        }
+    }
+}
+.copa-partidos{
+    width: 75%;
+    .partido{
+        div{
+            .rotada, .rotada-inversa{
+                margin: 0 4px;
+                height: 8px;
+            }
+            .rotada-inversa{
+                transform: rotateZ(8deg);
+            }
+            .rotada{
+                transform: rotateZ(-8deg);
+
+            }
+        }
+    }
+}
+.copa-tabla{
+    width: 100%;
+    .posicion{
+        background-color: #ffffff20;
+        box-shadow: var(--iluminacion);
+        border-radius: 4px;
+        div{
+            margin: 2px 0;
+            /* border: 1px solid #00000025; */
+        }
+    }
+}

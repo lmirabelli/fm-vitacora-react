@@ -11,7 +11,7 @@ export const Copas = () => {
 
     const { data, loading, error } = useDatabaseList(`http://localhost:4001/copas`);
     useEffect(() => {
-                        document.title = `Menu Copas (${data.copas?.length})`;
+                        document.title = `Menu Copas (${data.copasSegmentadas?.length})`;
                 
                         return () => {
                             document.title = "FM VITACORA";
@@ -25,8 +25,6 @@ export const Copas = () => {
                         return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                     }
                     let { copasSegmentadas } = data
-                    console.log(data)
-
 
     return(
         <div className="standard">
@@ -36,12 +34,12 @@ export const Copas = () => {
                 <div className="contenedor-pais" key={idx}>
                     <h4>{pais.pais}</h4>
                     {pais.copas.map((copa,idxCopa) => (
-                        <Fragment>
-                            <div className="copa" key={idxCopa}>
+                        <Fragment key={idxCopa}>
+                            <div className="copa">
                             <div className="w-15">{copa.copa}</div>
                             <div className="w-85">
                                 {copa.temporadas.map((t, idxTemporada) => (
-                                    <Link to={`/copas/${copa.copa}/${t.temporada}`} className={`w-5 ${t.tipo}`} key={idxTemporada}>
+                                    <Link to={`/copas/${pais.pais}/${copa.copa}/${t.temporada}`} className={`w-5 ${t.tipo}`} key={idxTemporada}>
                                         {t.temporada}
                                     </Link>
                                 ))}
