@@ -102,7 +102,11 @@ router.get('/:pais/:copa/:temporada', (req,res) => {
                 // ------------------------------------ PRUEBA CAMBIO DE NOMBRE -------------------------------------
                 if(copa.temporada > 1948 && copa.temporada < 1991){
                     let buscarAlemania = tabla.find(a => a.equipo === "alemania")
-                    buscarAlemania && (buscarAlemania.equipo = "alemania federal")
+                    if(buscarAlemania){
+                        buscarAlemania.equipo = "alemania federal"
+                        buscarAlemania.imagen = services.busquedaBandera(listaDeBanderas,"alemania federal").bandera
+                    }
+                    
                 }
                 // --------------------------------------------------------------------------------------------------
                 let buscarLocal = tabla.find(a => a.equipo == p.local)

@@ -1,0 +1,28 @@
+.tablas-competicion{
+    .tabla{
+        width: 30%;
+        background-color: var(--color-5);
+        padding: 24px;
+        border-radius: 24px;
+        box-shadow: var(--iluminacion);
+        max-height: 90vh;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+        display: none;
+        }
+        h2{
+            margin-bottom: 10px;
+        }
+        .jugador{
+            display: flex;
+            justify-content: space-between;
+            margin: 1px 0;
+            div{
+                text-align: center;
+                font-family: var(--fuente-resultado);
+                text-transform: capitalize;
+                color: var(--color-1);
+            }
+        }
+    }
+}

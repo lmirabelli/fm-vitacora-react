@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 import { useEffect } from "react"
 import { useDatabaseList } from "../../../services/conexion"
 import { SubNavBar } from "../SubNavBar/SubNavBar"
@@ -45,7 +45,7 @@ export const EstadisticasPartidos = ({dato}) => {
                         <div className="w-25">Ultimo Partido</div>
                     </div>
                 {tabla.map((d,idx) => (
-                    <div className="rival" key={idx}>
+                    <Link to={`./${d.data}`} state={d} className="rival" key={idx}>
                         <div className="w-5"></div>
                         <div className="w-25">{d.data}</div>
                         <div className="w-5">{dato === "miEquipo" && <img src={d.escudo.escudo} alt="escudo" className="escudo" style={{animationDelay: `${0.12 * idx}s`}}/>}</div>
@@ -57,7 +57,7 @@ export const EstadisticasPartidos = ({dato}) => {
                         <div className="w-5">{d.gc}</div>
                         <div className="w-5">{d.gf - d.gc >= 0 ? `+${d.gf - d.gc}` : d.gf - d.gc}</div>
                         <div className="w-25">{d.ultimoPartido}</div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

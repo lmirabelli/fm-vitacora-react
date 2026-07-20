@@ -26,10 +26,18 @@
                 }
         }
     }
+    .dentro{
+        background-color: #00f20012;
+    }
+    .fuera{
+        background-color: #f2000012;
+    }
+    .desconocido{
+        background-color: #ffffff12;
+    }
 
     .jugador-linea{
         margin-bottom: 2px;
-        background-color: var(--color-blanco-contraste);
         padding: 2px 0;
         color: var(--color-1);
         transition: scale 0.3s, background 0.3s;

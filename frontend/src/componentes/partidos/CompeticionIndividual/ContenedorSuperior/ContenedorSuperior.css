@@ -1,0 +1,57 @@
+.competiciones-container-superior{
+    width: 100%;
+    background: var(--color-1);
+    padding: 32px;
+    border-radius: 32px;
+    box-shadow: var(--iluminacion);
+    h2,h5{
+        text-transform: uppercase;
+        color: var(--color-blanco);
+        letter-spacing: 2px;
+    }
+    .estadisticas{
+        display: flex;
+        justify-content: space-around;
+        margin: 12px 0;
+        .info-stats{
+            color: var(--color-5);
+            font-family: var(--fuente-resultado);
+            font-size: 30px;
+            width: 10%;
+            background-color: var(--color-negro-contraste);
+            text-align: center;
+            padding: 6px 0;
+            border-radius: 12px;
+            box-shadow: var(--iluminacion);
+            overflow: hidden;
+        }
+    }
+    .equipos{
+        width: 100%;
+        display: flex;
+        .ciclo{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background: var(--color-negro-contraste);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: var(--iluminacion);
+            div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: var(--fuente-resultado);
+                color: var(--color-5);
+                font-size: 12px;
+                margin: 1px 0;
+                div{
+                    font-size: 10px;
+                }
+                img{
+                    height: 16px;
+                }
+            }
+        }
+    }
+}

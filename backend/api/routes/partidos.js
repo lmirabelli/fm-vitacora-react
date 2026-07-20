@@ -2,7 +2,7 @@ import express from "express";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
-import services from '../services.js'
+import services, { busquedaEscudo } from '../services.js'
 
 const router = express.Router();
 
@@ -385,6 +385,137 @@ router.get('/stats/:id', (req, res) => {
         tabla.sort((a,b) => (b.pg + b.pe + b.pp) - (a.pg + a.pe + a.pp))
 
         res.status(200).json({ tabla });
+    } catch (err) {
+        res.status(400).json({ mensaje: 'error al cargar la tabla', error: err.message });
+    }
+})
+
+router.get('/competicion/:id', (req, res) => {
+
+    let { id } = req.params
+    try {
+        const listaDePartidos = services.cargarBaseDeDatos(jsonPartidos)
+        const listaDeJugadores = services.cargarBaseDeDatos(jsonJugadores)
+        const listaDeBanderas = services.cargarBaseDeDatos(jsonPaises)
+        const listaDeEscudos = services.cargarBaseDeDatos(jsonEscudos)
+        
+        let competicion = { competicion: id,
+                            partidos: [],
+                            goleadores: [],
+                            asistidores: [],
+                            misEquipos: [],
+                            promedio: 0,
+                            penales: [],
+                            jugadores: [],
+                            temporadas: []
+                            }
+        let partidosCompeticion = listaDePartidos.filter(a => a.competicion === id)
+        let total = 0
+        partidosCompeticion.forEach( p => {
+            // enlistar partidos
+            let nuevoPartido = {
+                id: p.fechaDecimal,
+                rival: p.rival,
+                fecha: p.fecha,
+                condicion: p.condicion,
+                paisRival: services.busquedaBandera(listaDeBanderas,p.paisRival),
+                miEscudo: services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`),
+                escudoRival: services.busquedaEscudo(listaDeEscudos,`${p.rival} (xxx)`),
+                promedio: p.promedio,
+                resultado: `${p.golesFavor}-${p.golesContra}`
+            }
+            nuevoPartido.paisRival.pais = p.paisRival
+            competicion.partidos.push(nuevoPartido)
+            // entablar goleadores y asistidores
+            p.goles.forEach( g => {
+                let buscarGoleador = competicion.goleadores.find(a => a.jugador === g.goleador)
+                if(!buscarGoleador){
+                    let nuevoGoleador = {
+                        jugador: g.goleador,
+                        goles: 1
+                    }
+                    competicion.goleadores.push(nuevoGoleador)
+                }else{
+                    buscarGoleador.goles++
+                }
+                let buscarAsistente = competicion.asistidores.find(a => a.jugador === g.asistente)
+                if(!buscarAsistente){
+                    let nuevoAsistente = {
+                        jugador: g.asistente,
+                        asistencias: 1
+                    }
+                    competicion.asistidores.push(nuevoAsistente)
+                }else{
+                    buscarAsistente.asistencias++
+                }
+            })
+            // entablar equipos dirigidos
+            let buscarEquipo = competicion.misEquipos.find(a => a.equipo === p.miEquipo)
+            if(!buscarEquipo){
+                let nuevoEquipo = {
+                    equipo: p.miEquipo,
+                    escudo: nuevoPartido.miEscudo.escudo,
+                    pg: p.golesFavor > p.golesContra ? 1 : 0,
+                    pe: p.golesFavor === p.golesContra ? 1 : 0,
+                    pp: p.golesFavor < p.golesContra ? 1 : 0,
+                    gf: p.golesFavor,
+                    gc: p.golesContra,
+                    temporadas: [p.temporada]
+                }
+                competicion.misEquipos.push(nuevoEquipo)
+            }else{
+                p.golesFavor > p.golesContra && buscarEquipo.pg++
+                p.golesFavor === p.golesContra && buscarEquipo.pe++
+                p.golesFavor < p.golesContra && buscarEquipo.pp++
+                buscarEquipo.gf += parseInt(p.golesFavor)
+                buscarEquipo.gc += parseInt(p.golesContra)
+                buscarEquipo.temporadas.find( a => a === p.temporada) === undefined && buscarEquipo.temporadas.push(p.temporada)
+            }
+            // entablar jugadores
+            p.jugadores.forEach( j => {
+
+                let buscarJugador = competicion.jugadores.find(a => a.id === j.id)
+
+                if(!buscarJugador){
+                    if(j.id !== ""){
+                        let nuevoJugador = {
+                        id: j.id,
+                        jugador: j.nombre,
+                        puntaje: parseInt(j.puntaje),
+                        partidosCPuntaje: j.puntaje !== "0" ? 1 : 0,
+                        partidosSPuntaje: j.puntaje === "0" ? 1 : 0
+                        }
+                        competicion.jugadores.push(nuevoJugador)
+                    }
+                }else{
+                    buscarJugador.puntaje += parseInt(j.puntaje)
+                    j.puntaje !== "0" ? buscarJugador.partidosCPuntaje++ : buscarJugador.partidosSPuntaje++
+                }
+            })
+            total += p.promedio
+            competicion.penales.push(...p.penales)
+        })
+
+        competicion.promedio = (total / competicion.partidos.length).toFixed(2)
+        competicion.asistidores = competicion.asistidores.filter(a => a.jugador !== "." && a.jugador !== "...penal")
+        competicion.asistidores.sort((a,b) => b.asistencias - a.asistencias)
+        competicion.goleadores = competicion.goleadores.filter(a => a.jugador !== "...en contra")
+        competicion.goleadores.sort((a,b) => b.goles - a.goles)
+
+        competicion.jugadores.forEach( j => {
+            j.puntaje = parseInt(j.puntaje / j.partidosCPuntaje)
+            j.totalPartidos = j.partidosCPuntaje + j.partidosSPuntaje
+
+            let buscarJugador = listaDeJugadores.find(a => a.id === j.id)
+
+            if(buscarJugador){
+                j.nacionalidad = services.busquedaBandera(listaDeBanderas, buscarJugador.nacionalidad).bandera
+                j.edad = parseInt((partidosCompeticion[partidosCompeticion.length - 1].fechaDecimal - buscarJugador.fechaDecimalNacimiento) / 365.25)
+            }
+        })
+        competicion.jugadores.sort((a,b) => b.totalPartidos - a.totalPartidos)
+
+        res.status(200).json({ competicion});
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar la tabla', error: err.message });
     }

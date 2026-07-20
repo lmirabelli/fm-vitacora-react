@@ -26,6 +26,14 @@ export const PrincipalJugadores = () => {
         }
         let { listaDeJugadores } = data
 
+        const estadoJugador = (fecha) => {
+
+            let estado = "desconocido"
+            estado = fecha === "00.00.0000" ? "dentro" : "fuera"
+
+            return estado
+        }
+
     return(
         <div className="standard">
             <SubNavBar />
@@ -47,7 +55,7 @@ export const PrincipalJugadores = () => {
                         </div>
                     </div>
                 {listaDeJugadores.map((j,idx) => (
-                    <Link to={`/jugadores/${j.id}`} className='jugador-linea' key={idx}>
+                    <Link to={`/jugadores/${j.id}`} className={`jugador-linea ${estadoJugador(j.etapas[j.cantidadEtapas -1].fechaSalida)}`} key={idx}>
                         <div className='w-5'><img src={j.etapas[j.cantidadEtapas -1].escudoMiEquipo.escudo} alt="mi club" /></div>
                         <div className='w-15'>{j.alias === "" ? j.nombreCompleto : j.alias}</div>
                         <div className='w-10'>{j.fechaNacimiento}</div>

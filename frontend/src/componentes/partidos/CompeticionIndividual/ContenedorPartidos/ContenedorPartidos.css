@@ -1,0 +1,43 @@
+.tabla-partidos{
+    width: 100%;
+    background-color: var(--color-blanco-contraste);
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: var(--iluminacion);
+    backdrop-filter: blur(6px);
+    .partido{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        background-color: var(--color-negro-contraste);
+        padding: 4px;
+        margin: 4px 0;
+        box-shadow: var(--iluminacion);
+        border-radius: 4px;
+        transition: background 0.3s, scale 0.3s;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--fuente-resultado);
+            color: var(--color-blanco);
+            text-transform: capitalize;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-wrap: nowrap;
+            .bandera{
+                margin-left: 4px;
+                height: 12px;
+                transform: rotateZ(-24deg);
+                opacity: 0.60;
+            }
+            img{
+                height: 22px;
+            }
+        }
+        &:hover{
+            background-color: var(--color-1);
+            scale: 0.98;
+        }
+    }
+}

@@ -41,6 +41,7 @@ import { Block100 } from './componentes/Estadisticas/Block100/Block100';
 import { Arqueros } from './componentes/Estadisticas/Arqueros/Arqueros';
 import { Copas } from './componentes/Copas/Copas';
 import { CopaIndividual } from './componentes/Copas/CopaIndividual/CopaIndividual';
+import { CompeticionIndividual } from './componentes/partidos/CompeticionIndividual/CompeticionIndividual';
 
 
 
@@ -57,6 +58,7 @@ function App() {
           <Route path='/partidos' element={<Principal />} />
           <Route path='/partidos/rivales' element={<Rivales />} />
           <Route path='/partidos/competicion' element={<EstadisticasPartidos dato={'competicion'} />} />
+          <Route path='/partidos/competicion/:id' element={<CompeticionIndividual />} />
           <Route path='/partidos/condicion' element={<EstadisticasPartidos dato={'condicion'} />} />
           <Route path='/partidos/tiempo' element={<EstadisticasPartidos dato={'anio'} />} />
           <Route path='/partidos/misEquipos' element={<EstadisticasPartidos dato={'miEquipo'} />} />
