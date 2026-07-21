@@ -42,6 +42,7 @@ import { Arqueros } from './componentes/Estadisticas/Arqueros/Arqueros';
 import { Copas } from './componentes/Copas/Copas';
 import { CopaIndividual } from './componentes/Copas/CopaIndividual/CopaIndividual';
 import { CompeticionIndividual } from './componentes/partidos/CompeticionIndividual/CompeticionIndividual';
+import { CalculatorIndex } from './componentes/Calculator/CalculatorIndex/CalculatorIndex';
 
 
 
@@ -103,6 +104,8 @@ function App() {
           <Route path='/editarEscudo/:pais/:equipo' element={<EditarEscudo />} /> 
           {/* AGRADECIMIENTOS */}
           <Route path='/agradecimientos' element={<Agradecimientos />} />
+          {/* calculator */}
+          <Route path='/calculator' element={<CalculatorIndex />} />
         </Routes>
       </BrowserRouter>
   );

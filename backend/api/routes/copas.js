@@ -154,7 +154,6 @@ router.get('/', (req,res) => {
                 copasSegmentadas.push(nuevoPais)
             }else{
 
-
                 let buscarCopa = buscarPais.copas.find(a => a.copa === copa.copa)
                 
                 if(!buscarCopa){
@@ -164,7 +163,7 @@ router.get('/', (req,res) => {
                         temporadas: [{temporada: copa.temporada, tipo: copa.tipo}]
                         }
                         
-                        copas.push(nuevaCopa)
+                        buscarPais.copas.push(nuevaCopa)
                 }else{
                     buscarCopa.temporadas.push({temporada: copa.temporada, tipo: copa.tipo})
                 }

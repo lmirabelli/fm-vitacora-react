@@ -1,0 +1,27 @@
+.botonera-calculator{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 0;
+    .btn-calculator{
+        padding: 4px;
+        width: 22%;
+        text-align: center;
+        font-family: var(--fuente-resultado);
+        color: var(--color-blanco);
+        box-shadow: var(--iluminacion);
+        border-radius: 6px;
+        transition: background 0.5s;
+    }
+    .activo{
+        background-color: #008500;
+        cursor: no-drop;
+    }
+    .inactivo{
+        background-color: #850000;
+        cursor: pointer;
+        &:hover{
+            background-color: #858500;
+        }
+    }
+}

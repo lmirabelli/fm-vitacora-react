@@ -18,6 +18,9 @@
         .w-15{
             justify-content: center;
             align-items: center;
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         .w-85{
             a{

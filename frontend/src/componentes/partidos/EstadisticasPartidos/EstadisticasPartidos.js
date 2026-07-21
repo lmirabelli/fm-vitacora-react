@@ -25,7 +25,7 @@ export const EstadisticasPartidos = ({dato}) => {
                         return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                     }
                     let { tabla } = data
-
+                    console.log(dato)
     return(
         <div className="standard">
             <SubNavBar />
@@ -45,7 +45,7 @@ export const EstadisticasPartidos = ({dato}) => {
                         <div className="w-25">Ultimo Partido</div>
                     </div>
                 {tabla.map((d,idx) => (
-                    <Link to={`./${d.data}`} state={d} className="rival" key={idx}>
+                    <Link to={dato === "competicion" ? `./${d.data}` : ""} state={d} className="rival" key={idx}>
                         <div className="w-5"></div>
                         <div className="w-25">{d.data}</div>
                         <div className="w-5">{dato === "miEquipo" && <img src={d.escudo.escudo} alt="escudo" className="escudo" style={{animationDelay: `${0.12 * idx}s`}}/>}</div>
