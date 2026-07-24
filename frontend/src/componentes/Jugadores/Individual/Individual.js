@@ -34,7 +34,7 @@ export const Individual = () => {
         );
     }
 
-    let { jugador, partidos } = data;
+    let { jugador, partidos, campeones } = data;
 
     return (
         <div className="standard">
@@ -79,6 +79,12 @@ export const Individual = () => {
                         <div className="w-5">{j.asistencias}</div>
                         <div className="w-5">{j.mvp}</div>
                     </div>
+                ))}
+            </div>
+            <div className="contenedor-titulos" style={{background: `${jugador.bandera.colorSecundario}80`}}>
+                <h2 style={{color: `${jugador.bandera.colorPrimario}`}}>TITULOS</h2>
+                {campeones.map((i, idx) => (
+                    <span key={idx}>{i}</span>
                 ))}
             </div>
             <div className="contenedor-partidos">

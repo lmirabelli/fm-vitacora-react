@@ -23,7 +23,7 @@ export const Agregar = () => {
         golesFavor: '',
         golesContra: '',
         promedio: '',
-        jugadores: Array(16).fill({ nombre: '', puntaje: '', id: '' }),
+        jugadores: Array(17).fill({ nombre: '', puntaje: '', id: '' }),
         penales: [],
         goles: []
     });

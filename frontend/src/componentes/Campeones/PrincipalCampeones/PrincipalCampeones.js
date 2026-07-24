@@ -78,7 +78,7 @@ export const PrincipalCampeones = () => {
                                         <div className="w-35">{p.rival}</div>
                                         <div className="w-20">{p.condicion}</div>
                                         <div className="w-10">{p.resultado}</div>
-                                        <div className="w-15">{p.promedio}</div>
+                                        <div className="w-15">{p.promedio.toFixed(2)}</div>
                                     </Link>
                                 ))}
                             </div>

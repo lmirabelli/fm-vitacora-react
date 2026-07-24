@@ -14,6 +14,7 @@ const jsonPartidos = path.join(__dirname, "../../basededatos/partidos.json");
 const jsonPaises = path.join(__dirname, "../../basededatos/banderas.json");
 const jsonEscudos = path.join(__dirname, "../../basededatos/escudos.json");
 const jsonEstadisticas = path.join(__dirname, "../../basededatos/estadisticas.json");
+const jsonCampeones = path.join(__dirname, "../../basededatos/campeones.json");
 
 router.post('/agregar', (req, res) => {
     
@@ -295,6 +296,7 @@ router.get('/:id', (req, res) => {
         const listaDeEscudos = services.cargarBaseDeDatos(jsonEscudos)
         const listaDeEstadisticas = services.cargarBaseDeDatos(jsonEstadisticas)
         const listaDePartidos = services.cargarBaseDeDatos(jsonPartidos)
+        const listaDeCampeones = services.cargarBaseDeDatos(jsonCampeones)
 
         let jugadordata = listaDeJugadores.filter(a => a.id == id)
         let jugadoresEstructurados = []
@@ -368,7 +370,14 @@ router.get('/:id', (req, res) => {
             }
         })
 
-        res.status(200).json({ jugador,partidos });
+        let campeones = []
+        listaDeCampeones.forEach( p => {
+            let jugadorCampeon = p.jugadores.find(a => a.id === id)
+
+            jugadorCampeon && campeones.push(`${p.competicion}-${p.temporada}`)
+        })
+
+        res.status(200).json({ jugador,partidos,campeones });
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

@@ -1,5 +1,5 @@
 import { SubmenuFlotante } from "./SubmenuFlotante/SubmenuFlotante"
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 import { useDatabaseList } from "../../services/conexion";
 import { Link } from "react-router-dom";
 import './Copas.css'
@@ -11,7 +11,7 @@ export const Copas = () => {
 
     const { data, loading, error } = useDatabaseList(`http://localhost:4001/copas`);
     useEffect(() => {
-                        document.title = `Menu Copas (${data.copasSegmentadas?.length})`;
+                        document.title = `Menu Copas`;
                 
                         return () => {
                             document.title = "FM VITACORA";
@@ -24,29 +24,22 @@ export const Copas = () => {
                     if (error) {
                         return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                     }
-                    let { copasSegmentadas } = data
-
+                    let  {copasSegmentadas}  = data
     return(
         <div className="standard">
             <SubmenuFlotante />
-            <h2>COPAS</h2>
-            {copasSegmentadas.map((pais,idx) => (
+            {copasSegmentadas.map((i, idx) => (
                 <div className="contenedor-pais" key={idx}>
-                    <h4>{pais.pais}</h4>
-                    {pais.copas.map((copa,idxCopa) => (
-                        <Fragment key={idxCopa}>
-                            <div className="copa">
-                            <div className="w-15">{copa.copa}</div>
+                    <h4>{i.pais}</h4>
+                    {i.copas.map((j,idx2) => (
+                        <div className="copa" key={idx2}>
+                            <div className="w-15">{j.copa}</div>
                             <div className="w-85">
-                                {copa.temporadas.map((t, idxTemporada) => (
-                                    <Link to={`/copas/${pais.pais}/${copa.copa}/${t.temporada}`} className={`w-5 ${t.tipo}`} key={idxTemporada}>
-                                        {t.temporada}
-                                    </Link>
+                                {j.temporadas.map((k,idx3) => (
+                                    <Link to={`/copas/${i.pais}/${j.copa}/${k.temporada}`} className={`w-5 ${k.tipo}`} key={idx3}>{k.temporada}</Link>
                                 ))}
-                                </div>
                             </div>
-                            <hr />
-                        </Fragment>
+                        </div>
                     ))}
                 </div>
             ))}

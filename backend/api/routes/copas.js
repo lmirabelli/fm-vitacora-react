@@ -44,7 +44,8 @@ router.post('/agregar', (req, res) => {
 router.get('/:pais/:copa/:temporada', (req,res) => {
 
     try{
-        const {pais, copa, temporada} = req.params
+        let {pais, copa, temporada} = req.params
+        temporada = Number(temporada)
 
         let listaDeCopas = services.cargarBaseDeDatos(archivoCopas)
         let listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
@@ -57,7 +58,10 @@ router.get('/:pais/:copa/:temporada', (req,res) => {
         for(let copa of copasDeInteresSL){
             temporadasDisponibles.push(copa.temporada)
         }
-        let copasDeInteres = copasDeInteresSL.filter(a => a.temporada <= temporada)
+        let copasDeInteres = copasDeInteresSL.filter(a => Number(a.temporada) <= temporada)
+        if (copasDeInteres.length === 0) {
+            return res.status(404).json({ error: "No se encontraron datos para la temporada especificada." });
+        }
         const ultimaCopa = copasDeInteres[copasDeInteres.length - 1]
 
         const agregarEquipo = (equipo,pais,gf,gc,temp) => {
@@ -172,8 +176,8 @@ router.get('/', (req,res) => {
         
         res.status(200).json({copasSegmentadas});
     }catch (err){
-    console.log(`error al mostrar los goles, ${err}`)
-        res.status(400)
+    console.log(`Error al mostrar las copas: ${err}`);
+    return res.status(500).json({ error: "Error interno al procesar las copas" })
 }})
 
 export default router

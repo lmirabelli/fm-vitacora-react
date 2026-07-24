@@ -10,6 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const archivoCalculator = path.join(__dirname, '../../basededatos/calculator.json');
+const archivoJugadores = path.join(__dirname, '../../basededatos/jugadores.json');
+const archivoBanderas = path.join(__dirname, '../../basededatos/banderas.json');
 
 router.post('/guardar', (req, res) => {
     const datos = req.body
@@ -54,16 +56,32 @@ router.post('/guardar', (req, res) => {
     }
 })
 
-// router.get('/', (req,res) => {
+router.get('/', (req,res) => {
 
-//     try{
+    try{
+        let jugadores = services.cargarBaseDeDatos(archivoCalculator)
+        let listaDeJugadores = services.cargarBaseDeDatos(archivoJugadores)
+        let listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
 
+        jugadores.forEach( j => {
+            let buscarJugador = listaDeJugadores.find(a => a.id == j.id)
+
+            if(!buscarJugador){
+
+                j.nacionalidad = services.busquedaBandera(listaDeBanderas,"desconocido").bandera
+                j.fechaNacimiento = 0
+
+            }else{
+                j.nacionalidad = services.busquedaBandera(listaDeBanderas,buscarJugador.nacionalidad).bandera
+                j.fechaNacimiento = buscarJugador.fechaDecimalNacimiento
+            }
+        })
 
         
-//         res.status(200).json({listaDeCampeones,titulosxjugador});
-//     }catch (err){
-//     console.log(`error al mostrar los goles, ${err}`)
-//         res.status(400)
-// }})
+        res.status(200).json({jugadores});
+    }catch (err){
+    console.log(`error al mostrar los goles, ${err}`)
+        res.status(400)
+}})
 
 export default router

@@ -1,10 +1,10 @@
 import { useState } from "react"
+import './CargaJugadores.css'
 
-export const CargaJugadores = ({ setActivo }) => {
+export const CargaJugadores = ({ setActivo, refetch }) => {
     const [jugadoresLista, setJugadoresLista] = useState([])
     const [cargando, setCargando] = useState(false)
 
-    // Helper para evitar NaNs cuando el atributo viene vacío o con "-"
     const parseAtributo = (val) => {
         const parsed = parseInt(val, 10)
         return isNaN(parsed) ? 0 : parsed
@@ -18,7 +18,6 @@ export const CargaJugadores = ({ setActivo }) => {
             return
         }
 
-        // Obtener valores del formulario
         const formData = new FormData(e.target)
         const dia = parseInt(formData.get("dia"), 10)
         const mes = parseInt(formData.get("mes"), 10)
@@ -66,7 +65,8 @@ export const CargaJugadores = ({ setActivo }) => {
             regates: parseAtributo(j["Reg"]),
             remates: parseAtributo(j["Rem"]),
             resistencia: parseAtributo(j["Res"]),
-            salidas: parseAtributo(j["SAL"]),
+            salidas: parseAtributo(j["sal"]),
+            salto: parseAtributo(j["SAL"]),
             sacrificio: parseAtributo(j["Sac"]),
             saqueConMano: parseAtributo(j["Saq"]),
             serenidad: parseAtributo(j["Ser"]),
@@ -95,11 +95,16 @@ export const CargaJugadores = ({ setActivo }) => {
             }
 
             const data = await response.json()
-            console.log("Guardado exitoso:", data)
-            alert("¡Jugadores guardados con éxito!")
+            alert(`${data.mensaje}`)
 
-            // Si querés redirigir a otra pestaña automáticamente al guardar:
-            // if (setActivo) setActivo("guardados")
+            if (refetch) {
+                await refetch()
+            }
+
+            if (setActivo) {
+                setActivo("calculo")
+            }
+            
 
         } catch (error) {
             console.error("Error al guardar jugadores:", error)
@@ -145,30 +150,30 @@ export const CargaJugadores = ({ setActivo }) => {
         }
 
         reader.readAsText(file)
+
     }
 
     return (
         <div className="carga-jugadores">
-            <h2>CARGA DE JUGADORES</h2>
             <form onSubmit={cargarJugadores} className="fm-form">
-                <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
+                <h2>CARGA DE JUGADORES</h2>
+                <div className="fecha">
+                    <h5>Fecha del archivo</h5>
                     <input type="number" name="dia" placeholder="Día (DD)" min={1} max={31} required />
                     <input type="number" name="mes" placeholder="Mes (MM)" min={1} max={12} required />
                     <input type="number" name="anio" placeholder="Año (AAAA)" min={1800} required />
                 </div>
-
-                <div style={{ marginBottom: '30px', padding: '15px', background: '#f5f5f5', borderRadius: '6px' }}>
-                    <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '8px' }}>
-                        Seleccionar reporte HTML del FM:
+                <div className="archivo">
+                    <label>
+                        Seleccionar reporte HTML:
                     </label>
                     <input 
                         type="file" 
                         accept=".html" 
                         onChange={cargarFile} 
-                        style={{ fontSize: '14px' }}
                     />
                     {jugadoresLista.length > 0 && (
-                        <p style={{ margin: '8px 0 0 0', color: 'green', fontSize: '13px', fontWeight: '500' }}>
+                        <p>
                             ✓ {jugadoresLista.length} jugadores cargados y listos para enviar.
                         </p>
                     )}

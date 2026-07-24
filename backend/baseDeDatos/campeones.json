@@ -1,1 +1,401 @@
-[]
+[
+    {
+        "equipo": "mansfield town",
+        "temporada": 2024,
+        "competicion": "league trophy",
+        "escudo": {
+            "escudo": "https://tmssl.akamaized.net//images/wappen/head/3820.png?lm=1738177410",
+            "colorPrimario": "#f4ed1f",
+            "colorSecundario": "#1341fb",
+            "paisDelEquipo": "inglaterra",
+            "estado": "ok"
+        },
+        "partidos": [
+            {
+                "fecha": "05.09.2023",
+                "id": 19605,
+                "rival": "(s21) manchester city",
+                "condicion": "local",
+                "resultado": "3-2",
+                "promedio": 7.03
+            },
+            {
+                "fecha": "10.10.2023",
+                "id": 19640,
+                "rival": "bolton wanderers",
+                "condicion": "visitante",
+                "resultado": "1-2",
+                "promedio": 6.59
+            },
+            {
+                "fecha": "14.11.2023",
+                "id": 19675,
+                "rival": "blackpool",
+                "condicion": "visitante",
+                "resultado": "3-3",
+                "promedio": 7
+            },
+            {
+                "fecha": "06.12.2023",
+                "id": 19697,
+                "rival": "stockport county",
+                "condicion": "visitante",
+                "resultado": "2-1",
+                "promedio": 7.19
+            },
+            {
+                "fecha": "09.01.2024",
+                "id": 19731,
+                "rival": "crewe alexandra",
+                "condicion": "visitante",
+                "resultado": "2-1",
+                "promedio": 6.8
+            },
+            {
+                "fecha": "30.01.2024",
+                "id": 19752,
+                "rival": "stevenage",
+                "condicion": "local",
+                "resultado": "5-0",
+                "promedio": 7.47
+            },
+            {
+                "fecha": "12.03.2024",
+                "id": 19794,
+                "rival": "(s21) manchester united",
+                "condicion": "local",
+                "resultado": "2-2",
+                "promedio": 7.09
+            },
+            {
+                "fecha": "07.04.2024",
+                "id": 19820,
+                "rival": "bolton wanderers",
+                "condicion": "neutral",
+                "resultado": "2-2",
+                "promedio": 7
+            }
+        ],
+        "jugadores": [
+            {
+                "jugador": "pym, christy",
+                "id": "29086052",
+                "partidos": 1,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/250px-Flag_of_Ireland.svg.png",
+                "nacimiento": "24.04.1995",
+                "edad": 28.955509924709105,
+                "dorsal": 1
+            },
+            {
+                "jugador": "flint, aden",
+                "id": "30026218",
+                "partidos": 6,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "11.07.1989",
+                "edad": 34.74058863791923,
+                "dorsal": 2
+            },
+            {
+                "jugador": "macdonald, calum",
+                "id": "215471",
+                "partidos": 7,
+                "goles": 1,
+                "asistencias": 1,
+                "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/250px-Flag_of_Scotland.svg.png",
+                "nacimiento": "18.12.1997",
+                "edad": 26.302532511978097,
+                "dorsal": 3
+            },
+            {
+                "jugador": "johnson, callum",
+                "id": "29122000",
+                "partidos": 4,
+                "goles": 0,
+                "asistencias": 2,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "23.10.1996",
+                "edad": 27.45516769336071,
+                "dorsal": 4
+            },
+            {
+                "jugador": "clarke, ollie",
+                "id": "29071123",
+                "partidos": 2,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "29.06.1992",
+                "edad": 31.772758384668034,
+                "dorsal": 5
+            },
+            {
+                "jugador": "cargill, baily",
+                "id": "29087654",
+                "partidos": 6,
+                "goles": 1,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "05.07.1995",
+                "edad": 28.758384668035593,
+                "dorsal": 6
+            },
+            {
+                "jugador": "akins, lucas",
+                "id": "28000593",
+                "partidos": 6,
+                "goles": 2,
+                "asistencias": 3,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "25.02.1989",
+                "edad": 35.1129363449692,
+                "dorsal": 7
+            },
+            {
+                "jugador": "boateng, hiram",
+                "id": "29087451",
+                "partidos": 4,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "08.01.1996",
+                "edad": 28.246406570841888,
+                "dorsal": 8
+            },
+            {
+                "jugador": "bowery, jordan",
+                "id": "5112501",
+                "partidos": 6,
+                "goles": 2,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "02.07.1991",
+                "edad": 32.766598220396986,
+                "dorsal": 9
+            },
+            {
+                "jugador": "maris, george",
+                "id": "29110261",
+                "partidos": 7,
+                "goles": 2,
+                "asistencias": 1,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "06.03.1996",
+                "edad": 28.087611225188226,
+                "dorsal": 10
+            },
+            {
+                "jugador": "keillor-dunn, davis",
+                "id": "61080421",
+                "partidos": 7,
+                "goles": 2,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "02.11.1997",
+                "edad": 26.428473648186174,
+                "dorsal": 11
+            },
+            {
+                "jugador": "o'toole, john-joe",
+                "id": "28006092",
+                "partidos": 5,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/250px-Flag_of_Ireland.svg.png",
+                "nacimiento": "30.09.1988",
+                "edad": 35.51813826146475,
+                "dorsal": 13
+            },
+            {
+                "jugador": "brunt, lewis",
+                "id": "29193664",
+                "partidos": 1,
+                "goles": 0,
+                "asistencias": 1,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "06.11.2000",
+                "edad": 23.416837782340863,
+                "dorsal": 14
+            },
+            {
+                "jugador": "ofoborh, nnamdi",
+                "id": "28110726",
+                "partidos": 3,
+                "goles": 1,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/250px-Flag_of_Nigeria.svg.png",
+                "nacimiento": "07.11.1999",
+                "edad": 24.416153319644078,
+                "dorsal": 15
+            },
+            {
+                "jugador": "martin, josh",
+                "id": "28122648",
+                "partidos": 3,
+                "goles": 1,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "09.09.2001",
+                "edad": 22.576317590691307,
+                "dorsal": 16
+            },
+            {
+                "jugador": "swan, will",
+                "id": "29189402",
+                "partidos": 5,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "26.10.2000",
+                "edad": 23.446954140999317,
+                "dorsal": 17
+            },
+            {
+                "jugador": "oates, rhys",
+                "id": "29087368",
+                "partidos": 3,
+                "goles": 1,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "04.12.1994",
+                "edad": 29.34154688569473,
+                "dorsal": 18
+            },
+            {
+                "jugador": "cooper, george",
+                "id": "29236202",
+                "partidos": 1,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "25.10.2002",
+                "edad": 21.451060917180012,
+                "dorsal": 19
+            },
+            {
+                "jugador": "dinanga, marcus",
+                "id": "215508",
+                "partidos": 3,
+                "goles": 1,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "30.06.1997",
+                "edad": 26.770704996577688,
+                "dorsal": 21
+            },
+            {
+                "jugador": "williams, george",
+                "id": "29063515",
+                "partidos": 5,
+                "goles": 1,
+                "asistencias": 3,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "14.04.1993",
+                "edad": 30.981519507186857,
+                "dorsal": 22
+            },
+            {
+                "jugador": "robson, max",
+                "id": "28127319",
+                "partidos": 5,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "17.10.2002",
+                "edad": 21.472963723477072,
+                "dorsal": 23
+            },
+            {
+                "jugador": "reed, louis",
+                "id": "29123130",
+                "partidos": 6,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "25.07.1997",
+                "edad": 26.702258726899384,
+                "dorsal": 25
+            },
+            {
+                "jugador": "lewis, aaron",
+                "id": "28100469",
+                "partidos": 6,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Flag_of_Wales.svg/250px-Flag_of_Wales.svg.png",
+                "nacimiento": "26.06.1998",
+                "edad": 25.782340862423,
+                "dorsal": 26
+            },
+            {
+                "jugador": "mclaughlin, stephen",
+                "id": "52025487",
+                "partidos": 4,
+                "goles": 3,
+                "asistencias": 1,
+                "bandera": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/250px-Flag_of_Ireland.svg.png",
+                "nacimiento": "14.06.1990",
+                "edad": 33.81519507186858,
+                "dorsal": 28
+            },
+            {
+                "jugador": "flinders, scott",
+                "id": "5118761",
+                "partidos": 7,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "12.06.1986",
+                "edad": 37.82067077344285,
+                "dorsal": 29
+            },
+            {
+                "jugador": "gale, james",
+                "id": "2000142754",
+                "partidos": 6,
+                "goles": 2,
+                "asistencias": 2,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "20.12.2001",
+                "edad": 22.297056810403834,
+                "dorsal": 30
+            },
+            {
+                "jugador": "simpson, jack",
+                "id": "29149937",
+                "partidos": 5,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "18.12.1996",
+                "edad": 27.301848049281315,
+                "dorsal": 34
+            },
+            {
+                "jugador": "kruszynski, jakub",
+                "id": "2000140843",
+                "partidos": 4,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "26.02.2005",
+                "edad": 19.110198494182068,
+                "dorsal": 47
+            },
+            {
+                "jugador": "flanagan, finn",
+                "id": "2000140849",
+                "partidos": 1,
+                "goles": 0,
+                "asistencias": 0,
+                "bandera": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/250px-Flag_of_England.svg.png",
+                "nacimiento": "22.01.2005",
+                "edad": 19.20602327173169,
+                "dorsal": 48
+            }
+        ]
+    }
+]

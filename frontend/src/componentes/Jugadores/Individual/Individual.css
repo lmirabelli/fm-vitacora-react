@@ -1,19 +1,25 @@
 .info-jugador {
     display: grid;
-    grid-template-columns: repeat(1fr, 10);
-    gap: 10px;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 6px;
     grid-template-areas:
     'csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior'
-    'cetapas cetapas cetapas . . . . . . .'
+    'cetapas cetapas cetapas cetapas cetapas ctitulos ctitulos ctitulos ctitulos ctitulos'
     'cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos'
 ;
-    .contenedor-superior,
-    .contenedor-etapas {
+    .contenedor-etapas,
+    .contenedor-titulos{
+        padding: 18px;
+    }
+    .contenedor-superior{
         padding: 36px;
+    }
+    .contenedor-superior,
+    .contenedor-etapas,
+    .contenedor-titulos {
+
         border-radius: 24px;
-        box-shadow:
-            inset 4px 4px 8px 1px var(--color-blanco-contraste),
-            inset -4px -4px 8px 1px var(--color-negro-contraste);
+        box-shadow: var(--iluminacion);
         backdrop-filter: blur(4px);
         h2,
         h5 {
@@ -60,11 +66,26 @@
             }
         }
     }
-
-    .contenedor-etapas {
-        width: 100%;
+    .contenedor-etapas{
         grid-area: cetapas;
-        margin: 12px;
+    }
+    .contenedor-titulos{
+        grid-area: ctitulos;
+    }
+
+    .contenedor-etapas, .contenedor-titulos {
+        width: 100%;
+        span{
+            font-size: 10px;
+            font-family: var(--fuente-resultado);
+            text-transform: uppercase;
+            padding: 2px 6px;
+            margin: 2px;
+            background-color: var(--color-5);
+            color: var(--color-1);
+            border-radius: 4px;
+            box-shadow: var(--iluminacion);
+        }
         .etapa {
             width: 100%;
             display: flex;

@@ -11,7 +11,7 @@ export const CopaIndividual = () => {
         let {pais,copa,temporada} = useParams()
         const { data, loading, error } = useDatabaseList(`http://localhost:4001/copas/${pais}/${copa}/${temporada}`);
         useEffect(() => {
-                            document.title = `${data.ultimaCopa?.copa.toUpperCase()} ${data.ultimaCopa?.temporada}`;
+                            document.title = `${data?.ultimaCopa?.copa.toUpperCase()} ${data?.ultimaCopa?.temporada}`;
                     
                             return () => {
                                 document.title = "FM VITACORA";
@@ -25,7 +25,6 @@ export const CopaIndividual = () => {
                             return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                         }
                         let { tabla,temporadasDisponibles,ultimaCopa } = data
-                        console.log(data)
 
     return(
         <div className='standard'>

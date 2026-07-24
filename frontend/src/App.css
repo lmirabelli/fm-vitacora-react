@@ -161,6 +161,10 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 20%;
 }
 
+.w-22{
+    width: 22%;
+}
+
 .w-25{
     width: 25%;
 }
