@@ -21,6 +21,7 @@ import imagenesRoutes from './routes/imagenes.js'
 import configuracionRoutes from './routes/configuracion.js'
 import copasRoutes from './routes/copas.js'
 import calculatorRoutes from './routes/calculator.js'
+import ligasRoutes from './routes/ligas.js'
 
 
 app.use('/partidos', partidosRoutes)
@@ -31,6 +32,7 @@ app.use('/campeones', campeonesRoutes)
 app.use('/imagenes', imagenesRoutes)
 app.use('/configuracion', configuracionRoutes)
 app.use('/copas', copasRoutes)
+app.use('/ligas', ligasRoutes)
 app.use('/calculator', calculatorRoutes)
 
 

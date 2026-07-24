@@ -308,8 +308,8 @@ router.get('/rivales', (req, res) => {
                     pg,
                     pe,
                     pp,
-                    gf: p.golesFavor,
-                    gc: p.golesContra,
+                    gf: parseInt(p.golesFavor),
+                    gc: parseInt(p.golesContra),
                     ultimoPartido: `${p.fecha} ${p.competicion} ${p.golesFavor}-${p.golesContra}`,
                     escudo: services.busquedaEscudo(listaDeEscudos, `${p.rival} (xxx)`).escudo,
                     bandera: services.busquedaBandera(listaDePaises, p.paisRival).bandera,
@@ -320,8 +320,8 @@ router.get('/rivales', (req, res) => {
                 buscarEnTabla.pg += pg
                 buscarEnTabla.pe += pe
                 buscarEnTabla.pp += pp
-                buscarEnTabla.gf += p.golesFavor
-                buscarEnTabla.gc += p.golesContra
+                buscarEnTabla.gf += parseInt(p.golesFavor)
+                buscarEnTabla.gc += parseInt(p.golesContra)
                 buscarEnTabla.ultimoPartido= `${p.fecha} ${p.competicion} ${p.golesFavor}-${p.golesContra}`
                 buscarEnTabla.url = p.fechaDecimal
             }
