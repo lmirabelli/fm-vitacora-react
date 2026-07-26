@@ -1,0 +1,85 @@
+.info-container{
+    width: 100%;
+    margin: 54px auto;
+    padding: 16px;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    background-color: var(--color-blanco-contraste);
+    box-shadow: var(--iluminacion);
+    h2{
+        text-transform: capitalize;
+        text-align: center;
+        color: var(--color-2);
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 1px var(--color-negro);
+    }
+    .liga{
+        width: 100%;
+        display: flex;
+        .info-liga-form{
+            width: 22%;
+            font-family: var(--fuente-resultado);
+            text-transform: capitalize;
+            color: var(--color-1);
+            text-wrap: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .temporadas{
+            width: 78%;
+            display: flex;
+            align-items: center;
+            div{
+                margin: 0 1px;
+                box-shadow: 1px 1px 4px 0px var(--color-negro);
+                text-align: center;
+                font-size: 12px;
+                font-family: var(--fuente-resultado);
+                width: 5%;
+                border-radius: 4px;
+                background-color: var(--color-2);
+            }
+        }
+    }
+    .lista{
+        width: 100%;
+        input{
+            padding: 6px;
+            text-align: center;
+            font-family: var(--fuente-resultado);
+            margin: 4px 2px;
+            border: 0;
+            border-radius: 6px;
+            box-shadow: var(--iluminacion);
+        }
+        .linea-datos{
+            width: 100%;
+            display: flex;
+            div, input{
+                text-align: center;
+                background-color: var(--color-blanco-contraste);
+                margin: 2px;
+                border-radius: 6px;
+                font-family: var(--fuente-resultado);
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            div{
+                color: var(--color-1);
+            }
+            input{
+                color: var(--color-2);
+                border: 1px solid var(--color-1);
+                padding: 4px 0;
+                box-shadow: inset 1px 1px 4px 0px var(--color-1);
+            }
+            .w6{
+                width: 6%;
+            }
+            .w16{
+                width: 16%;
+            }
+        }
+    }
+}

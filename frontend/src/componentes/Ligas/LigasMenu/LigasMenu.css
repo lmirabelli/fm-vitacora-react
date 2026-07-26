@@ -1,0 +1,24 @@
+.btnera-ligas{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .btn-liga{
+        margin: 8px;
+        padding: 8px 0;
+        width: 6%;
+        background: var(--color-5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: var(--iluminacion);
+        text-decoration: none;
+        transition: background 0.5s;
+        &:hover{
+            background-color: var(--color-3);
+        }
+        img{
+            height: 16px;
+        }
+    }
+}

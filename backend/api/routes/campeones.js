@@ -54,7 +54,10 @@ router.post('/agregar', (req, res) => {
                         goles: 0,
                         asistencias: 0
                     }
-                    jugadores.push(nuevoJugador)
+
+                    if(nuevoJugador.nombre !== ""){
+                        jugadores.push(nuevoJugador)
+                    }
 
                     buscarJugador = jugadores.find(a => a.id == j.id)
                 }

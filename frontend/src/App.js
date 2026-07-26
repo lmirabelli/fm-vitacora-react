@@ -43,6 +43,8 @@ import { Copas } from './componentes/Copas/Copas';
 import { CopaIndividual } from './componentes/Copas/CopaIndividual/CopaIndividual';
 import { CompeticionIndividual } from './componentes/partidos/CompeticionIndividual/CompeticionIndividual';
 import { CalculatorIndex } from './componentes/Calculator/CalculatorIndex/CalculatorIndex';
+import { LigasMenu } from './componentes/Ligas/LigasMenu/LigasMenu';
+import { AgregarLigas } from './componentes/Ligas/AgregarLigas/AgregarLigas';
 
 
 
@@ -99,6 +101,9 @@ function App() {
           <Route path='/copas/agregar' element={<AgregarCopa />} />
           <Route path='/copas/:pais/:copa/:temporada' element={<CopaIndividual />} />
           <Route path='/copas' element={<Copas />} />
+          {/* LIGAS */}
+          <Route path='/ligas' element={<LigasMenu />} />
+          <Route path='/ligas/agregar' element={<AgregarLigas/>} />
           {/* CONFIGURACION */}
           <Route path='/configuracion' element={<Configuracion />} />
           <Route path='/editarEscudo/:pais/:equipo' element={<EditarEscudo />} /> 
