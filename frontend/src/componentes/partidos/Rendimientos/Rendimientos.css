@@ -41,6 +41,11 @@
     .individual{
         display: flex;
         margin: 2px 0;
+        text-decoration: none;
+        transition: transform 0.5s;
+        &:hover{
+            transform: translateX(6px);
+        }
         .neutro{
             background-color: var(--color-blanco-contraste);
             color: var(--color-1);

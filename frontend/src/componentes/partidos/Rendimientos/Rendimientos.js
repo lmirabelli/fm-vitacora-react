@@ -2,6 +2,7 @@ import { useEffect, useState} from "react";
 import { useDatabaseList } from "../../../services/conexion";
 import "./Rendimientos.css"
 import { SubNavBar } from "../SubNavBar/SubNavBar";
+import { Link } from "react-router-dom";
 
 export const Rendimientos = () => {
 
@@ -42,6 +43,7 @@ export const Rendimientos = () => {
                                 minimoDePartidos = 1
                         }
 
+                        listaJugadoresPuntuados = listaJugadoresPuntuados.filter(a => a.etapas[a.etapas.length - 1].fechaSalida === "00.00.0000")
                         listaJugadoresPuntuados.forEach(j => {
                             
                             if(j.partidosPuntuados >= minimoDePartidos){
@@ -94,7 +96,6 @@ export const Rendimientos = () => {
                             return clase
                         }
 
-
     return(
         <div className="standard">
             <SubNavBar />
@@ -117,13 +118,13 @@ export const Rendimientos = () => {
                     ))}
                 </div>
                 {listaJugadoresPuntuados.map((j,idx) => (
-                    <div className="individual" key={idx}>
+                    <Link to={`/jugadores/${j.id}`} className="individual" key={idx}>
                         <div className="w-10 neutro">{j.nombreCompleto}</div>
                         <div className={`w-3 ${puntuar(j.promedio)}`}>{j.promedio === 0 ? "" : j.promedio}</div>
                     {j.ultimosPartidos.map((up,idx2) => (
                         <div className={`w-3 ${puntuar(up)}`} key={idx2}>{(up === 0 || up === "nj") ? "" : up}</div>
                     ))}
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>

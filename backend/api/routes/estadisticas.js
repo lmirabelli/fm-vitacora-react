@@ -542,12 +542,11 @@ router.get('/arqueros', (req,res) => {
         let tablaEstadisticas = []
         listaDeArqueros.forEach(gk => {
             let buscarArquero = tablaEstadisticas.find(a => a.id === gk.id)
-
+            
             if(!buscarArquero){
 
                 let buscarData = listaDeJugadores.find(a => a.id === gk.id)
                 let bandera = services.busquedaBandera(listaDeBanderas,buscarData.nacionalidad)
-                console.log(buscarData.nacionalidad)
                 let anioInicio = buscarData.etapas[0].fechaLlegada.slice(-4)
                 let anioFinal = buscarData.etapas[buscarData.etapas.length - 1].fechaSalida.slice(-4)
                 let etapa = anioFinal === "0000" ? `${anioInicio}-Act` : anioFinal === anioInicio ? anioInicio : `${anioInicio}-${anioFinal}`
@@ -577,23 +576,23 @@ router.get('/arqueros', (req,res) => {
 
                 tablaEstadisticas.push(nuevoArquero)
             }else{
-                buscarData.partidos += gk.partidos
-                buscarData.minutos += gk.minutos
-                buscarData.golesEncajados += gk.golesEncajados
-                buscarData.balonesAtajados += gk.balonesAtajados
-                buscarData.balonesDesviados += gk.balonesDesviados
-                buscarData.balonesRechazados += gk.balonesRechazados
-                buscarData.penalesRecibidos += gk.penalesRecibidos
-                buscarData.penalesParados += gk.penalesParados
-                buscarData.pasesIntentados += gk.pasesIntentados
-                buscarData.pasesCompletados += gk.pasesCompletados
-                buscarData.partidosGanados += gk.partidosGanados
-                buscarData.partidosEmpatados += gk.partidosEmpatados
-                buscarData.partidosPerdidos += gk.partidosPerdidos
-                buscarData.jugadorDelPartido += gk.jugadorDelPartido
-                buscarData.tarjetaAmarilla += gk.tarjetaAmarilla
-                buscarData.tarjetasRojas += gk.tarjetasRojas
-                buscarData.vallaInvicta += gk.vallaInvicta
+                buscarArquero.partidos += gk.partidos
+                buscarArquero.minutos += gk.minutos
+                buscarArquero.golesEncajados += gk.golesEncajados
+                buscarArquero.balonesAtajados += gk.balonesAtajados
+                buscarArquero.balonesDesviados += gk.balonesDesviados
+                buscarArquero.balonesRechazados += gk.balonesRechazados
+                buscarArquero.penalesRecibidos += gk.penalesRecibidos
+                buscarArquero.penalesParados += gk.penalesParados
+                buscarArquero.pasesIntentados += gk.pasesIntentados
+                buscarArquero.pasesCompletados += gk.pasesCompletados
+                buscarArquero.partidosGanados += gk.partidosGanados
+                buscarArquero.partidosEmpatados += gk.partidosEmpatados
+                buscarArquero.partidosPerdidos += gk.partidosPerdidos
+                buscarArquero.jugadorDelPartido += gk.jugadorDelPartido
+                buscarArquero.tarjetaAmarilla += gk.tarjetaAmarilla
+                buscarArquero.tarjetasRojas += gk.tarjetasRojas
+                buscarArquero.vallaInvicta += gk.vallaInvicta
             }
         })
         tablaEstadisticas.sort((a,b) => b.partidos - a.partidos)
