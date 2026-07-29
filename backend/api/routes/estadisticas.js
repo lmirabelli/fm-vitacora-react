@@ -715,8 +715,10 @@ router.get('/', (req,res) => {
                         pg: j.partidosGanados || 0,
                         pe: j.partidosEmpatados || 0,
                         pp: j.partidosPerdidos || 0,
-                        distancia: parseFloat(j.distancia)
-
+                        distancia: parseFloat(j.distancia),
+                        posicion: j.posicion,
+                        xg: parseFloat(j.xg),
+                        xa: parseFloat(j.xa)
                     }
                     estadisticas.push(nuevoJugador)
                 }else{
@@ -742,6 +744,9 @@ router.get('/', (req,res) => {
                     buscarJugador.pe += j.partidosEmpatados
                     buscarJugador.pp += j.partidosPerdidos
                     buscarJugador.distancia += parseFloat(j.distancia)
+                    buscarJugador.posicion = j.posicion
+                    buscarJugador.xg += parseFloat(j.xg)
+                    buscarJugador.xa += parseFloat(j.xa)
                 }
             })
         });
@@ -766,6 +771,7 @@ router.get('/', (req,res) => {
                 }
             }
 
+            j.minutosxgol = (j.minutos / j.goles).toFixed(0)
             j.minutosxpartido = (j.minutos / j.partidos).toFixed(0)
             j.minutosxgol = (j.minutos / j.goles).toFixed(0)
             j.influencias = j.goles + j.asistencias

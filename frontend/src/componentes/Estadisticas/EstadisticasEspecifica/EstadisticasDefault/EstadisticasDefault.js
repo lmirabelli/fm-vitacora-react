@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const EstadisticasDefault = ({tablaFiltrada}) => {
+export const EstadisticasDefault = ({tablaFiltrada,tipoTabla}) => {
 
 
     return(
