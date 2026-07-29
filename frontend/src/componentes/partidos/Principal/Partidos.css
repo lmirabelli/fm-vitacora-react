@@ -1,5 +1,6 @@
 .item-partido{
     margin: 2px 0;
+    padding: 2px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;

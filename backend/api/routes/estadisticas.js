@@ -711,10 +711,38 @@ router.get('/', (req,res) => {
                         pasesCompletados: j.pasesCompletados || 0,
                         pasesClaves: j.pasesClaves || 0,
                         pasesIntentados: j.pasesIntentados || 0,
-                        ocasionesClaves: j.ocasionesClaves || 0
+                        ocasionesClaves: j.ocasionesClaves || 0,
+                        faltasRecibidas: j.faltasRecibidas || 0,
+                        pg: j.partidosGanados || 0,
+                        pe: j.partidosEmpatados || 0,
+                        pp: j.partidosPerdidos || 0,
+                        distancia: parseFloat(j.distancia)
 
                     }
                     estadisticas.push(nuevoJugador)
+                }else{
+                    buscarJugador.temporadas.push(temp.temporada)
+                    buscarJugador.equipos.find(a => a === temp.equipo) === undefined && buscarJugador.equipos.push(temp.equipo)
+
+                    buscarJugador.partidos += j.partidos
+                    buscarJugador.minutos += j.minutos
+                    buscarJugador.goles += j.goles
+                    buscarJugador.asistencias += j.asistencias
+                    buscarJugador.jugadorDelPartido += j.jugadorDelPartido
+                    buscarJugador.faltasCometidas += j.faltasCometidas
+                    buscarJugador.tarjetaAmarilla += j.tarjetaAmarilla
+                    buscarJugador.tarjetasRojas += j.tarjetasRojas
+                    buscarJugador.tirosPuerta += j.tirosPuerta
+                    buscarJugador.disparos += j.disparos
+                    buscarJugador.pasesCompletados += j.pasesCompletados
+                    buscarJugador.pasesClaves += j.pasesClaves
+                    buscarJugador.pasesIntentados += j.pasesIntentados
+                    buscarJugador.ocasionesClaves += j.ocasionesClaves
+                    buscarJugador.faltasRecibidas += j.faltasRecibidas
+                    buscarJugador.pg += j.partidosGanados
+                    buscarJugador.pe += j.partidosEmpatados
+                    buscarJugador.pp += j.partidosPerdidos
+                    buscarJugador.distancia += parseFloat(j.distancia)
                 }
             })
         });

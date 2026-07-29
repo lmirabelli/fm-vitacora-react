@@ -10,6 +10,7 @@ import { SubNavBar } from "../SubNavBar/SubNavBar";
 import { EstadisticasVersus } from "./EstadisticasVersus/EstadisticasVersus";
 import './PartidoIndividual.css'
 import { TodosLosPartidos } from "./TodosLosPartidos/TodosLosPartidos";
+import { Penales } from "./Penales/Penales";
 
 export const PartidoIndividual = () => {
 
@@ -30,7 +31,7 @@ export const PartidoIndividual = () => {
                 if (error) {
                     return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                 }
-                let { partido, partidoAnterior, partidoPosterior,partidosJugadores, estadisticasVersus, partidosVersus } = data
+                let { partido, partidoAnterior, partidoPosterior,partidosJugadores, estadisticasVersus, partidosVersus, listaDePenales } = data
 
     return(
         <div className="standard">
@@ -41,6 +42,7 @@ export const PartidoIndividual = () => {
                     <CartelResultado dato={partido.golesFavor} />
                     <CartelResultado dato={partido.golesContra} />
                 </div>
+                {listaDePenales.length > 0 && <Penales listaDePenales={listaDePenales} />}
                 <div className="otros-partidos">
                     {partidoAnterior ? <OtrosPartidos partido={partidoAnterior} /> : <div className="otro-partido" />}
                     {partidoPosterior ? <OtrosPartidos partido={partidoPosterior} /> : <div className="otro-partido" />}

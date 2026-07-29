@@ -592,12 +592,14 @@ router.get('/:id', (req, res) => {
         let estadisticasVersus = {pg: 0, pe: 0, pp: 0, gf: 0, gc: 0, dif: 0, efectividad: 0, ultimoPartido: "", maximaGoleada: "",difmaxGoleada: -1000}
         let partidosJugadores = []
         let partidosVersus = listaDePartidos.filter(a => a.rival == partido.rival)
+        let listaDePenales = []
         partidosVersus.forEach(p => {
             p.miEscudo = services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`)
             p.escudo = services.busquedaEscudo(listaDeEscudos,`${partido.rival} (xxx)`)
             parseInt(p.golesFavor) > parseInt(p.golesContra) ? estadisticasVersus.pg++ :  parseInt(p.golesFavor) < parseInt(p.golesContra) ? estadisticasVersus.pp++ : estadisticasVersus.pe++
             estadisticasVersus.gf += parseInt(p.golesFavor)
             estadisticasVersus.gc += parseInt(p.golesContra)
+            listaDePenales.push(...p.penales)
             if((parseInt(p.golesFavor) - parseInt(p.golesContra) > estadisticasVersus.difmaxGoleada)){
                 estadisticasVersus.difmaxGoleada = parseInt(p.golesFavor) - parseInt(p.golesContra) + parseInt(p.golesFavor) / 1000
                 estadisticasVersus.maximaGoleada = `${p.fecha} - ${p.competicion} ${p.golesFavor}-${p.golesContra}`
@@ -654,7 +656,7 @@ router.get('/:id', (req, res) => {
         });
         
         partidosJugadores.sort((a,b) => b.pje - a.pje)
-        res.status(200).json({ partido,partidoAnterior,partidoPosterior, partidosJugadores, partidosVersus, estadisticasVersus, plantel });
+        res.status(200).json({ partido,partidoAnterior,partidoPosterior, partidosJugadores, partidosVersus, estadisticasVersus, plantel, listaDePenales });
     } catch (err) {
         console.log(err)
         res.status(400).json({ mensaje: 'error al cargar los partidos', error: err.message });

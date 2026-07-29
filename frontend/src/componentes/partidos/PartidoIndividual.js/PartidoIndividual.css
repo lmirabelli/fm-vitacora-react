@@ -13,6 +13,7 @@
     "otrosPartidos otrosPartidos jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
     "statsVS statsVS jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
     "statsVS statsVS jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
+    "pk pk pk pk pk pk pk pk pk pk"
     "todos todos todos todos todos todos todos todos todos todos";
 
     .partido-cabecera{
@@ -42,6 +43,29 @@
     .jugadores-del-partido{
         grid-area: jugadores;
         
+    }
+
+    .pk-container{
+        grid-area: pk;
+        background-color: var(--color-blanco-contraste);
+        padding: 8px;
+        border-radius: 8px;
+        backdrop-filter: blur(4px);
+        box-shadow: var(--iluminacion);
+        .pk{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2px;
+            margin: 2px 0;
+            border-radius: 4px;
+            box-shadow: var(--iluminacion);
+            backdrop-filter: blur(2px);
+            div{
+                font-family: var(--fuente-resultado);
+                text-align: center;
+                text-transform: capitalize;
+            }
+        }
     }
     .otros-partidos{
         grid-area: otrosPartidos;
