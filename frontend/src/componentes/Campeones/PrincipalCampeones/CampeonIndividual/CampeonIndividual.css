@@ -1,0 +1,58 @@
+.contenedor-info{
+    padding: 16px;
+    margin: 4px 0;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--iluminacion);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .lista-jugadores-campeones{
+        width: 58%;
+    }
+    .lista-partidos-campeones{
+        width: 40%;
+        .linea{
+            font-size: 12px;
+        }
+    }
+    .lista-jugadores-campeones, .lista-partidos-campeones{
+        a:hover{
+            transform: translateX(-6px);
+        }
+        .linea{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 2px 0;
+            padding: 2px 0;
+            box-shadow: var(--iluminacion);
+            transition: transform 0.3s;
+            div{
+                font-family: var(--fuente-resultado);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: capitalize;
+                img{
+                    height: 14px;
+                }
+            }
+        }
+    }
+    h2,h6{
+        font-family: var(--fuente-resultado);
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 32px;
+            margin-left: 12px;
+            transform: rotateZ(22deg);
+        }
+    }
+}

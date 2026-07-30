@@ -28,64 +28,21 @@ export const PrincipalCampeones = () => {
             }
             let { listaDeCampeones, titulosxjugador } = data
             titulosxjugador.sort((a,b) => b.titulos - a.titulos)
-
+            
     return(
         <div className="standard">
             <Submenu />
             <div className="tablero">
                 <div className="temporadas">
                     {listaDeCampeones.map((c, idx) => (
-                        <div className="info-campeon" key={idx} style={{background: `${c.escudo.colorPrimario}60`, "--escudo": `url(${c.escudo.escudo})`, "--color-fuente": `${c.escudo.colorSecundario}`}}>
-                            <h4 style={{color: `${c.escudo.colorSecundario}`}}>{c.equipo}</h4>
-                            <h6 style={{color: `${c.escudo.colorSecundario}`}}>{c.temporada} - {c.competicion}</h6>
-                            <hr style={{opacity: 0.2}} />
-                            <div className="jugadores">
-                                <h6>Jugadores</h6>
-                                <Link className="jugador" style={{marginBottom: "8px"}}>
-                                    <div className="w-5"></div>
-                                    <div className="w-10"></div>
-                                    <div className="w-40">jugador</div>
-                                    <div className="w-15">edad</div>
-                                    <div className="w-10">pJ</div>
-                                    <div className="w-10">g</div>
-                                    <div className="w-10">a</div>
-                                </Link>
-                                {c.jugadores.map((j, idx2) => (
-                                    <Link to={`/jugadores/${j.id}`} className="jugador" key={idx2}>
-                                        <div className="w-5">{j.dorsal}</div>
-                                        <div className="w-10"><img src={j.bandera} alt="nacionalidad" className="bandera"/></div>
-                                        <div className="w-40">{j.jugador}</div>
-                                        <div className="w-15">{parseInt(j.edad)}</div>
-                                        <div className="w-10">{j.partidos}</div>
-                                        <div className="w-10">{j.goles}</div>
-                                        <div className="w-10">{j.asistencias}</div>
-                                    </Link>
-                                ))}
-                                <hr style={{opacity: 0.2}} />
-                            </div>
-                            <div className="partidos">
-                                <h6>Partidos</h6>
-                                <div className="partido" style={{marginBottom: "8px"}}>
-                                    <div className="w-20">fecha</div>
-                                    <div className="w-35">rival</div>
-                                    <div className="w-20">condicion</div>
-                                    <div className="w-10">result.</div>
-                                    <div className="w-15">pje.</div>
-                                </div>
-                                {c.partidos.map((p, idx2) => (
-                                    <Link to={`/partidos/${p.id}`} className="partido" key={idx2}>
-                                        <div className="w-20">{p.fecha}</div>
-                                        <div className="w-35">{p.rival}</div>
-                                        <div className="w-20">{p.condicion}</div>
-                                        <div className="w-10">{p.resultado}</div>
-                                        <div className="w-15">{p.promedio.toFixed(2)}</div>
-                                    </Link>
-                                ))}
-                            </div>
-                        </div>
+                        <Link to={`/campeones/${c.competicion}-${c.temporada}`} className="btn-campeonato" key={idx} state={c} style={{background: `${c.escudo.colorPrimario}25`, color: `${c.escudo.colorSecundario}`}}>
+                            <h4>{c.competicion}</h4>
+                            <h4>{c.temporada}</h4>
+                            <h6>{c.equipo}<img src={c.escudo.escudo} alt="escudo" /></h6>
+                        </Link>
                     ))}
                 </div>
-                {titulosxjugador.length > 0 && <JugadoresCampeones titulosxjugador={titulosxjugador} />}
+                <JugadoresCampeones titulosxjugador={titulosxjugador} />
             </div>
         </div>
     )

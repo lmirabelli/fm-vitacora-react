@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 
 export const JugadoresCampeones = ({titulosxjugador}) => {
 
+    return(
     <div className="campeones">
                     <h2>TITULOS</h2>
                     <div className="jugador" style={{marginBottom: "8px"}}>
@@ -19,4 +20,5 @@ export const JugadoresCampeones = ({titulosxjugador}) => {
                         </Link>
                     ))}
                 </div>
+    )
 }

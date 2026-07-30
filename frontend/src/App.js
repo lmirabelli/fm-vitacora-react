@@ -45,6 +45,7 @@ import { CompeticionIndividual } from './componentes/partidos/CompeticionIndivid
 import { CalculatorIndex } from './componentes/Calculator/CalculatorIndex/CalculatorIndex';
 import { LigasMenu } from './componentes/Ligas/LigasMenu/LigasMenu';
 import { AgregarLigas } from './componentes/Ligas/AgregarLigas/AgregarLigas';
+import { CampeonIdividual } from './componentes/Campeones/PrincipalCampeones/CampeonIndividual/CampeonIndividual';
 
 
 
@@ -96,6 +97,7 @@ function App() {
           <Route path='/estadisticas/:id' element={<EstadisticasEspecificas />} />
           {/* CAMPEON */}
           <Route path='/campeones/agregar' element={<AgregarCampeon />} />
+          <Route path='/campeones/:id' element={<CampeonIdividual />} />
           <Route path='/campeones' element={<PrincipalCampeones />} />
           {/* COPAS */}
           <Route path='/copas/agregar' element={<AgregarCopa />} />
