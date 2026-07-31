@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDatabaseList } from "../../../services/conexion";
 import './GolesImportancia.css'
 import { Link } from "react-router-dom";
+import { linkearJugadores } from "../../../services/linkearJugadores";
 
 
 
@@ -50,7 +51,7 @@ export const GolesImportancia = () => {
                     <div className="w-10">{"> 80mins"}</div>
                 </div>
                 {tablaGoles.map((g,idx) => (
-                    <Link to={`/jugadores/${g.id}`} className="puesto" key={idx}>
+                    <Link to={linkearJugadores(g.id)} className="puesto" key={idx}>
                         <div className="w-5">{idx + 1}</div>
                         <div className="w-5"><img src={g.bandera} alt="nacionalidad" className="bandera"/></div>
                         <div className="w-15">{g.goleador}</div>

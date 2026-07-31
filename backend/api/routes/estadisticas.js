@@ -156,12 +156,12 @@ router.get('/goles/importancia', (req,res) => {
 
                 if(!buscarGoleador){
                     let buscarID = p.jugadores.find(a => a.nombre == g.goleador)
-                    let buscarInfo = listaDeJugadores.find(a => a.id == buscarID.id)
+                    let buscarInfo = listaDeJugadores.find(a => a.id == buscarID?.id)
 
                     let nuevoGoleador = {
                         goleador: g.goleador,
-                        id: buscarID.id,
-                        bandera: services.busquedaBandera(listaDeBanderas,buscarInfo.nacionalidad).bandera,
+                        id: buscarID?.id,
+                        bandera: services.busquedaBandera(listaDeBanderas,buscarInfo?.nacionalidad).bandera,
                         importancia: {
                             unoxcero,empate,victoria,descuento,relleno,madrugador,agonico,total
                         }
@@ -288,14 +288,21 @@ router.get('/goles/minutos', (req,res) => {
 
                 let buscarGoleador = tabla.find(a => a.goleador == g.goleador)
 
-                if(!buscarGoleador){
+                if(!buscarGoleador && g.goleador !== "..en contra"){
                     let buscarInfo = listaDeJugadores.find(a => a.nombreCompleto == g.goleador)
-                    let llegada = buscarInfo.etapas[0].fechaLlegada.slice(-4)
-                    let salida = buscarInfo.etapas[buscarInfo.etapas.length - 1].fechaSalida.slice(-4)
+                    let llegada = "-"
+                    let salida = "-"
+                    let etapa = "-"
+                    if(buscarInfo){
+                        llegada = buscarInfo.etapas[0].fechaLlegada.slice(-4)
+                        salida = buscarInfo.etapas[buscarInfo.etapas.length - 1].fechaSalida.slice(-4)
+
+                        etapa = `${llegada} - ${salida == "0000" ? "Act." : salida} ${buscarInfo.etapas?.length > 1 ? `(${buscarInfo.etapas?.length})` : ""}`
+                    }
                     let nuevoGoleador = {
-                        id: buscarInfo.id,
-                        etapa: `${llegada} - ${salida == "0000" ? "Act." : salida} ${buscarInfo.etapas.length > 1 ? `(${buscarInfo.etapas.length})` : ""}`,
-                        bandera: services.busquedaBandera(listaDeBanderas, buscarInfo.nacionalidad).bandera,
+                        id: buscarInfo?.id,
+                        etapa,
+                        bandera: services.busquedaBandera(listaDeBanderas, buscarInfo?.nacionalidad).bandera,
                         total: 0,
                         goleador: g.goleador,
                         tramo1: 0,
