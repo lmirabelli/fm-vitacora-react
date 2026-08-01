@@ -148,6 +148,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .w-5{
     width: 5%;
 }
+.w-7{
+    width: 7%;
+}
 
 .w-10{
     width: 10%;

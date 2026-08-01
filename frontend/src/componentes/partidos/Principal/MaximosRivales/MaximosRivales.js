@@ -1,17 +1,9 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDatabaseList } from "../../../../services/conexion";
 import './MaximosRivales.css'
 
 export const MaximosRivales = () => {
 
-    useEffect(() => {
-                    document.title = "RIVALES";
-            
-                    return () => {
-                        document.title = "FM VITACORA";
-                    };
-                }, []);
         
                     const { data, loading, error } = useDatabaseList(
                     "http://localhost:4001/partidos/rivales"

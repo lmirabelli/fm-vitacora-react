@@ -369,39 +369,53 @@ router.get('/goles/veteranos', (req,res) => {
         let listaDeEscudos = services.cargarBaseDeDatos(archivoEscudos)
 
         let lista = []
+        let ultimoPartido = listaDePartidos[listaDePartidos.length - 1]
 
         listaDePartidos.forEach( p => {
             p.goles.forEach( g => {
 
-                let infoJugador = listaDeJugadores.find(a => a.nombreCompleto == g.goleador)
-                let edadDecimal = 0
-                let edadAnios = 0
-                let edadDias = 0
+                let buscarEnLista = lista.find(a => a.jugador === g.goleador)
 
-                if(infoJugador){
-                    edadDecimal = (p.fechaDecimal - infoJugador.fechaDecimalNacimiento) / 365.25
-                    edadAnios = parseInt(edadDecimal)
-                    edadDias = parseInt((edadDecimal - edadAnios) * 365.25)
+                if(!buscarEnLista){
+                    const infoJugador = listaDeJugadores.find(j => j.nombreCompleto === g.goleador)
+                    let anios = infoJugador ? (p.fechaDecimal - infoJugador.fechaDecimalNacimiento) / 365.25 : "-"
+                    let dias = infoJugador ? (anios % 1) * 365.25 : "-"
+                    let tiempoDelGol = (ultimoPartido.id - p.fechaDecimal) 
+                    const edadGol = `${parseInt(anios)} años y ${parseInt(dias)} dias`
+                    const nuevoGoleador = {
+                        fechaGol: p.fecha,
+                        fechaNacimiento: infoJugador?.fechaNacimiento,
+                        fechaDecimalNacimiento: infoJugador?.fechaDecimalNacimiento,
+                        jugador: g.goleador,
+                        asistidor: g.asistente,
+                        resultadoParcial: `${g.gfParcial}-${g.gcParcial}`,
+                        miEquipo: services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`),
+                        rival: services.busquedaEscudo(listaDeEscudos,`${p.rival} (xxx)`),
+                        competencia: p.competicion,
+                        anios,
+                        edadGol,
+                        tiempoDelGol: `hace ${parseInt(tiempoDelGol)} dias`,
+                    }
+                    lista.push(nuevoGoleador)
+                }else{
+                    buscarEnLista.fechaGol = p.fecha,
+                    buscarEnLista.asistidor = g.asistente
+                    buscarEnLista.resultadoParcial = `${g.gfParcial}-${g.gcParcial}`
+                    buscarEnLista.miEquipo = services.busquedaEscudo(listaDeEscudos,`${p.miEquipo} (xxx)`)
+                    buscarEnLista.rival = services.busquedaEscudo(listaDeEscudos,`${p.rival} (xxx)`)
+                    buscarEnLista.competencia = p.competicion
+                    buscarEnLista.anios = buscarEnLista.anios !== "-" ? (p.fechaDecimal - buscarEnLista.fechaDecimalNacimiento) / 365.25 : "-"
+                    let dias = buscarEnLista.anios !== "-" ? (p.fechaDecimal - buscarEnLista.fechaDecimalNacimiento) / 365.25 % 1 * 365.25: "-"
+                    buscarEnLista.edadGol = `${parseInt(buscarEnLista.anios)} años y ${parseInt(dias)} dias`
+                    buscarEnLista.tiempoDelGol = `hace ${ultimoPartido.id - p.fechaDecimal} dias`
                 }
-                let gol = {
-                    fechaDelPartido: p.fecha,
-                    goleador: g.goleador,
-                    edadDecimal,
-                    edadAnios,
-                    edadDias,
-                    miEscudo: services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`).escudo,
-                    rivalEscudo: services.busquedaEscudo(listaDeEscudos, `${p.rival} (xxx)`).escudo,
-                    rival: p.rival,
-                    competicion: p.competicion,
-                    resultadoParcial: `${g.gfParcial} - ${g.gcParcial}`,
-                    asistente: g.asistente
-                }
-                lista.push(gol)
+                
             })
         })
 
-        lista.sort((a,b) => b.edadDecimal - a.edadDecimal)
-        res.status(200).json({lista});
+
+        lista.sort((a,b) => b.anios - a.anios)
+        res.status(200).json({lista, ultimoPartido});
     }catch (err){
     console.log(`error al mostrar los goles, ${err}`)
         res.status(400)

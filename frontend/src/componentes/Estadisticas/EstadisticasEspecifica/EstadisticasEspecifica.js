@@ -7,6 +7,7 @@ import { SubMenu } from "./SubMenu/SubMenu";
 import { EstadisticasPartidos } from "./EstadisticasPartidos/EstadisticasPartidos";
 import { EstadisticasDefault } from "./EstadisticasDefault/EstadisticasDefault";
 import { EstadisticasGoles } from "./EstadisticasGoles/EstadisitcasGoles";
+import { EstadisticasTerminator } from "./EstadisticasTerminator/EstadisticasTerminator";
 
 export const EstadisticasEspecificas = () => {
     const {id} = useParams()
@@ -39,6 +40,7 @@ export const EstadisticasEspecificas = () => {
             id === "minutos" && (tipoDeTabla = "partidos")
             id === "goles" && (tipoDeTabla = "goles")
             id === "asistencias" && (tipoDeTabla = "goles")
+            id === "terminator" && (tipoDeTabla = "terminator")
     return(
         <div className="standard">
             <SubNavBar />
@@ -46,6 +48,7 @@ export const EstadisticasEspecificas = () => {
                 <h2>{id}</h2>
                 {tipoDeTabla === "partidos" && <EstadisticasPartidos tablaFiltrada={tablaFiltrada}/>}
                 {tipoDeTabla === "goles" && <EstadisticasGoles tablaFiltrada={tablaFiltrada}/>}
+                {tipoDeTabla === "terminator" && <EstadisticasTerminator tablaFiltrada={tablaFiltrada}/>}
                 {tipoDeTabla === "default" && <EstadisticasDefault tablaFiltrada={tablaFiltrada}/>}
         </div>
     )
