@@ -744,6 +744,10 @@ router.get('/', (req, res) => {
                 buscarResultado.partidos.push(p)
             }
         });
+        if(invicto.partidos <= contarInvicto.partidos){
+            contarInvicto.fechaFinal = contarInvicto.fechaFinal + " (Act.)"
+            invicto = {...contarInvicto}
+        }
 
         const records = {
             mejorResultado,
