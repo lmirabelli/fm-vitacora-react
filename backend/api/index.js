@@ -24,6 +24,7 @@ import calculatorRoutes from './routes/calculator.js'
 import ligasRoutes from './routes/ligas.js'
 
 
+
 app.use('/partidos', partidosRoutes)
 app.use('/jugadores', jugadoresRoutes)
 app.use('/planteles', plantelesRoutes)
@@ -34,6 +35,7 @@ app.use('/configuracion', configuracionRoutes)
 app.use('/copas', copasRoutes)
 app.use('/ligas', ligasRoutes)
 app.use('/calculator', calculatorRoutes)
+
 
 
 app.listen(port, () => {

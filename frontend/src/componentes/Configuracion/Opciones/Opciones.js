@@ -1,12 +1,10 @@
-import { NuevaPartida } from "./NuevaPartida/NuevaPartida"
-
+import { NuevaPartida } from "./NuevaPartida/NuevaPartida";
 
 export const Opciones = () => {
 
-
-    return(
+    return (
         <div className="opciones">
             <NuevaPartida />
         </div>
-    )
-}
+    );
+};

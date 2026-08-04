@@ -739,7 +739,8 @@ router.get('/', (req,res) => {
                         distancia: parseFloat(j.distancia),
                         posicion: j.posicion,
                         xg: parseFloat(j.xg),
-                        xa: parseFloat(j.xa)
+                        xa: parseFloat(j.xa),
+                        fueraDeJuego: parseInt(j.fueraDeJuego)
                     }
                     estadisticas.push(nuevoJugador)
                 }else{
@@ -768,6 +769,7 @@ router.get('/', (req,res) => {
                     buscarJugador.posicion = j.posicion
                     buscarJugador.xg += parseFloat(j.xg)
                     buscarJugador.xa += parseFloat(j.xa)
+                    buscarJugador.fueraDeJuego += parseInt(j.fueraDeJuego)
                 }
             })
         });

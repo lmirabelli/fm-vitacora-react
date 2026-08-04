@@ -14,7 +14,7 @@ export const EstadisticasGoles = ({tablaFiltrada}) => {
                 <div className="w-5" title="Minutos">Min</div>
                 <div className="w-5" title="Goles">G</div>
                 <div className="w-5" title="Asistencias">A</div>
-                <div className="w-5" title="Influencias">I</div>
+                <div className="w-5" title="Fuera de juego / Offsides">FDJ</div>
                 <div className="w-5" title="Tiros a puerta">TAP</div>
                 <div className="w-5" title="Disparos">DISP</div>
                 <div className="w-5" title="Punteria">Punt</div>
@@ -37,7 +37,7 @@ export const EstadisticasGoles = ({tablaFiltrada}) => {
                     <div className="w-5">{j.minutos}</div>
                     <div className="w-5">{j.goles}</div>
                     <div className="w-5">{j.asistencias}</div>
-                    <div className="w-5">{j.goles + j.asistencias}</div>
+                    <div className="w-5">{j.fueraDeJuego}</div>
                     <div className="w-5">{j.tirosPuerta}</div>
                     <div className="w-5">{j.disparos}</div>
                     <div className="w-5">{isNaN(j.tirosPuerta / j.disparos * 100) ? "-" : (j.tirosPuerta / j.disparos * 100).toFixed(1)}%</div>

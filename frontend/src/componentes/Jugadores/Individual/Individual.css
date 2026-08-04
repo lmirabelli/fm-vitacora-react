@@ -5,6 +5,7 @@
     grid-template-areas:
     'csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior'
     'cetapas cetapas cetapas cetapas cetapas ctitulos ctitulos ctitulos ctitulos ctitulos'
+    'cstats cstats cstats cstats cstats cstats cstats cstats cstats cstats'
     'cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos'
 ;
     .contenedor-etapas,
@@ -71,6 +72,9 @@
     }
     .contenedor-titulos{
         grid-area: ctitulos;
+    }
+    .contenedor-estadisticas{
+        grid-area: cstats;
     }
 
     .contenedor-etapas, .contenedor-titulos {

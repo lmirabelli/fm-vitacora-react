@@ -300,6 +300,7 @@ router.get('/:id', (req, res) => {
 
         let jugadordata = listaDeJugadores.filter(a => a.id == id)
         let jugadoresEstructurados = []
+        let temporadasDelJugador = []
         jugadordata.forEach(j => {
             let jugProcesado = services.estructurarJugadores(j,listaDePaises,listaDeEscudos)
             jugadoresEstructurados.push(jugProcesado)
@@ -310,7 +311,7 @@ router.get('/:id', (req, res) => {
 
             if(buscarJugador){
                 let buscarEquipo = estadisticas.find(a => a.equipo == temp.equipo)
-
+                temporadasDelJugador.push(buscarJugador)
                 if(!buscarEquipo){
                     let nuevoEquipo = {
                         equipo: temp.equipo,
@@ -377,7 +378,61 @@ router.get('/:id', (req, res) => {
             jugadorCampeon && campeones.push(`${p.competicion}-${p.temporada}`)
         })
 
-        res.status(200).json({ jugador,partidos,campeones });
+        let estadisticasTotales = {}
+        temporadasDelJugador.forEach(stats => {
+            estadisticasTotales.asistencias = (estadisticasTotales.asistencias || 0) + (stats.asistencias || 0);
+            estadisticasTotales.balonesAtajados = (estadisticasTotales.balonesAtajados || 0) + (stats.balonesAtajados || 0);
+            estadisticasTotales.balonesDesviados = (estadisticasTotales.balonesDesviados || 0) + (stats.balonesDesviados || 0);
+            estadisticasTotales.balonesRechazados = (estadisticasTotales.balonesRechazados || 0) + (stats.balonesRechazados || 0);
+            estadisticasTotales.cabezazosGanados = (estadisticasTotales.cabezazosGanados || 0) + (stats.cabezazosGanados || 0);
+            estadisticasTotales.cabezazosIntentados = (estadisticasTotales.cabezazosIntentados || 0) + (stats.cabezazosIntentados || 0);
+            estadisticasTotales.centrosCompletados = (estadisticasTotales.centrosCompletados || 0) + (stats.centrosCompletados || 0);
+            estadisticasTotales.centrosIntentados = (estadisticasTotales.centrosIntentados || 0) + (stats.centrosIntentados || 0);
+            estadisticasTotales.despejes = (estadisticasTotales.despejes || 0) + (stats.despejes || 0);
+            estadisticasTotales.disparos = (estadisticasTotales.disparos || 0) + (stats.disparos || 0);
+            estadisticasTotales.disparosBloqueados = (estadisticasTotales.disparosBloqueados || 0) + (stats.disparosBloqueados || 0);
+            estadisticasTotales.distancia = (parseFloat(estadisticasTotales.distancia) || 0) + (parseFloat(stats.distancia) || 0);
+            estadisticasTotales.entradasClaves = (estadisticasTotales.entradasClaves || 0) + (stats.entradasClaves || 0);
+            estadisticasTotales.entradasCompletadas = (estadisticasTotales.entradasCompletadas || 0) + (stats.entradasCompletadas || 0);
+            estadisticasTotales.entradasIntentadas = (estadisticasTotales.entradasIntentadas || 0) + (stats.entradasIntentadas || 0);
+            estadisticasTotales.faltasCometidas = (estadisticasTotales.faltasCometidas || 0) + (stats.faltasCometidas || 0);
+            estadisticasTotales.faltasRecibidas = (estadisticasTotales.faltasRecibidas || 0) + (stats.faltasRecibidas || 0);
+            estadisticasTotales.fueraDeJuego = (estadisticasTotales.fueraDeJuego || 0) + (stats.fueraDeJuego || 0);
+            estadisticasTotales.goles = (estadisticasTotales.goles || 0) + (stats.goles || 0);
+            estadisticasTotales.golesEncajados = (estadisticasTotales.golesEncajados || 0) + (stats.golesEncajados || 0);
+            estadisticasTotales.golesXerror = (estadisticasTotales.golesXerror || 0) + (stats.golesXerror || 0);
+            estadisticasTotales.jugadorDelPartido = (estadisticasTotales.jugadorDelPartido || 0) + (stats.jugadorDelPartido || 0);
+            estadisticasTotales.minutos = (estadisticasTotales.minutos || 0) + (stats.minutos || 0);
+            estadisticasTotales.ocasionesClaves = (estadisticasTotales.ocasionesClaves || 0) + (stats.ocasionesClaves || 0);
+            estadisticasTotales.partidos = (estadisticasTotales.partidos || 0) + (stats.partidos || 0);
+            estadisticasTotales.partidosGanados = (estadisticasTotales.partidosGanados || 0) + (stats.partidosGanados || 0);
+            estadisticasTotales.partidosEmpatados = (estadisticasTotales.partidosEmpatados || 0) + (stats.partidosEmpatados || 0);
+            estadisticasTotales.partidosPerdidos = (estadisticasTotales.partidosPerdidos || 0) + (stats.partidosPerdidos || 0);
+            estadisticasTotales.pasesClaves = (estadisticasTotales.pasesClaves || 0) + (stats.pasesClaves || 0);
+            estadisticasTotales.pasesCompletados = (estadisticasTotales.pasesCompletados || 0) + (stats.pasesCompletados || 0);
+            estadisticasTotales.pasesIntentados = (estadisticasTotales.pasesIntentados || 0) + (stats.pasesIntentados || 0);
+            estadisticasTotales.pasesProgresivos = (estadisticasTotales.pasesProgresivos || 0) + (stats.pasesProgresivos || 0);
+            estadisticasTotales.penalesMarcados = (estadisticasTotales.penalesMarcados || 0) + (stats.penalesMarcados || 0);
+            estadisticasTotales.penalesParados = (estadisticasTotales.penalesParados || 0) + (stats.penalesParados || 0);
+            estadisticasTotales.penalesRecibidos = (estadisticasTotales.penalesRecibidos || 0) + (stats.penalesRecibidos || 0);
+            estadisticasTotales.presionesCompletadas = (estadisticasTotales.presionesCompletadas || 0) + (stats.presionesCompletadas || 0);
+            estadisticasTotales.presionesIntentadas = (estadisticasTotales.presionesIntentadas || 0) + (stats.presionesIntentadas || 0);
+            estadisticasTotales.recuperaciones = (estadisticasTotales.recuperaciones || 0) + (stats.recuperaciones || 0);
+            estadisticasTotales.regates = (estadisticasTotales.regates || 0) + (stats.regates || 0);
+            estadisticasTotales.robos = (estadisticasTotales.robos || 0) + (stats.robos || 0);
+            estadisticasTotales.suplente = (parseInt(estadisticasTotales.suplente )|| 0) + (parseInt(stats.suplente) || 0);
+            estadisticasTotales.titular = (parseInt(estadisticasTotales.titular )|| 0) + (parseInt(stats.titular) || 0);
+            estadisticasTotales.tarjetaAmarilla = (estadisticasTotales.tarjetaAmarilla || 0) + (stats.tarjetaAmarilla || 0);
+            estadisticasTotales.tarjetasRojas = (estadisticasTotales.tarjetasRojas || 0) + (stats.tarjetasRojas || 0);
+            estadisticasTotales.tirosPuerta = (estadisticasTotales.tirosPuerta || 0) + (stats.tirosPuerta || 0);
+            estadisticasTotales.vallaInvicta = (estadisticasTotales.vallaInvicta || 0) + (stats.vallaInvicta || 0);
+            estadisticasTotales.xa = (estadisticasTotales.xa || 0) + (stats.xa || 0);
+            estadisticasTotales.xg = (estadisticasTotales.xg || 0) + (stats.xg || 0);
+            estadisticasTotales.xge = (estadisticasTotales.xge || 0) + (stats.xge || 0);
+
+        })
+
+        res.status(200).json({ jugador,partidos,campeones,estadisticasTotales});
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

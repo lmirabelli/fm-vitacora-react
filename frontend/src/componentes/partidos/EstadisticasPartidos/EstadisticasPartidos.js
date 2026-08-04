@@ -25,7 +25,7 @@ export const EstadisticasPartidos = ({dato}) => {
                         return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                     }
                     let { tabla } = data
-                    console.log(dato)
+
     return(
         <div className="standard">
             <SubNavBar />

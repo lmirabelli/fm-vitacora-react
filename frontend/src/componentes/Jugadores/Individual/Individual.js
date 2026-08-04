@@ -3,6 +3,7 @@ import { useDatabaseList } from "../../../services/conexion";
 import { Link, useParams } from "react-router-dom";
 import { SubNavBar } from "../SubNavBar/SubNavBar";
 import './Individual.css'
+import { EstadisticasIndividual } from "./EstadisticasIndividual/EstadisticasIndividual";
 
 export const Individual = () => {
     let id = useParams().id;
@@ -34,7 +35,7 @@ export const Individual = () => {
         );
     }
 
-    let { jugador, partidos, campeones } = data;
+    let { jugador, partidos, campeones,estadisticasTotales } = data;
 
     return (
         <div className="standard">
@@ -87,6 +88,7 @@ export const Individual = () => {
                     <span key={idx}>{i}</span>
                 ))}
             </div>
+            <EstadisticasIndividual stats={estadisticasTotales} />
             <div className="contenedor-partidos">
                 <h2>PARTIDOS</h2>
                 <div className="partido" style={{marginBottom: "6px"}}>
