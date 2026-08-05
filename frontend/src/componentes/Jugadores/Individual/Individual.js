@@ -36,6 +36,7 @@ export const Individual = () => {
     }
 
     let { jugador, partidos, campeones,estadisticasTotales } = data;
+    console.log(data)
 
     return (
         <div className="standard">
@@ -88,7 +89,7 @@ export const Individual = () => {
                     <span key={idx}>{i}</span>
                 ))}
             </div>
-            <EstadisticasIndividual stats={estadisticasTotales} />
+            {partidos.length > 0 && <EstadisticasIndividual stats={estadisticasTotales} />}
             <div className="contenedor-partidos">
                 <h2>PARTIDOS</h2>
                 <div className="partido" style={{marginBottom: "6px"}}>

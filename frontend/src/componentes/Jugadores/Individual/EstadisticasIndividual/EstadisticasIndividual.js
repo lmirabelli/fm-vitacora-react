@@ -14,8 +14,17 @@ export const EstadisticasIndividual = ({stats}) => {
     let defensivoTitulos = ["disparos bloqueados","despejes","entradas claves","entradas completadas","entradas intentadas","Efectividad de entradas","goles x error","presiones completadas","presiones intentadas","Efectividad de presiones","recuperaciones","robos"]
     let defensivoValores = ["disparosBloqueados","despejes","entradasClaves","entradasCompletadas","entradasIntentadas","efectividadEntradas","golesXerror","presionesCompletadas","presionesIntentadas","efectividadPresiones","recuperaciones","robos"]
 
-    let ofensivoTitulos = ["goles","minutos x gol","asistencias","influencias","tiros a puerta","disparos","punteria","disparos x gol","fuera de juego","fdj x partido","ocasiones claves","xg","xa"]
-    let ofensivoValores = ["goles","minutosxgol","asistencias","influencias","tirosPuerta","disparos","punteria","disparosGol","fueraDeJuego","fdjPartido","ocasionesClaves","xg","xa"]
+    let ofensivoTitulos = ["goles","minutos x gol","asistencias","influencias","tiros a puerta","disparos","punteria","disparos x gol","faltas recibidas","faltas recibidas x partido","fuera de juego","fdj x partido","ocasiones claves","xg","xa"]
+    let ofensivoValores = ["goles","minutosxgol","asistencias","influencias","tirosPuerta","disparos","punteria","disparosGol","faltasRecibidas","faltasRecibidasPartido","fueraDeJuego","fdjPartido","ocasionesClaves","xg","xa"] 
+
+    let pasesTitulos = ["centros completados","centros intentados","eficacia en centros","pases claves","pases completados","pases intentados","eficacia en pases","pases progresivos","pases por partido","regates"]
+    let pasesValores = ["centrosCompletados","centrosIntentados","eficaciaCentros","pasesClaves","pasesCompletados","pasesIntentados","eficaciaPases","pasesProgresivos","pasesPartido","regates"]
+
+    let cabezazosTitulos = ["cabezazos ganados","cabezazos intentados","eficacia de cabezazos","cabezazos x partido"]
+    let cabezazosValores = ["cabezazosGanados","cabezazosIntentados","eficaciaCabezazos","cabezazosPartido"]
+
+    let faltasTitulos = ["faltas cometidas","tarjetas amarillas","tarjetas rojas","faltas x partido","faltas x tarjeta amarilla"]
+    let faltasValores = ["faltasCometidas","tarjetaAmarilla","tarjetasRojas","faltasPartido","faltasTA"]
 
     // Calculos Generales
     stats.minutosxpartido = parseInt(stats.minutos / stats.partidos)
@@ -41,6 +50,20 @@ export const EstadisticasIndividual = ({stats}) => {
     stats.disparosGol = stats.goles === 0 ? "-" : parseInt(stats.disparos / stats.goles)
     stats.fdjPartido = stats.fueraDeJuego === 0 ? "-" : parseFloat(stats.fueraDeJuego / stats.minutos * 90).toFixed(1)
     stats.minutosxgol = stats.goles === 0 ? "-" : parseInt(stats.minutos / stats.goles)
+    stats.faltasRecibidasPartido = stats.minutos === 0 ? "-" : (stats.faltasRecibidas / stats.minutos * 90).toFixed(1)
+
+    //Calculos Pases
+    stats.eficaciaCentros = stats.centrosIntentados === 0 ? "-%" : `${(stats.centrosCompletados / stats.centrosIntentados * 100).toFixed(1)}%`
+    stats.eficaciaPases = stats.pasesIntentados === 0 ? "-%" : `${(stats.pasesCompletados / stats.pasesIntentados * 100).toFixed(1)}%`
+    stats.pasesPartido = stats.pasesIntentados === 0 ? "-" : `${parseInt(stats.pasesIntentados / stats.minutos * 90)}`
+
+    //Calculos Cabezazos
+    stats.eficaciaCabezazos = stats.cabezazosIntentados === 0 ? "-%" : `${(stats.cabezazosGanados / stats.cabezazosIntentados * 100).toFixed(1)}%`
+    stats.cabezazosPartido = stats.minutos === 0 ? "-" : parseInt(stats.cabezazosGanados / stats.minutos * 90)
+
+    //Calculos Faltas
+    stats.faltasPartido = stats.minutos === 0 ? "-" : (stats.faltasCometidas / stats.minutos * 90).toFixed(2)
+    stats.faltasTA = stats.tarjetaAmarilla === 0 ? "-" : (stats.faltasCometidas / stats.tarjetaAmarilla).toFixed(2)
     return(
         <div className="contenedor-estadisticas">
             <h4>Estadisticas</h4>
@@ -77,6 +100,33 @@ export const EstadisticasIndividual = ({stats}) => {
                     <div className="stats-individual" key={idx}>
                         <span className="titulo-stats">{t}</span>
                         <span className="valor-stats">{stats[ofensivoValores[idx]]}</span>
+                    </div>
+                ))}
+            </div>
+            <div className="sector-estadisticas">
+                <h6>Pases</h6>
+                    {pasesTitulos.map((t,idx) => (
+                    <div className="stats-individual" key={idx}>
+                        <span className="titulo-stats">{t}</span>
+                        <span className="valor-stats">{stats[pasesValores[idx]]}</span>
+                    </div>
+                ))}
+            </div>
+            <div className="sector-estadisticas">
+                <h6>Cabezazos</h6>
+                    {cabezazosTitulos.map((t,idx) => (
+                    <div className="stats-individual" key={idx}>
+                        <span className="titulo-stats">{t}</span>
+                        <span className="valor-stats">{stats[cabezazosValores[idx]]}</span>
+                    </div>
+                ))}
+            </div>
+            <div className="sector-estadisticas">
+                <h6>Faltas</h6>
+                    {faltasTitulos.map((t,idx) => (
+                    <div className="stats-individual" key={idx}>
+                        <span className="titulo-stats">{t}</span>
+                        <span className="valor-stats">{stats[faltasValores[idx]]}</span>
                     </div>
                 ))}
             </div>

@@ -6,7 +6,7 @@
     backdrop-filter: blur(12px);
     box-shadow: var(--iluminacion);
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     h4{
         margin: 8px 0;
@@ -17,6 +17,7 @@
         width: 24%;
         padding-bottom: 16px;
         overflow: hidden;
+        margin: 4px 0;
         h6{
             background-color: #253244;
             padding: 2px;
