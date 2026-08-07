@@ -3,8 +3,6 @@ import './EstadisticasIndividual.css'
 
 export const EstadisticasIndividual = ({stats}) => {
 
-    console.log(stats)
-
     let generalesTitulos = ["partidos","titular","suplente","% de titularidad","minutos","minutos x partido","partidos ganados","partidos empatados","partidos perdidos","% de puntos","distancia","distancia x partido","jugador del partido"]
     let generalesValores = ["partidos","titular","suplente","porcentajeDeTitularidad","minutos","minutosxpartido","partidosGanados","partidosEmpatados","partidosPerdidos","porcentajeDePuntos","distancia","distanciaxpartido","jugadorDelPartido"]
 

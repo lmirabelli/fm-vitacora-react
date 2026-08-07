@@ -710,99 +710,69 @@ router.get('/', (req,res) => {
 
         listaDeEstadisticas.forEach(temp => {
             temp.jugadores.forEach(j => {
-                let buscarJugador = estadisticas.find(a => a.jugador == j.jugador)
-
+                let buscarJugador = estadisticas.find(a => a.id === j.id)
+                let estadisticasDeTemporada = {...j}
+                delete estadisticasDeTemporada.id
+                delete estadisticasDeTemporada.jugador
+                delete estadisticasDeTemporada.minutosAcordados
+                delete estadisticasDeTemporada.posicion
+                estadisticasDeTemporada.distancia = parseFloat(estadisticasDeTemporada.distancia)
+                estadisticasDeTemporada.suplente = parseInt(estadisticasDeTemporada.suplente)
+                estadisticasDeTemporada.titular = parseInt(estadisticasDeTemporada.titular)
+                
                 if(!buscarJugador){
+                    let jugadorFn = listaDeJugadores.find(a => a.id === j.id)
+                    let nacionalidad = listaDeBanderas.find(a => a.pais === jugadorFn.nacionalidad).imagen
+                    let misEquipos = []
+                    let status = "club"
+                    jugadorFn.etapas.forEach(et => {
+                        let escudo = services.busquedaEscudo(listaDeEscudos,et.miEquipo)
+                        let busquedaEscudo = misEquipos.find(a => a === escudo)
+                        !busquedaEscudo && misEquipos.push(escudo.escudo)
+                        status = et.fechaSalida === "00.00.0000" ? "club" : "fuera"
+                    })
                     let nuevoJugador = {
+                        jugador: jugadorFn.nombreCompleto || j.jugador,
                         id: j.id,
-                        jugador: j.jugador,
-                        temporadas: [temp.temporada],
-                        equipos: [temp.equipo],
-                        partidos: j.partidos || 0,
-                        minutos: j.minutos || 0,
-                        goles: j.goles || 0,
-                        asistencias: j.asistencias || 0,
-                        jugadorDelPartido: j.jugadorDelPartido || 0,
-                        faltasCometidas: j.faltasCometidas || 0,
-                        tarjetaAmarilla: j.tarjetaAmarilla || 0,
-                        tarjetasRojas: j.tarjetasRojas || 0,
-                        tirosPuerta: j.tirosPuerta || 0,
-                        disparos: j.disparos || 0,
-                        pasesCompletados: j.pasesCompletados || 0,
-                        pasesClaves: j.pasesClaves || 0,
-                        pasesIntentados: j.pasesIntentados || 0,
-                        ocasionesClaves: j.ocasionesClaves || 0,
-                        faltasRecibidas: j.faltasRecibidas || 0,
-                        pg: j.partidosGanados || 0,
-                        pe: j.partidosEmpatados || 0,
-                        pp: j.partidosPerdidos || 0,
-                        distancia: parseFloat(j.distancia),
-                        posicion: j.posicion,
-                        xg: parseFloat(j.xg),
-                        xa: parseFloat(j.xa),
-                        fueraDeJuego: parseInt(j.fueraDeJuego)
+                        info: {
+                            misEquipos,
+                            status,
+                            nacionalidad,
+                            posicion: j.posicion
+                        },
+                        estadisticas: estadisticasDeTemporada
                     }
                     estadisticas.push(nuevoJugador)
                 }else{
-                    buscarJugador.temporadas.push(temp.temporada)
-                    buscarJugador.equipos.find(a => a === temp.equipo) === undefined && buscarJugador.equipos.push(temp.equipo)
-
-                    buscarJugador.partidos += j.partidos
-                    buscarJugador.minutos += j.minutos
-                    buscarJugador.goles += j.goles
-                    buscarJugador.asistencias += j.asistencias
-                    buscarJugador.jugadorDelPartido += j.jugadorDelPartido
-                    buscarJugador.faltasCometidas += j.faltasCometidas
-                    buscarJugador.tarjetaAmarilla += j.tarjetaAmarilla
-                    buscarJugador.tarjetasRojas += j.tarjetasRojas
-                    buscarJugador.tirosPuerta += j.tirosPuerta
-                    buscarJugador.disparos += j.disparos
-                    buscarJugador.pasesCompletados += j.pasesCompletados
-                    buscarJugador.pasesClaves += j.pasesClaves
-                    buscarJugador.pasesIntentados += j.pasesIntentados
-                    buscarJugador.ocasionesClaves += j.ocasionesClaves
-                    buscarJugador.faltasRecibidas += j.faltasRecibidas
-                    buscarJugador.pg += j.partidosGanados
-                    buscarJugador.pe += j.partidosEmpatados
-                    buscarJugador.pp += j.partidosPerdidos
-                    buscarJugador.distancia += parseFloat(j.distancia)
-                    buscarJugador.posicion = j.posicion
-                    buscarJugador.xg += parseFloat(j.xg)
-                    buscarJugador.xa += parseFloat(j.xa)
-                    buscarJugador.fueraDeJuego += parseInt(j.fueraDeJuego)
+                    for(const clave in buscarJugador.estadisticas){
+                        buscarJugador.estadisticas[clave] = buscarJugador.estadisticas[clave] + estadisticasDeTemporada[clave]
+                    }
                 }
             })
         });
 
-        estadisticas = estadisticas.filter(a => a.partidos > 0)
-        estadisticas.forEach(j => {
-
-            let buscarJugador = listaDeJugadores.find(a => a.id == j.id)
-            j.escudos = []
-            j.equipos.forEach(eq => {
-                j.escudos.push(services.busquedaEscudo(listaDeEscudos,eq).escudo)
-            })
-            if(buscarJugador){
-                j.nacionalidad = services.busquedaBandera(listaDeBanderas,buscarJugador.nacionalidad).bandera
-                j.etapas = []
-                j.nacimiento = buscarJugador.fechaNacimiento
-                j.jugador = buscarJugador.nombreCompleto
-                for(let etapa of buscarJugador.etapas){
-                    const llegada = etapa.fechaLlegada.slice(-4)
-                    const salida = etapa.fechaSalida == '00.00.0000' ? "act." : etapa.fechaSalida.slice(-4)
-                    j.etapas.push(`${llegada}-${salida}`)
-                }
-            }
-
-            j.minutosxgol = (j.minutos / j.goles).toFixed(0)
-            j.minutosxpartido = (j.minutos / j.partidos).toFixed(0)
-            j.minutosxgol = (j.minutos / j.goles).toFixed(0)
-            j.influencias = j.goles + j.asistencias
-            j.faltasxpartido = (j.faltasCometidas / j.partidos).toFixed(2)
-            j.terminator = j.faltasCometidas + j.tarjetaAmarilla * 3 + j.tarjetasRojas * 10
-            j.punteria = (j.tirosPuerta / j.disparos * 100).toFixed(1)
-            j.efectividadPases = (j.pasesCompletados / j.pasesIntentados * 100).toFixed(1)
-            j.efectividadGoles = (j.goles / j.disparos * 100).toFixed(1)
+        estadisticas.forEach( e => {
+            const stat = e.estadisticas
+            stat.minxpartido = stat.partidos > 0 ? parseInt(stat.minutos / stat.partidos) : 0
+            stat.porcentajeTitularidad = stat.partidos > 0 ? parseFloat(stat.titular / stat.partidos * 100).toFixed(1) : 0
+            stat.distancia = stat.distancia.toFixed(1)
+            let tirosGK = stat.balonesAtajados + stat.balonesDesviados + stat.balonesRechazados
+            stat.efectividadArquero = parseFloat(tirosGK / (tirosGK + stat.golesEncajados) * 100 ).toFixed(1)
+            stat.porcentajeVI = parseFloat(stat.vallaInvicta / stat.partidos * 100).toFixed(1)
+            stat.tasaEntradas = stat.entradasIntentadas > 0 ?parseFloat(stat.entradasCompletadas / stat.entradasIntentadas * 100).toFixed(1) : 0
+            stat.tasaPresiones = stat.presionesIntentadas > 0 ?parseFloat(stat.presionesCompletadas / stat.presionesIntentadas * 100).toFixed(1) : 0
+            stat.punteria = stat.disparos > 0 ? parseFloat(stat.tirosPuerta / stat.disparos * 100).toFixed(1) : 0
+            stat.tasaGol = stat.disparos > 0 ? parseFloat(stat.goles / stat.disparos * 100).toFixed(1) : 0
+            stat.minxgol = stat.goles > 0 ? parseInt(stat.minutos / stat.goles) : 0
+            stat.tasaCabezazos = stat.cabezazosIntentados > 0 ? parseFloat(stat.cabezazosGanados / stat.cabezazosIntentados * 100).toFixed(1) : 0
+            stat.minxencajado = stat.golesEncajados > 0 ? parseInt(stat.minutos / stat.golesEncajados) : 0
+            stat.tasaCentros = stat.centrosIntentados > 0 ? parseFloat(stat.centrosCompletados / stat.centrosIntentados * 100).toFixed(1) : 0
+            stat.tasaPases = stat.pasesIntentados > 0 ? parseFloat(stat.pasesCompletados / stat.pasesIntentados * 100).toFixed(1) : 0
+            stat.pasesxpartido = stat.minutos > 0 ? parseInt(stat.pasesIntentados / stat.minutos * 90) : 0
+            stat.faltasxpartido = stat.minutos > 0 ? parseFloat(stat.faltasCometidas / stat.minutos * 90).toFixed(1) : 0
+            stat.faltasxtarjetas = stat.tarjetaAmarilla > 0 ? parseInt(stat.faltasCometidas / stat.tarjetaAmarilla) : 0
+            stat.terminator = (stat.tarjetasRojas * 3 + stat.tarjetaAmarilla + stat.faltasCometidas * 0.1).toFixed(1)
+            stat.agresividad = stat.minutos > 0 ? parseFloat(stat.terminator / stat.minutos * 90 * 100).toFixed(1) : 0
         })
         
         res.status(200).json({estadisticas});

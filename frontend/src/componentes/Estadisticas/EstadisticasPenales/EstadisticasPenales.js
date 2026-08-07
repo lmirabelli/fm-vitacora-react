@@ -1,4 +1,3 @@
-import { SubMenu } from "../EstadisticasEspecifica/SubMenu/SubMenu"
 import { useEffect } from "react";
 import { useDatabaseList } from "../../../services/conexion";
 import "./EstadisticasPenales.css"
@@ -37,7 +36,6 @@ export const EstadisticasPenales = () => {
                 }
     return(
         <div className="standard">
-            <SubMenu />
             <h2>PENALES</h2>
             <div className="listado">
                 {lista.map((pk, idx) => (

@@ -36,7 +36,6 @@ export const Individual = () => {
     }
 
     let { jugador, partidos, campeones,estadisticasTotales } = data;
-    console.log(data)
 
     return (
         <div className="standard">

@@ -38,7 +38,6 @@ import { Agradecimientos } from './componentes/Agradecimientos/Agradecimientos';
 import { Resultados } from './componentes/partidos/Resultados/Resultados';
 import { EstadisticasPenales } from './componentes/Estadisticas/EstadisticasPenales/EstadisticasPenales';
 import { Block100 } from './componentes/Estadisticas/Block100/Block100';
-import { Arqueros } from './componentes/Estadisticas/Arqueros/Arqueros';
 import { Copas } from './componentes/Copas/Copas';
 import { CopaIndividual } from './componentes/Copas/CopaIndividual/CopaIndividual';
 import { CompeticionIndividual } from './componentes/partidos/CompeticionIndividual/CompeticionIndividual';
@@ -93,7 +92,6 @@ function App() {
           <Route path='/estadisticas/goles/rivales'  element={<GolesStats stats={"rivales"} />} />
           <Route path='/estadisticas/goles/asistentes'  element={<GolesStats stats={"asistentes"} />} />
           <Route path='/estadisticas/penales' element={<EstadisticasPenales />} />
-          <Route path='/estadisticas/arqueros' element={<Arqueros />} />
           <Route path='/estadisticas/:id' element={<EstadisticasEspecificas />} />
           {/* CAMPEON */}
           <Route path='/campeones/agregar' element={<AgregarCampeon />} />

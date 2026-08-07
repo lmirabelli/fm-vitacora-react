@@ -1,0 +1,54 @@
+.tabla-estadisticas{
+    width: 100%;
+    margin: 24px 0;
+    .titulo,.jugador{
+        display: flex;
+        justify-content: space-between;
+        border-radius: 4px;
+        div{
+            font-family: var(--fuente-resultado);
+            text-overflow: ellipsis;
+            overflow: hidden;
+            text-wrap: nowrap;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            cursor: pointer;
+            border-left: 1px solid #00000045;
+            border-right: 1px solid #00000045;
+            img{
+                height: 12px;
+            }
+        }
+    }
+    .titulo{
+        background-color: var(--color-6);
+        color: var(--color-blanco);
+        padding: 6px 0;
+    }
+    .jugador{
+        text-decoration: none;
+        background-color: var(--color-blanco-contraste);
+        backdrop-filter: blur(48px);
+        color: var(--color-1);
+        margin: 2px 0;
+        padding: 2px 0;
+        cursor: pointer;
+        box-shadow: var(--iluminacion);
+        transition: background 0.3s,color 0.3s;
+        &:hover{
+            background-color: var(--color-4);
+            color: var(--color-1);
+        }
+    }
+    .club{
+        background-color: #00e727a1;
+        color: #afffaf;
+    }
+    .fuera{
+        background-color: #e70027a1;
+        color: #ffafaf;
+    }
+}

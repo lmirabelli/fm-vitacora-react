@@ -12,14 +12,14 @@
         margin: 8px 0;
     }
     .sector-estadisticas{
-        border: 1px solid #253244;
+        border: 1px solid var(--color-6);
         border-radius: 4px;
         width: 24%;
         padding-bottom: 16px;
         overflow: hidden;
         margin: 4px 0;
         h6{
-            background-color: #253244;
+            background-color: var(--color-6);
             padding: 2px;
             color: var(--color-4);
             margin-bottom: 12px;
@@ -29,7 +29,7 @@
             margin: 1px 4px;
             display: flex;
             justify-content: space-between;
-            border: 1px solid #253244;
+            border: 1px solid var(--color-6);
             background-color: var(--color-blanco-contraste);
             border-radius: 4px;
             transition: scale 0.3s;
@@ -43,7 +43,7 @@
             }
             .valor-stats{
                 width: 20%;
-                background-color: #253244;
+                background-color: var(--color-6);
                 color: var(--color-4);
                 font-size: 12px;
             }

@@ -25,9 +25,10 @@ export const PlantelIndividual = () => {
         }
         let { plantel } = data;
         plantel.jugadores.sort((a,b) => a.dorsal - b.dorsal)
+        console.log(data)
 
     return(
-        <div className="standard plantel" style={{background: `${plantel.escudo.colorPrimario}80`}}>
+        <div className="standard plantel" style={{background: `${plantel.escudo.colorPrimario}22`}}>
             <h2 style={{color: `${plantel.escudo.colorSecundario}`,textShadow: `0 0 4px ${plantel.escudo.colorPrimario}`}}><img src={plantel.escudo.escudo} alt="escudo" />{plantel.equipo.slice(0,-6)} - {plantel.temporada}</h2>
             <div className="titulo" style={{color: `${plantel.escudo.colorSecundario}`}}>
                     <div className="w-3 tcenter"></div>
