@@ -10,6 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const archivoPlanteles = path.join(__dirname, "../../basededatos/planteles.json");
+const archivoPartidos = path.join(__dirname, "../../basededatos/partidos.json");
 const archivoJugadores = path.join(__dirname, "../../basededatos/jugadores.json");
 const archivoBanderas = path.join(__dirname, "../../basededatos/banderas.json");
 const archivoEscudos = path.join(__dirname, "../../basededatos/escudos.json");
@@ -93,6 +94,7 @@ router.get('/:temporada/:equipo', (req, res) => {
         const listaDeEscudos = services.cargarBaseDeDatos(archivoEscudos)
         const listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
         const listaDeEstadisticas = services.cargarBaseDeDatos(archivoEstadisticas)
+        const listaDePartidos = services.cargarBaseDeDatos(archivoPartidos)
 
         let plantel = listaDePlanteles.find(a => a.temporada == temporada && a.equipo == equipo)
         plantel.escudo = services.busquedaEscudo(listaDeEscudos,plantel.equipo)
@@ -101,6 +103,7 @@ router.get('/:temporada/:equipo', (req, res) => {
         for(let j of plantel.jugadores){
             let infoJugador = listaDeJugadores.find(a => a.id == j.id)
             let statsJugadores = estadisticasTemporada?.jugadores.find(a => a.id == j.id)
+            j.edad = parseInt(temporada) - parseInt(infoJugador.fechaNacimiento.slice(-4))
             j.posicion = statsJugadores?.posicion || "-"
             j.tarjetasAmarilla = statsJugadores?.tarjetasAmarilla || 0
             j.tarjetasRoja = statsJugadores?.tarjetasRoja || 0
@@ -114,7 +117,92 @@ router.get('/:temporada/:equipo', (req, res) => {
             j.bandera = services.busquedaBandera(listaDeBanderas,infoJugador.nacionalidad).bandera
         }
 
-        res.status(200).json({ plantel });
+        let partidosDeTemporada = listaDePartidos.filter(a => a.temporada === temporada)
+        let competiciones = []
+        partidosDeTemporada.forEach( p => {
+
+            let bcompeticion = competiciones.find( a => a.competicion == p.competicion)
+
+            if(!bcompeticion){
+                let nuevaCompeticion = {
+                    competicion: p.competicion,
+                    pj: 1,
+                    pg: parseInt(p.golesFavor) > parseInt(p.golesContra) ? 1 : 0,
+                    pe: parseInt(p.golesFavor) === parseInt(p.golesContra) ? 1 : 0,
+                    pp: parseInt(p.golesFavor) < parseInt(p.golesContra) ? 1 : 0,
+                    gf: parseInt(p.golesFavor),
+                    gc: parseInt(p.golesContra),
+                    jugadores: [],
+                    goles: [],
+                    asistencias: []
+                }
+
+                competiciones.push(nuevaCompeticion)
+            }else{
+                bcompeticion.pj++
+                parseInt(p.golesFavor) > parseInt(p.golesContra) && bcompeticion.pg++
+                parseInt(p.golesFavor) === parseInt(p.golesContra) && bcompeticion.pe++
+                parseInt(p.golesFavor) < parseInt(p.golesContra) && bcompeticion.pp++
+                bcompeticion.gf += parseInt(p.golesFavor)
+                bcompeticion.gc += parseInt(p.golesContra)
+            }
+            bcompeticion = competiciones.find( a => a.competicion == p.competicion)
+            p.goles.forEach( g => {
+
+                let bgoleador = bcompeticion.goles.find(a => a.jugador === g.goleador)
+                if(!bgoleador){
+                    let nuevoGoleador = {
+                        jugador: g.goleador,
+                        dato: 1
+                    }
+
+                    bcompeticion.goles.push(nuevoGoleador)
+                }else{
+                    bgoleador.dato++
+                }
+
+                if(g.asistente !== "." && g.asistente !== "...penal"){
+                    let basistidor = bcompeticion.asistencias.find(a => a.jugador === g.asistente)
+                if(!basistidor){
+                    let nuevoAsistidor = {
+                        jugador: g.asistente,
+                        dato: 1
+                    }
+
+                    bcompeticion.asistencias.push(nuevoAsistidor)
+                }else{
+                    basistidor.dato++
+                }
+                }
+            })
+
+            p.jugadores.forEach( j => {
+
+                let bjugador = bcompeticion.jugadores.find(a => a.jugador === j.nombre)
+                if(!bjugador){
+                    let nuevoJugador = {
+                        jugador: j.nombre,
+                        dato: 1
+                    }
+
+                    bcompeticion.jugadores.push(nuevoJugador)
+                }else{
+                    bjugador.dato++
+                }
+
+            })
+        })
+        competiciones.forEach( i => {
+
+            i.jugadores.sort((a,b) => b.dato - a.dato)
+            i.jugadores = i.jugadores.slice(0,3)
+            i.goles.sort((a,b) => b.dato - a.dato)
+            i.goles = i.goles.slice(0,3)
+            i.asistencias.sort((a,b) => b.dato - a.dato)
+            i.asistencias = i.asistencias.slice(0,3)
+        })
+
+        res.status(200).json({ plantel, partidosDeTemporada, competiciones });
     } catch (err) {
         console.log(err)
         res.status(400).json({ mensaje: 'error al cargar el plantel', error: err.message });

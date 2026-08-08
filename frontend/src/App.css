@@ -33,7 +33,7 @@
 }
 
 body{
-    background-image: url('./img/background-fm.png');
+    background-image: url('./img/background.svg');
     font-family: var(--fuente-sans-serif);
     background-attachment: fixed;
     background-size: cover;

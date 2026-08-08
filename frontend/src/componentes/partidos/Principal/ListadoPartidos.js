@@ -10,11 +10,11 @@ export const ListadoPartidos = ({lista}) => {
         let resultado = {background: '#000', color: '#fff'}
 
         if(gf > gc){
-            resultado = {background: '#34a13250', color: '#fefafa', textShadow: '0 0 4px #000'}
+            resultado = {background: '#34a13250', color: '#34a132'}
         }else if(gf < gc){
-            resultado = {background: '#a1323250', color: '#fefafa', textShadow: '0 0 4px #000'}
+            resultado = {background: '#a1323250', color: '#a13232'}
         }else if(gf === gc){
-            resultado = {background: '#a19b3250', color: '#fefafa', textShadow: '0 0 4px #000'}
+            resultado = {background: '#a19b3250', color: '#a19b32'}
         }
 
         return resultado
