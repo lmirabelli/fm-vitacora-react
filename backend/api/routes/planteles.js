@@ -193,7 +193,7 @@ router.get('/:temporada/:equipo', (req, res) => {
             })
         })
         competiciones.forEach( i => {
-
+            i.jugadoresUtilizados = i.jugadores.length
             i.jugadores.sort((a,b) => b.dato - a.dato)
             i.jugadores = i.jugadores.slice(0,3)
             i.goles.sort((a,b) => b.dato - a.dato)

@@ -4,3 +4,43 @@
     width: 100%;
     margin: 12px 0 24px;
 }
+.container-partidos{
+    width: 100%;
+    margin: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    .lista-partidos{
+        width: 70%;
+    }
+    .lista-competiciones{
+        width: 28%;
+        h4{
+            margin-bottom: 12px;
+            color: var(--color-1);
+        }
+        .competicion-card{
+            background-color: var(--color-4-contraste);
+            backdrop-filter: blur(8px);
+            margin: 6px 0;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: var(--iluminacion);
+            .linea{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                margin: 4px 0;
+                div{
+                    padding: 2px 0;
+                    text-align: center;
+                    background-color: #ffffff20;
+                    border-radius: 4px;
+                    box-shadow: var(--iluminacion);
+                    font-family: var(--fuente-resultado);
+                    font-size: 14px;
+                    transform: skewX(-8deg);
+                }
+            }
+        }
+    }
+}

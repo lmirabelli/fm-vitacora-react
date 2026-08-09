@@ -676,7 +676,7 @@ router.get('/', (req, res) => {
         let comienzoVictoria = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
         let comienzoDerrota = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
         let resultadosRepetidos = []
-
+        let tablas = []
         listaDePartidos.forEach(p => {
             p.escudoMiEquipo = services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`)
             p.escudoRival = services.busquedaEscudo(listaDeEscudos, `${p.rival} (xxx)`)
@@ -686,6 +686,30 @@ router.get('/', (req, res) => {
             mejorResultado.diferencia < p.diferencia && (mejorResultado = p)
             peorResultado.diferencia > p.diferencia && (peorResultado = p)
 
+            // TABLAS DE COMPETICIONES 
+
+            let bCompeticion = tablas.find( i => i.competicion === p.competicion)
+
+            if(!bCompeticion){
+                let nuevaCompeticion = {
+                    competicion: p.competicion,
+                    pj: 1,
+                    pg: p.golesFavor > p.golesContra ? 1 : 0,
+                    pe: p.golesFavor === p.golesContra ? 1 : 0,
+                    pp: p.golesFavor < p.golesContra ? 1 : 0,
+                    gf: parseInt(p.golesFavor),
+                    gc: parseInt(p.golesContra)
+                }
+
+                tablas.push(nuevaCompeticion)
+            }else{
+                bCompeticion.pj++
+                p.golesFavor > p.golesContra && bCompeticion.pg++
+                p.golesFavor === p.golesContra && bCompeticion.pe++
+                p.golesFavor < p.golesContra && bCompeticion.pp++
+                bCompeticion.gf += parseInt(p.golesFavor)
+                bCompeticion.gc += parseInt(p.golesContra)
+            }
             //contar invicto
             if(p.golesFavor >= p.golesContra){
                 contarInvicto.partidos == 0 && (contarInvicto.fechaInicio = `${p.fecha} vs. ${p.rival}`)
@@ -744,6 +768,7 @@ router.get('/', (req, res) => {
                 buscarResultado.partidos.push(p)
             }
         });
+
         if(invicto.partidos <= contarInvicto.partidos){
             contarInvicto.fechaFinal = contarInvicto.fechaFinal + " (Act.)"
             invicto = {...contarInvicto}
@@ -757,8 +782,16 @@ router.get('/', (req, res) => {
             comienzoDerrota
         }
 
+        tablas.forEach( i => {
+            i.pts = i.pg * 3 + i.pe
+            i.efectividad = (i.pts / (i.pj * 3) * 100).toFixed(1)
+            i.dif = i.gf - i.gc
+        })
 
-        res.status(200).json({ listaDePartidos, records, resultadosRepetidos });
+        tablas.sort((a,b) => b.pj - a.pj)
+
+
+        res.status(200).json({ listaDePartidos, records, resultadosRepetidos, tablas });
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

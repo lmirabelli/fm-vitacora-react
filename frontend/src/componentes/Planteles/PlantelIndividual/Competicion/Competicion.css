@@ -6,11 +6,13 @@
     border-radius: 6px;
     box-shadow: 1px 1px 4px 0px #00000020;
     .stats{
-        display: flex;
-        justify-content: space-between;
         .dato{
             width: 12%;
         }
+    }
+    .stats,.efectividad{
+        display: flex;
+        justify-content: space-between;
     }
     .stats > .dato,.efectividad,.podio{
         font-family: var(--fuente-resultado);

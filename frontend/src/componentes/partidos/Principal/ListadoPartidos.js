@@ -20,7 +20,7 @@ export const ListadoPartidos = ({lista}) => {
         return resultado
     }
     return(
-        <>
+        <div className="lista-partidos">
         {lista.map((p,idx) =>(
             <Link to={`./${p.fechaDecimal}`} key={idx} className={`w100 item-partido`} style={asignarResultado(p.golesFavor,p.golesContra)}>
                 <div className="w-5">{idx + 1}</div>
@@ -34,6 +34,6 @@ export const ListadoPartidos = ({lista}) => {
                 <div className="w-5">{p.golesContra}</div>
             </Link>
         ) )}
-        </>
+        </div>
     )
 }

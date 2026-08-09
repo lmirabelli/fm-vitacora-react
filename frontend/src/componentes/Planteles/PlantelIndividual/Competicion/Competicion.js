@@ -15,7 +15,12 @@ export const Competicion = ({competicion}) => {
                 <div className="dato" title='goles en contra'>{competicion.gc}</div>
                 <div className="dato" title='diferencia'>{competicion.gf - competicion.gc >= 0 ? `+${competicion.gf - competicion.gc}` : competicion.gf - competicion.gc}</div>
             </div>
-            <div className="efectividad" title='porcentaje de puntos obtenidos'>{((competicion.pg * 3 + competicion.pe) / (competicion.pj * 3) * 100).toFixed(2)}%</div>
+            <div className="efectividad" title='porcentaje de puntos obtenidos'>
+                <div className='w-40'>{((competicion.pg * 3 + competicion.pe) / (competicion.pj * 3) * 100).toFixed(2)}%</div>
+                <div className='w-60'>
+                    {competicion.jugadoresUtilizados} jug. utilizados
+                </div>
+            </div>
             {competicion.jugadores.length > 0 && <Podio categoria={"Partidos"} tabla={competicion.jugadores} />}
             {competicion.goles.length > 0 && <Podio categoria={"goles"} tabla={competicion.goles} />}
             {competicion.asistencias.length > 0 && <Podio categoria={"asistencias"} tabla={competicion.asistencias} />}
