@@ -45,6 +45,8 @@ import { CalculatorIndex } from './componentes/Calculator/CalculatorIndex/Calcul
 import { LigasMenu } from './componentes/Ligas/LigasMenu/LigasMenu';
 import { AgregarLigas } from './componentes/Ligas/AgregarLigas/AgregarLigas';
 import { CampeonIdividual } from './componentes/Campeones/PrincipalCampeones/CampeonIndividual/CampeonIndividual';
+import { AnalisisContrato } from './componentes/AnalisisContrato/AnalisisContrato';
+import { LigasIndividual } from './componentes/Ligas/LigasIndividual/LigasIndividual';
 
 
 
@@ -103,6 +105,7 @@ function App() {
           <Route path='/copas' element={<Copas />} />
           {/* LIGAS */}
           <Route path='/ligas' element={<LigasMenu />} />
+          <Route path='/ligas/:pais' element={<LigasIndividual />} />
           <Route path='/ligas/agregar' element={<AgregarLigas/>} />
           {/* CONFIGURACION */}
           <Route path='/configuracion' element={<Configuracion />} />
@@ -111,6 +114,7 @@ function App() {
           <Route path='/agradecimientos' element={<Agradecimientos />} />
           {/* calculator */}
           <Route path='/calculator' element={<CalculatorIndex />} />
+          <Route path='/analisisContrato' element={<AnalisisContrato />} />
         </Routes>
       </BrowserRouter>
   );

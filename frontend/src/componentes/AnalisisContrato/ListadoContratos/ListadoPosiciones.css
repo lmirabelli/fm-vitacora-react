@@ -1,0 +1,72 @@
+.container-contratos{
+    .container-jugador{
+        
+        width: 100%;
+        margin: 2px 0;
+        background: var(--color-blanco-contraste);
+        backdrop-filter: blur(16px);
+        padding: 4px 8px;
+        border-radius: 6px;
+        box-shadow: var(--iluminacion);
+        .superior{
+            justify-content: space-between;
+        }
+        .inferior{
+            div{
+                border-radius: 4px;
+                margin: 0 2px;
+            }
+        }
+        .superior, .inferior{
+            display: flex;
+            margin: 4px 0;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-family: var(--fuente-resultado);
+            text-wrap: nowrap;
+            overflow: hidden;
+            /* border: 1px solid #111; */
+            .posicion{
+                width: 13%;
+                color: #f4f3f9;
+                margin: 2px;
+                transform: skewX(-16deg);
+            }
+            .portero{
+                background-color: #161616;
+            }
+            .defensor{
+                background-color: #244e92;
+            }
+            .medio{
+                background-color: #24924e;
+            }
+            .delantero{
+                background-color: #6d0d0d;
+            }
+        }
+    }
+    }   
+}
+.container-data-dura{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 24px 0;
+    .sector{
+        width: 24%;
+        padding: 12px;
+        border-radius: 12px;
+        box-shadow: var(--iluminacion);
+        background: var(--color-blanco-contraste);
+        backdrop-filter: blur(4px);
+        div{
+            text-align: center;
+            font-family: var(--fuente-resultado);
+
+        }
+    }
+}

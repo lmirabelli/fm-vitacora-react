@@ -10,6 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const jsonPartidos = path.join(__dirname, "../../basededatos/partidos.json");
+const jsonTemporadas = path.join(__dirname, "../../basededatos/planteles.json");
+const jsonCampeones = path.join(__dirname, "../../basededatos/campeones.json");
 const jsonJugadores = path.join(__dirname, "../../basededatos/jugadores.json");
 const jsonPaises = path.join(__dirname, "../../basededatos/banderas.json");
 const jsonEscudos = path.join(__dirname, "../../basededatos/escudos.json");
@@ -666,8 +668,10 @@ router.get('/:id', (req, res) => {
 router.get('/', (req, res) => {
     try {
         const listaDePartidos = services.cargarBaseDeDatos(jsonPartidos)
+        const listaDeCampeones = services.cargarBaseDeDatos(jsonCampeones)
         const listaDePaises = services.cargarBaseDeDatos(jsonPaises)
         const listaDeEscudos = services.cargarBaseDeDatos(jsonEscudos)
+        const listaDeTemporadas = services.cargarBaseDeDatos(jsonTemporadas)
 
         let mejorResultado = {diferencia: -1000}
         let peorResultado = {diferencia: 1000}
@@ -677,6 +681,7 @@ router.get('/', (req, res) => {
         let comienzoDerrota = {veces: 0, pg: 0, pe: 0, pp: 0, gf: 0, gc: 0}
         let resultadosRepetidos = []
         let tablas = []
+        
         listaDePartidos.forEach(p => {
             p.escudoMiEquipo = services.busquedaEscudo(listaDeEscudos, `${p.miEquipo} (xxx)`)
             p.escudoRival = services.busquedaEscudo(listaDeEscudos, `${p.rival} (xxx)`)
@@ -698,7 +703,8 @@ router.get('/', (req, res) => {
                     pe: p.golesFavor === p.golesContra ? 1 : 0,
                     pp: p.golesFavor < p.golesContra ? 1 : 0,
                     gf: parseInt(p.golesFavor),
-                    gc: parseInt(p.golesContra)
+                    gc: parseInt(p.golesContra),
+                    ultimoPartido: `${p.fecha} ${p.rival} ${p.golesFavor}-${p.golesContra}`
                 }
 
                 tablas.push(nuevaCompeticion)
@@ -709,6 +715,7 @@ router.get('/', (req, res) => {
                 p.golesFavor < p.golesContra && bCompeticion.pp++
                 bCompeticion.gf += parseInt(p.golesFavor)
                 bCompeticion.gc += parseInt(p.golesContra)
+                bCompeticion.ultimoPartido = `${p.fecha} ${p.rival} ${p.golesFavor}-${p.golesContra}`
             }
             //contar invicto
             if(p.golesFavor >= p.golesContra){
@@ -790,8 +797,39 @@ router.get('/', (req, res) => {
 
         tablas.sort((a,b) => b.pj - a.pj)
 
+        // ENLISTAR CAMPEONES
 
-        res.status(200).json({ listaDePartidos, records, resultadosRepetidos, tablas });
+        let tablaCampeones = []
+        
+        listaDeCampeones.forEach( t => {
+
+            let buscarEnTabla = tablaCampeones.find( i => i.competicion === t.competicion)
+
+            if(!buscarEnTabla){
+                let nuevaCompeticion = {
+                    competicion: t.competicion,
+                    temporadas: [t.temporada]
+                }
+
+                tablaCampeones.push(nuevaCompeticion)
+            }else{
+                buscarEnTabla.temporadas.push(t.temporada)
+            }
+        })
+
+        let temporadas = []
+
+        listaDeTemporadas.forEach( t => {
+            temporadas.push({
+                temporada: t.temporada,
+                equipo: t.equipo,
+                competicion: t.competicion,
+                escudo: services.busquedaEscudo(listaDeEscudos,t.equipo)
+            })
+        })
+
+
+        res.status(200).json({ listaDePartidos, records, resultadosRepetidos, tablas, tablaCampeones, temporadas });
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

@@ -14,17 +14,18 @@
     }
     .lista-competiciones{
         width: 28%;
-        h4{
-            margin-bottom: 12px;
-            color: var(--color-1);
-        }
         .competicion-card{
+            display: block;
             background-color: var(--color-4-contraste);
             backdrop-filter: blur(8px);
             margin: 6px 0;
             padding: 8px;
             border-radius: 8px;
             box-shadow: var(--iluminacion);
+            h4{
+                margin-bottom: 12px;
+                color: var(--color-1);
+            }
             .linea{
                 width: 100%;
                 display: flex;
@@ -39,6 +40,7 @@
                     font-family: var(--fuente-resultado);
                     font-size: 14px;
                     transform: skewX(-8deg);
+                    color: var(--color-1);
                 }
             }
         }

@@ -38,6 +38,7 @@ export const PrincipalJugadores = () => {
         <div className="standard">
             <SubNavBar />
             <div className='jugadores-listado'>
+                <Link to="/analisisContrato" className='btn-menu-container'>Contratos</Link>
                 <h3>Todos los Jugadores</h3>
                     <div className='jugador-titular'>
                         <div className='w-5'></div>

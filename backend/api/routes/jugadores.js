@@ -10,6 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const jsonJugadores = path.join(__dirname, "../../basededatos/jugadores.json");
+const jsonCalculator = path.join(__dirname, "../../basededatos/calculator.json");
 const jsonPartidos = path.join(__dirname, "../../basededatos/partidos.json");
 const jsonPaises = path.join(__dirname, "../../basededatos/banderas.json");
 const jsonEscudos = path.join(__dirname, "../../basededatos/escudos.json");
@@ -255,6 +256,71 @@ router.delete('/eliminar', (req, res) => {
         res.status(500).json({
             error: 'Error interno del servidor'
         });
+    }
+})
+
+router.get('/contrato', (req, res) => {
+    try {
+        const listaDeJugadoresBase = services.cargarBaseDeDatos(jsonJugadores)
+        const listaDeEstadisticas = services.cargarBaseDeDatos(jsonEstadisticas)
+        const listaDePaises = services.cargarBaseDeDatos(jsonPaises)
+        const listaDeEscudos = services.cargarBaseDeDatos(jsonEscudos)
+        const listaJugadoresCalculator = services.cargarBaseDeDatos(jsonCalculator)
+        const listaPartidos = services.cargarBaseDeDatos(jsonPartidos)
+
+        let listaDeJugadoresFiltrada = listaDeJugadoresBase.filter(a => a.etapas[a.etapas.length - 1].fechaSalida === "00.00.0000")
+        let listaDeJugadores = []
+        const temporadaActual = listaPartidos[listaPartidos.length - 1].temporada
+        listaDeJugadoresFiltrada.forEach( j => {
+    
+
+            // buscar en estadisticas
+            let partidos = 0
+            let goles = 0
+            let asistencias = 0
+            let minutos = 0
+            let golesEncajados = 0
+            listaDeEstadisticas.forEach( t => {
+                let busquedaEstadisticas = t.jugadores.find(a => a.id === j.id)
+
+                if(busquedaEstadisticas){
+                    partidos += busquedaEstadisticas.partidos ?? 0
+                    goles += busquedaEstadisticas.goles ?? 0
+                    asistencias += busquedaEstadisticas.asistencias ?? 0
+                    minutos += busquedaEstadisticas.minutos ?? 0
+                    golesEncajados += busquedaEstadisticas.golesEncajados ?? 0
+                }
+            })
+
+            let nuevoJugador = {
+                id: j.id,
+                jugador: j.nombreCompleto,
+                bandera: services.busquedaBandera(listaDePaises,j.nacionalidad).bandera,
+                fechaNacimiento: j.fechaNacimiento,
+                fechaDecimalNacimiento: j.fechaDecimalNacimiento,
+                temporadaActual,
+                estadisticas: {
+                    partidos,goles,asistencias,minutos,golesEncajados
+                }
+            }
+
+            listaDeJugadores.push(nuevoJugador)
+        })
+
+        listaDeJugadores.sort((a,b) => {
+            if(a.nombreCompleto < b.nombreCompleto){
+                return -1
+            }
+            if(a.nombreCompleto > b.nombreCompleto){
+                return 1
+            }
+            return 0
+        })
+
+
+        res.status(200).json({ listaDeJugadores });
+    } catch (err) {
+        res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }
 })
 

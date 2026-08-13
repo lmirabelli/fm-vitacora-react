@@ -7,6 +7,8 @@ import { Records } from "./Records/Records";
 import { MaximosRivales } from "./MaximosRivales/MaximosRivales";
 import { RepeticionResultados } from "./RepeticionResultados/RepeticionResultados";
 import { TablasCompeticiones } from './TablasCompeticiones/TablasCompeticiones';
+import { Campeones } from './Campeones/Campeones';
+import { Temporadas } from './Temporadas/Temporadas';
 
 
 export const Principal = () => {
@@ -29,8 +31,8 @@ export const Principal = () => {
             if (error) {
                 return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
             }
-            let { listaDePartidos, records, resultadosRepetidos, tablas } = data
-
+            let { listaDePartidos, records, resultadosRepetidos, tablas, tablaCampeones,temporadas } = data
+            console.log(data)
     return(
         <div className="standard">
             <SubNavBar />
@@ -39,9 +41,13 @@ export const Principal = () => {
                 {listaDePartidos.length > 0 && <RepeticionResultados resultados={resultadosRepetidos} />}
             </div>
             {listaDePartidos.length > 4 && <MaximosRivales />}
+            <Temporadas temporadas={temporadas} />
             <div className='container-partidos'>
                 <ListadoPartidos lista={listaDePartidos} />
-                <TablasCompeticiones tablas={tablas} />
+                <section className="lista-competiciones">
+                    <Campeones tablaCampeones={tablaCampeones} />
+                    <TablasCompeticiones tablas={tablas} />
+                </section>
             </div>
         </div>
     )

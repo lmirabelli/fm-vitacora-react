@@ -1,0 +1,49 @@
+.container-temporadas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .temporada{
+        display: flex;
+        justify-content: space-between;
+        width: 12%;
+        margin: 6px;
+        padding: 6px;
+        border-radius: 6px;
+        box-shadow: var(--iluminacion);
+        backdrop-filter: blur(16px);
+        transition: scale 0.7s;
+        &:hover{
+            scale: 0.9;
+            .container-escudo{
+                img{
+                    transform: rotate(372deg);
+                }
+            }
+        }
+        .container-escudo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+            overflow: hidden;
+            img{
+                transform: rotateZ(-12deg);
+                height: 24px;
+                transition: transform 0.7s ease-in-out;
+            }
+        }
+        .container-data{
+            width: 80%;
+            div{
+                font-family: var(--fuente-resultado);
+                text-align: center;
+                text-transform: capitalize;
+                font-size: 10px;
+                margin: -2px 0;
+                text-overflow: ellipsis;
+                text-wrap: nowrap;
+                overflow: hidden;
+            }
+        }
+    }
+}

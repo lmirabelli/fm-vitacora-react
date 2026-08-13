@@ -1,0 +1,35 @@
+.tabla-historica{
+    width: 100%;
+    padding: 20px;
+    background-color: #f3f6ff40;
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: var(--iluminacion);
+    .posicion{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 2px 0;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            border: 1px solid #09324140;
+            font-family: var(--fuente-resultado);
+            text-transform: capitalize;
+            border-radius: 6px;
+            background-color: var(--color-p);
+            color: var(--color-s);
+            .division{
+                margin: 0 4px;
+                padding: 0 6px;
+                border: 0;
+            }
+            img{
+                height: 18px;
+                filter: drop-shadow(1px 1px 0px #000);
+            }
+        }
+    }
+}

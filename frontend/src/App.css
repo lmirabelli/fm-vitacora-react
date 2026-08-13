@@ -39,6 +39,10 @@ body{
     background-size: cover;
 }
 
+a{
+    text-decoration: none;
+}
+
 h1,h2,h3,h4,h5,h6{
     width: 100%;
     text-align: center;
@@ -52,6 +56,19 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+.btn-menu-container{
+    background-color: var(--color-1);
+    padding: 2px 12px;
+    font-family: var(--fuente-resultado);
+    color: var(--color-5);
+    border-radius: 4px;
+    box-shadow: var(--iluminacion);
+    transition: background 0.3s, color 0.3s;
+    &:hover{
+        background-color: var(--color-4);
+        color: var(--color-1)
+    }
 }
 
 .btn-submit {
@@ -149,12 +166,29 @@ input[type="number"]::-webkit-outer-spin-button {
 .w-5{
     width: 5%;
 }
+
+.w-6{
+    width: 6%;
+}
+
 .w-7{
     width: 7%;
 }
 
+.w-8{
+    width: 8%;
+}
+
 .w-10{
     width: 10%;
+}
+
+.w-12{
+    width: 12%;
+}
+
+.w-14{
+    width: 14%;
 }
 
 .w-15{

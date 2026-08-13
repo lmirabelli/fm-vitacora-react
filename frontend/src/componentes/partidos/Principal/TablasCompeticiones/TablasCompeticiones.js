@@ -1,12 +1,17 @@
+import { Link } from "react-router-dom"
 
 
 
 export const TablasCompeticiones = ({tablas}) => {
 
+    const traspasarData = (i) => {
+        return {data: i.competicion, pg: i.pg, pe: i.pe, pp: i.pp, gf: i.gf, gc: i.gc, escudo: "", ultimoPartido: i.ultimoPartido}
+    }
+
     return(
-        <div className="lista-competiciones">
+        <>
             {tablas.map((i,idx) => (
-                <div className="competicion-card" key={idx}>
+                <Link to={`/partidos/competicion/${i.competicion}`} state={traspasarData(i)} className="competicion-card" key={idx}>
                     <h4>{i.competicion}</h4>
                     <div className="linea">
                         <div className="w-15" title="pj">{i.pj}</div>
@@ -20,8 +25,8 @@ export const TablasCompeticiones = ({tablas}) => {
                     <div className="linea">
                         <div className="w-60">{i.efectividad}%</div>
                     </div>
-                </div>
+                </Link>
             ))}
-        </div>
+        </>
     )
 }
