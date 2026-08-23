@@ -65,7 +65,7 @@ export const CargaJugadores = ({ setActivo, refetch }) => {
             regates: parseAtributo(j["Reg"]),
             remates: parseAtributo(j["Rem"]),
             resistencia: parseAtributo(j["Res"]),
-            salidas: parseAtributo(j["sal"]),
+            salidas: parseAtributo(j["Sal"]),
             salto: parseAtributo(j["SAL"]),
             sacrificio: parseAtributo(j["Sac"]),
             saqueConMano: parseAtributo(j["Saq"]),

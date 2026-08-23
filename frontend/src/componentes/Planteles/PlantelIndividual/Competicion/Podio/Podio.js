@@ -2,8 +2,6 @@
 
 export const Podio = ({categoria, tabla}) => {
 
-    console.log(tabla)
-    
     return(
         <div className="podio">
         <h6>mas {categoria}</h6>

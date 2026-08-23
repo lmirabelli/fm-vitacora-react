@@ -7,7 +7,6 @@ export const TablaEstadisticas = ({ stats, titulos, atributos }) => {
     const [idActual, setIdActual] = useState("pj")
 
     let statsOrdenados = columnaOrden !== null ? [...stats].sort((a, b) => b[atributos[columnaOrden]] - a[atributos[columnaOrden]],): stats;
-    console.log(idActual)
 
     if(idActual.includes("%")){
         statsOrdenados = statsOrdenados.filter(a => a.partidos > 9)

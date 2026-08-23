@@ -6,6 +6,7 @@
     --color-blanco: #f4f7ff;
     --color-negro: #1A1A1A;
     --color-1: #102967;
+    --color-1-contraste: #10296775;
     --color-2: #664D10;
     --color-3: #4460A6;
     --color-4: #BBA05C;
@@ -154,6 +155,63 @@ input[type="number"]::-webkit-outer-spin-button {
     background: var(--color-muymalo);
     color: var(--color-blanco);
 }
+
+.container-filtros{
+        width: 95%;
+        background-color: #003465a1;
+        backdrop-filter: blur(12px);
+        margin: 8px auto;
+        padding: 12px;
+        border-radius: 12px;
+        box-shadow: var(--iluminacion);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        .btn-filtro{
+            width: 12%;
+            min-width: 100px;
+            padding: 8px 0;
+            font-size: 12px;
+        }
+        .btn-filtro-small{
+            width: 6%;
+            min-width: 50px;
+            padding: 2px 0;
+            font-size: 8px;
+        }
+        .btn-filtro, .btn-filtro-small{
+            margin: 4px 6px;
+            border-radius: 8px;
+            border: 0;
+            background: var(--color-1);
+            font-family: var(--fuente-resultado);
+            color: var(--color-blanco);
+            text-transform: uppercase;
+            box-shadow: var(--iluminacion);
+            transition: scale 0.3s;
+            cursor: pointer;
+            &:hover{
+                scale: 0.98;
+            }
+        }
+        .img-filtro-bandera{
+            width: 6%;
+            background-color: transparent;
+            border: 0;
+            margin: 6px 4px;
+            img{
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                border-radius: 6px;
+                filter: drop-shadow(0 0 4px #00000090);
+                transition: scale 0.3s;
+                cursor: pointer;
+                &:hover{
+                    scale: 0.9;
+                }
+            }
+        }
+    }
 
 .w-3{
     width: 3%;

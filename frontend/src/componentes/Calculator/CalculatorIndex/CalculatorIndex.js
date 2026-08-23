@@ -3,6 +3,7 @@ import { Submenu } from "../Submenu/Submenu"
 import { CargaJugadores } from "../CargaJugadores/CargaJugadores"
 import { useDatabaseList } from "../../../services/conexion"
 import { CalculatorProcesador } from "../CalculatorProcesador/CalculatorProcesador"
+import { CalculatorPosicion } from "../CalculatorPosicion/CalculatorPosicion"
 
 export const CalculatorIndex = () => {
     const [seccionActiva, setSeccionActiva] = useState("carga")
@@ -30,6 +31,7 @@ export const CalculatorIndex = () => {
 
             {seccionActiva === "carga" && (<CargaJugadores setActivo={setSeccionActiva} refetch={refetch}/>)}
             {seccionActiva === "calculo" && <CalculatorProcesador jugadores={jugadoresList} />}
+            {seccionActiva === "posicion" && <CalculatorPosicion jugadores={jugadoresList} />}
             {seccionActiva === "guardados" && <p>Vista: Jugadores Guardados</p>}
             {seccionActiva === "guardar" && <p>Vista: Guardar</p>}
         </div>

@@ -1,113 +1,99 @@
 import './CalculatorProcesador.css'
 import { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { PanelInformacion } from './PanelInformacion/PanelInformacion';
 
 
 export const CalculatorProcesador = ({ jugadores }) => {
-    const [mensajeError, setMensajeError] = useState(null);
-    const [panelInformacion, setPanelInformacion] = useState(null)
+    const [fecha, setFecha] = useState("00.00.0000")
     const [jugadorProcesado,setJugadorProcesado] = useState([])
-    let ultimoRegistro = 0
+    const [posicionJugador, setPosicionJugador] = useState("por")
+
+    const recolectarValoresRadio = () => {
+    const primario = [];
+    const secundario = [];
+    const terciario = [];
+    
+    // Seleccionar todos los radio buttons que están checked
+    const radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+    
+    radioButtons.forEach(radio => {
+        const name = radio.getAttribute('name');
+        const value = parseInt(radio.value);
+        
+        if (name && name !== 'valor-primario' && name !== 'valor-secundario' && name !== 'valor-cantidad' && name !== "pos") {
+            if (value === 1) {
+                primario.push(name);
+            } else if (value === 2) {
+                secundario.push(name);
+            } else if (value === 3) {
+                terciario.push(name);
+            }
+        }
+    });
+    
+    return { primario, secundario, terciario };
+};
 
     const calcular = async (e) => {
-        e.preventDefault();
-        setMensajeError(null);
-        const formData = new FormData(e.target);
-
-        const ponderaciones = {};
-        formData.forEach((value, key) => {
-            ponderaciones[key] = Number(value);
-        });
-
-        let jmostrar = parseInt(formData.get("valor-cantidad"))
-        if((parseInt(formData.get("valor-primario")) + parseInt(formData.get("valor-secundario"))) > 98){
-
-            setMensajeError("Se te fueron al carajo los calculos los valores primarios y secundarios no deben ser superiores a 98");
-            console.log((formData.get("valor-primario") + formData.get("valor-secundario")))
-        } 
+        e.preventDefault()
         let lista = []
-        let hayJugadorInvalido = false;
-        jugadores.forEach((j) => {
-            let primario = [];
-            let secundario = [];
-            let terciario = [];
-            let totalPrimario = 0
-            let totalSecundario = 0
-            let totalTerciario = 0
+        setPosicionJugador(document.querySelector('input[name="pos"]:checked').value)
+        const { primario, secundario, terciario } = recolectarValoresRadio();
+        const pondendadorPrimario = parseInt(document.querySelector('input[name="valor-primario"]').value)
+        const pondendadorSecundario = parseInt(document.querySelector('input[name="valor-secundario"]').value)
+        const pondendadorTerciario = 100 - pondendadorPrimario - pondendadorSecundario
+    
+        if((pondendadorPrimario + pondendadorSecundario) < 96){
+        
+        const ultimoRegistro = Math.max(0,...jugadores.flatMap(j => j.atributos.map(a => a.fecha.fechaDecimal)));
 
-            const att = j.atributos[j.atributos.length - 1];
-            att.fecha.fechaDecimal > ultimoRegistro && (ultimoRegistro = att.fecha.fechaDecimal)
-            Object.entries(ponderaciones).forEach(([atributo, prioridad]) => {
-                if (att && att[atributo] !== undefined) {
-                    const valor = att[atributo];
+        const arquero = ["alcanceAereo","blocaje","comunicacion","control","excentricidad","salidaPunos","mando","pases","reflejos","salidas","saqueConMano","saqueDePuerta","manoAMano"]
+        const tecnico = ["cabeza","centros","control","entradas","marcaje","pases","penales","regates","remates","corners","saquesLargos","tecnica","tirosLejanos","tirosLibres"]
+        const mental = ["agresividad","anticipacion","colocacion","concentracion","decisiones","desmarques","determinacion","juegoEnEquipo","liderazgo","sacrificio","serenidad","talento","valentia","vision"]
+        const fisico = ["aceleracion","agilidad","salto","equilibrio","fuerza","recuperacionFisica","resistencia","velocidad"]
 
-                    if (prioridad === 1) {
-                        primario.push(valor);
-                    } else if (prioridad === 2) {
-                        secundario.push(valor);
-                    } else if (prioridad === 3) {
-                        terciario.push(valor);
+        jugadores.forEach(j => {
+            j.atributos.forEach( a => {
+                if(a.fecha.fechaDecimal === ultimoRegistro){
+                    setFecha(a.fecha.fecha)
+                    let pjePrimario = 0
+                    let pjeSecundario = 0
+                    let pjeTerciario = 0
+                    primario.forEach( att => pjePrimario += a[att])
+                    secundario.forEach( att => pjeSecundario += a[att])
+                    terciario.forEach( att => pjeTerciario += a[att])
+                    let nuevoJugador = {
+                        arquero: {},
+                        tecnico: {},
+                        mental: {},
+                        fisico: {},
+                        primario: parseFloat((pjePrimario / primario.length * (pondendadorPrimario / 100)).toFixed(2)),
+                        secundario: parseFloat((pjeSecundario / secundario.length * (pondendadorSecundario / 100)).toFixed(2)),
+                        terciario: parseFloat((pjeTerciario / terciario.length * (pondendadorTerciario / 100)).toFixed(2)),
+                        info: {
+                            jugador: j.jugador,
+                            edad: j.fechaNacimiento === 0 ? "S/Reg" : parseInt((ultimoRegistro - j.fechaNacimiento) / 365.25),
+                            bandera: j.nacionalidad,
+                            posicion: a.posicion,
+                            mejorPosicion: a.mejorPosicion,
+                            id: j.id
+                        }
                     }
+
+                    arquero.forEach(att =>{nuevoJugador.arquero[att] = a[att]})
+                    tecnico.forEach(att =>{nuevoJugador.tecnico[att] = a[att]})
+                    mental.forEach(att =>{nuevoJugador.mental[att] = a[att]})
+                    fisico.forEach(att =>{nuevoJugador.fisico[att] = a[att]})
+                    nuevoJugador.total = nuevoJugador.primario + nuevoJugador.secundario + nuevoJugador.terciario
+                    lista.push(nuevoJugador)
                 }
-
-            });
-            if (primario.length < 4 || secundario.length < 4 || terciario.length < 4) {
-                hayJugadorInvalido = true;
-            }
-
-            primario.forEach( j => {
-                totalPrimario += j
             })
-
-            totalPrimario = totalPrimario / primario.length * parseInt(formData.get("valor-primario"))
-
-            secundario.forEach( j => {
-                totalSecundario += j
-            })
-            totalSecundario = totalSecundario / secundario.length * parseInt(formData.get("valor-secundario"))
-            terciario.forEach( j => {
-                totalTerciario += j
-            })
-            totalTerciario = totalTerciario / terciario.length * (100 - parseInt(formData.get("valor-secundario")) - parseInt(formData.get("valor-secundario")))
-
-            lista.push({
-                jugador: j.jugador,
-                id: j.id,
-                promedio: ((totalPrimario + totalSecundario + totalTerciario) / 200),
-                posicion: att.posicion,
-                fecha: att.fecha,
-                edad: j.fechaNacimiento !== 0 ? (att.fecha.fechaDecimal - j.fechaNacimiento) / 365.25 : "NR",
-                nacionalidad: j.nacionalidad
-            })
-
         });
 
-        if (hayJugadorInvalido) {
-            setMensajeError("No alcanza los valores mínimos esperados");
-        }
-
-        if(mensajeError === null){
-            console.log(mensajeError)
-            lista = lista.filter(a => a.fecha.fechaDecimal === ultimoRegistro)
-            lista.sort((a,b) => b.promedio - a.promedio)
-            setPanelInformacion(`${lista.length} jugadores analizados`)
-            jmostrar = jmostrar > lista.length ? lista.length : jmostrar < 1 ? 10 : jmostrar
-            lista = lista.slice(0,jmostrar)
-            setJugadorProcesado(lista)
-        }
-    };
-    console.log(jugadorProcesado)
-
-    const calcularFondo = (miProm, mejorProm) => {
-
-        let diferencia = miProm / mejorProm
-        let rojo = 153 / (diferencia * 1.15)
-        rojo > 255 && (rojo = 255)
-        let verde = 255 * diferencia
-        console.log(verde)
-
-        return `rgba(${rojo}, ${verde}, 0, 0.6)`
+        setJugadorProcesado(lista)
     }
+    };
+
     return (
         <div className="standard">
             <form className="form-botonera" onSubmit={calcular}>
@@ -687,38 +673,34 @@ export const CalculatorProcesador = ({ jugadores }) => {
                         />
                     </div>
                 </div>
+                <div className='w-100'>
+                        <label>Arquero: </label>
+                        <input type="radio" name="pos" value={"por"} defaultChecked/>
+                        <label>Defensor: </label>
+                        <input type="radio" name="pos" value={"df"} />
+                        <label>Carrilero</label>
+                        <input type="radio" name="pos" value={"cr"} />
+                        <label>Mediocentro: </label>
+                        <input type="radio" name="pos" value={"mc"} />
+                        <label>Mediocampista: </label>
+                        <input type="radio" name="pos" value={"me"} />
+                        <label>Mediapunta: </label>
+                        <input type="radio" name="pos" value={"mp"} />
+                        <label>Delantero: </label>
+                        <input type="radio" name="pos" value={"dl"} />
+                </div>
                 <div className="w-100">
                     <h4>Valoracion</h4>
                     <h6>primario: es el porcentaje del puntaje total que equivale a los valores de los atributos primarios.</h6>
                     <h6>secundario: es el porcentaje del puntaje total que equivale a los valores de los atributos secundarios.</h6>
                     <h6>la suma de ambos valores no puede exceder el 98%, ya que para el buen funcionamiento del calculator queda reservado como minimo un 2% para los valores terciarios</h6>
-                    <label>Primario: <input type="number" defaultValue={45} name="valor-primario" /></label>
-                    <label>Secundario: <input type="number" defaultValue={30} name="valor-secundario" /></label>
-                    <label>Jugadores a mostrar: <input type="number" defaultValue={10} name="valor-cantidad" /></label>
+                    <label className='pondendador'>Primario: <input type="number" defaultValue={45} name="valor-primario" /></label>
+                    <label className='pondendador'>Secundario: <input type="number" defaultValue={30} name="valor-secundario" /></label>
+                    <label className='pondendador'>Jugadores a mostrar: <input type="number" defaultValue={10} name="valor-cantidad" /></label>
                 </div>
                 <button type="submit">Calcular</button>
             </form>
-            {mensajeError && (
-                <div className="mensaje-error">
-                    <h2>{mensajeError}</h2>
-                </div>
-            )}
-            {panelInformacion && !mensajeError && (
-                <div className='panel-informacion'>
-                        <h2>{panelInformacion}</h2>
-                        <h4>{jugadorProcesado[0].fecha.fecha}</h4>
-                        {jugadorProcesado.map((j,idx) => (
-                            <Link to={`/jugadores/${j.id}`} className='jugador' key={idx} style={{background: `${calcularFondo(j.promedio, jugadorProcesado[0].promedio)}`, animationDelay: `${0.15 * idx}s`}}>
-                                <div className='w-5'>{idx + 1}</div>
-                                <div className='w-10'><img src={j.nacionalidad} alt="bandera" className='bandera'/></div>
-                                <div className='w-20'>{j.jugador}</div>
-                                <div className='w-10'>{isNaN(parseInt(j.edad)) ? "S/Reg" : parseInt(j.edad)}</div>
-                                <div className='w-15'>{j.posicion}</div>
-                                <div className='w-15'>{j.promedio.toFixed(2)}</div>
-                            </Link>
-                        ))}
-                    </div>
-            )}
+                <PanelInformacion jugadorProcesado={jugadorProcesado} fecha={fecha} posicion={posicionJugador}/>
         </div>
     );
 };

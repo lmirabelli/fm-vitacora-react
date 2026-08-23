@@ -29,13 +29,13 @@ export const EstadisticasPenales = () => {
 
                 const asignarColores = (final) => {
                     let colores = {background: '#303030', color: '#909090'}
-                    final === "convertido" && (colores = {background: '#083003', color: "#0dc113"})
-                    final !== "convertido" && (colores = {background: '#670000', color: "#ef0d0d"})
+                    final === "convertido" && (colores = {background: '#08300380', color: "#0dc113"})
+                    final !== "convertido" && (colores = {background: '#67000080', color: "#ef0d0d"})
 
                     return colores
                 }
     return(
-        <div className="standard">
+        <div className="standard pk-container">
             <h2>PENALES</h2>
             <div className="listado">
                 {lista.map((pk, idx) => (

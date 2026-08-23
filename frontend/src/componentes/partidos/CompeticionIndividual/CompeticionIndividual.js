@@ -30,6 +30,7 @@ export const CompeticionIndividual = () => {
                             return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
                         }
                         let { competicion } = data
+                        console.log(data)
     return(
         <div className="standard">
             <div className="botonera-flotante bf-derecha">
@@ -40,8 +41,8 @@ export const CompeticionIndividual = () => {
                 <ContenedorGoles data={competicion.goleadores} titulo={"goleadores"}/>
                 <ContenedorGoles data={competicion.asistidores} titulo={"asistidores"}/>
                 <ContenedorGoles data={competicion.jugadores} titulo={"jugadores"}/>
+                <ContenedorPartidos partidos={competicion.partidos}/>
             </div>
-            <ContenedorPartidos partidos={competicion.partidos}/>
         </div>
     )
 }

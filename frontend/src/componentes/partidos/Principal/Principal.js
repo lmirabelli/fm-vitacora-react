@@ -32,7 +32,7 @@ export const Principal = () => {
                 return <div className='aviso'>Error al cargar los datos: {error.message}</div>;
             }
             let { listaDePartidos, records, resultadosRepetidos, tablas, tablaCampeones,temporadas } = data
-            console.log(data)
+
     return(
         <div className="standard">
             <SubNavBar />

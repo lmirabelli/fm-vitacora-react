@@ -16,7 +16,6 @@ export const ContenedorSuperior = ({state,misEquipos}) => {
                     <div className="info-stats" title="puntos">{state.pg * 3 + state.pe}</div>
                     <div className="info-stats" title="promedio">{((state.pg * 3 + state.pe) / (state.pg + state.pe + state.pp)).toFixed(3)}</div>
                 </div>
-                <h5>Ultimo Partido: {state.ultimoPartido}</h5>
                 <div className='equipos'>
                     {misEquipos.map((team,idx) => (
                         <div className='w-15 ciclo' key={idx} title={team.equipo}>

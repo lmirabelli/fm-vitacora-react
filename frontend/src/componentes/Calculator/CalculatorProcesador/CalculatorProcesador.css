@@ -26,70 +26,55 @@
             }
         }
 
-.item-atributo:has(input[value="1"]:checked) {
-    background-color: #28a74526;
-    border-left: 4px solid #28a745;
-}
+        .item-atributo:has(input[value="1"]:checked) {
+            background-color: #28a74526;
+            border-left: 4px solid #28a745;
+        }
 
+        .item-atributo:has(input[value="2"]:checked) {
+            background-color: #0772ff26;
+            border-left: 4px solid #0772ff;
+        }
 
-.item-atributo:has(input[value="2"]:checked) {
-    background-color: #0772ff26;
-    border-left: 4px solid #0772ff;
-}
+        .item-atributo:has(input[value="3"]:checked) {
+            background-color: #e5ff0026;
+            border-left: 4px solid #e5ff00;
+        }
+    }
 
-.item-atributo:has(input[value="3"]:checked) {
-    background-color: #e5ff0026;
-    border-left: 4px solid #e5ff00;
-}
+    .pondendador{
+        font-family: var(--fuente-resultado);
+        font-size: 14px;
+        input{
+            height: 20px;
+            margin: 4px 10px;
+            font-family: var(--fuente-resultado);
+            text-align: center;
+            background-color: var(--color-blanco-contraste);
+            border: 0;
+            border-radius: 6px;
+            box-shadow: var(--iluminacion);
+        }
     }
 }
-.panel-informacion{
+.panel-informacion {
     margin: 24px 0;
     padding: 24px;
     border-radius: 24px;
     box-shadow: var(--iluminacion);
-    background-color: #0772ff15;
+    background-color: #00060ebb;
     backdrop-filter: blur(12px);
-    h2{
+    h2 {
         letter-spacing: 2px;
-    }
-    .jugador{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        text-decoration: none;
-        margin: 2px 0;
-        padding: 2px 4px;
-        border-radius: 6px;
-        box-shadow: var(--iluminacion);
-        opacity: 0;
-        transition: scale 0.3s;
-        animation: entrada 0.5s forwards ease-in-out;
-        &:hover{
-            scale: 0.98;
-        }
-        div{
-            font-family: var(--fuente-resultado);
-            color: var(--color-1);
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            text-wrap: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            img{
-                height: 16px;
-            }
-        }
     }
 }
 
 @keyframes entrada {
-    0%{
+    0% {
         transform: translateX(-45px);
         opacity: 0;
     }
-    100%{
+    100% {
         transform: translateX(0px);
         opacity: 1;
     }

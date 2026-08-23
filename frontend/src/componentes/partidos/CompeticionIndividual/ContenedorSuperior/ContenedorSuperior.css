@@ -1,9 +1,10 @@
 .competiciones-container-superior{
     width: 100%;
-    background: var(--color-1);
+    background: var(--color-1-contraste);
     padding: 32px;
     border-radius: 32px;
     box-shadow: var(--iluminacion);
+    backdrop-filter: blur(4px);
     h2,h5{
         text-transform: uppercase;
         color: var(--color-blanco);
@@ -14,11 +15,11 @@
         justify-content: space-around;
         margin: 12px 0;
         .info-stats{
-            color: var(--color-5);
+            color: var(--color-1);
             font-family: var(--fuente-resultado);
             font-size: 30px;
             width: 10%;
-            background-color: var(--color-negro-contraste);
+            background-color: var(--color-blanco-contraste);
             text-align: center;
             padding: 6px 0;
             border-radius: 12px;
@@ -33,7 +34,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            background: var(--color-negro-contraste);
+            background: var(--color-1-contraste);
             padding: 8px;
             border-radius: 8px;
             box-shadow: var(--iluminacion);
@@ -42,7 +43,7 @@
                 justify-content: center;
                 align-items: center;
                 font-family: var(--fuente-resultado);
-                color: var(--color-5);
+                color: var(--color-blanco);
                 font-size: 12px;
                 margin: 1px 0;
                 div{

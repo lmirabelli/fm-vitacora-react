@@ -722,27 +722,29 @@ router.get('/', (req,res) => {
                 
                 if(!buscarJugador){
                     let jugadorFn = listaDeJugadores.find(a => a.id === j.id)
-                    let nacionalidad = listaDeBanderas.find(a => a.pais === jugadorFn.nacionalidad).imagen
-                    let misEquipos = []
-                    let status = "club"
-                    jugadorFn.etapas.forEach(et => {
-                        let escudo = services.busquedaEscudo(listaDeEscudos,et.miEquipo)
-                        let busquedaEscudo = misEquipos.find(a => a === escudo)
-                        !busquedaEscudo && misEquipos.push(escudo.escudo)
-                        status = et.fechaSalida === "00.00.0000" ? "club" : "fuera"
-                    })
-                    let nuevoJugador = {
-                        jugador: jugadorFn.nombreCompleto || j.jugador,
-                        id: j.id,
-                        info: {
-                            misEquipos,
-                            status,
-                            nacionalidad,
-                            posicion: j.posicion
-                        },
-                        estadisticas: estadisticasDeTemporada
+                    if(jugadorFn){
+                        let nacionalidad = listaDeBanderas.find(a => a.pais === jugadorFn.nacionalidad).imagen
+                        let misEquipos = []
+                        let status = "club"
+                        jugadorFn.etapas.forEach(et => {
+                            let escudo = services.busquedaEscudo(listaDeEscudos,et.miEquipo)
+                            let busquedaEscudo = misEquipos.find(a => a === escudo)
+                            !busquedaEscudo && misEquipos.push(escudo.escudo)
+                            status = et.fechaSalida === "00.00.0000" ? "club" : "fuera"
+                        })
+                        let nuevoJugador = {
+                            jugador: jugadorFn.nombreCompleto || j.jugador,
+                            id: j.id,
+                            info: {
+                                misEquipos,
+                                status,
+                                nacionalidad,
+                                posicion: j.posicion
+                            },
+                            estadisticas: estadisticasDeTemporada
+                        }
+                        estadisticas.push(nuevoJugador)
                     }
-                    estadisticas.push(nuevoJugador)
                 }else{
                     for(const clave in buscarJugador.estadisticas){
                         buscarJugador.estadisticas[clave] = buscarJugador.estadisticas[clave] + estadisticasDeTemporada[clave]

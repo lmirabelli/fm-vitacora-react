@@ -6,6 +6,7 @@ export const Submenu = ({activo, setActivo, jugadores}) => {
         <div className={`botonera-calculator`}>
             <div className={`btn-calculator ${activo === "carga" ? "activo" : "inactivo"}`} onClick={() => {setActivo("carga")}}>Cargar Jugadores</div>
             <div className={`btn-calculator ${activo === "calculo" ? "activo" : "inactivo"}`} onClick={() => {setActivo("calculo")}}>Calculo</div>
+            <div className={`btn-calculator ${activo === "posicion" ? "activo" : "inactivo"}`} onClick={() => {setActivo("posicion")}}>posicion</div>
         </div>
     )
 }
