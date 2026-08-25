@@ -123,7 +123,7 @@ router.get("/:pais", (req, res) => {
 
         tablaCompleta.sort((a,b) => b.ptsTotal - a.ptsTotal)
 
-        res.status(200).json({tablaCompleta});
+        res.status(200).json({tablaCompleta, ligasFiltradas});
     }
     catch {
 

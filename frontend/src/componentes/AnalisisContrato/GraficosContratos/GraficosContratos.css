@@ -1,0 +1,38 @@
+.container-graficos{
+    width: 100%;
+    background-color: var(--color-blanco-contraste);
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .info-contrato{
+        display: block;
+    }
+    .info-jugadores{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 4px 0;
+        .info-j{
+            background-color: var(--color-blanco-contraste);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 2px;
+            border-radius: 4px;
+            box-shadow: var(--iluminacion);
+            div{
+                font-family: var(--fuente-resultado);
+                text-align: center;
+            }
+        }
+    }
+    .info-contrato, .info-jugadores{
+        font-size: 12px;
+        font-family: var(--fuente-resultado);
+        width: 100%;
+    }
+}

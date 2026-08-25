@@ -1,3 +1,19 @@
+.info-temporadas{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .temporada{
+        width: 7%;
+        margin: 4px 2px;
+        padding: 4px;
+        border-radius: 6px;
+        box-shadow: var(--iluminacion);
+        background: var(--color-1);
+        color: var(--color-blanco);
+        font-family: var(--fuente-resultado);
+        text-align: center;
+    }
+}
 .tabla-historica{
     width: 100%;
     padding: 20px;
@@ -10,18 +26,23 @@
         display: flex;
         justify-content: space-between;
         margin: 2px 0;
+        background: var(--color-p);
+        background: linear-gradient(31deg, var(--color-p) 0%, var(--color-s) 100%);
+        box-shadow: 1px 1px 2px #000;
+        /* border: 1px solid var(--color-p); */
+        border-radius: 6px;
         div{
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 4px;
-            border: 1px solid #09324140;
+            padding: 2px;
             font-family: var(--fuente-resultado);
             text-transform: capitalize;
-            border-radius: 6px;
-            background-color: var(--color-p);
-            color: var(--color-s);
+            color: var(--color-1);
+            font-size: 12px;
+            text-shadow: 1px 1px 0px #ffffff45;
             .division{
+                background-color: transparent;
                 margin: 0 4px;
                 padding: 0 6px;
                 border: 0;

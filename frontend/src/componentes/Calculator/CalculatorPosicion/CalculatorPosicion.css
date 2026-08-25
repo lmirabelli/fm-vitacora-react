@@ -1,0 +1,35 @@
+.contenedor-posiciones{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    .tabla-posicion{
+        width: 25%;
+        background-color: var(--color-blanco-contraste);
+        box-shadow: var(--iluminacion);
+        backdrop-filter: blur(12px);
+        padding: 12px;
+        margin: 4px 0;
+        border-radius: 12px;
+        h4{
+            color: var(--color-1);
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .jugador{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid var(--color-blanco-contraste);
+            padding: 2px;
+            margin: 2px 0;
+            border-radius: 6px;
+            box-shadow: 1px 1px 4px #000;
+            div{
+                font-family: var(--fuente-resultado);
+                font-size: 12px;
+                text-align: center;
+                text-transform: capitalize;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useDatabaseList } from "../../services/conexion";
 import { ListadoContratos } from "./ListadoContratos/ListadoContratos";
+import { GraficosContratos } from "./GraficosContratos/GraficosContratos";
 
 export const AnalisisContrato = () => {
 
@@ -96,87 +97,72 @@ export const AnalisisContrato = () => {
             });
             const tempJugadores = [];
 
-            jugadoresHTML.forEach( j => {
-                let separador = j.Final.indexOf('/')
-                let dia = j.Final.slice(0,separador)
-                let mes = j.Final.slice(separador + 1, -5)
-                let anio = j.Final.slice(-4)
 
-                const fechaFT = new Date(`${temporadaActual}-6-30`)
-                let fechaDecimalFT = Math.floor(fechaFT.getTime() / 86400000);
-
-                const aniosRestantes = parseInt(anio) - parseInt(temporadaActual)
+            let fechar = (fecha) => {
+                let separador = fecha.indexOf('/')
+                let dia = fecha.slice(0,separador)
+                let mes = fecha.slice(separador + 1, -5)
+                let anio = fecha.slice(-4)
                 const fechaUniversal = new Date(`${anio}-${mes}-${dia}`)
                 let fechaDecimal = Math.floor(fechaUniversal.getTime() / 86400000);
 
-                let buscarEspacio = j["Nacim."].indexOf(" ")
-                const fechaNacimiento = j["Nacim."].slice(0,buscarEspacio)
+                return fechaDecimal
+            }
 
-                let separadorN = fechaNacimiento.indexOf('/')
-                let diaN = fechaNacimiento.slice(0,separadorN)
-                let mesN = fechaNacimiento.slice(separadorN + 1, -5)
-                let anioN = fechaNacimiento.slice(-4)
-
-                const fechaUniversalN = new Date(`${anioN}-${mesN}-${diaN}`)
-                let fechaDecimalNacimiento = Math.floor(fechaUniversalN.getTime() / 86400000);
-
-                const separadorPrecio = j["Valor de traspaso"].indexOf("-")
-                let precioMinimo = valorizar(j["Valor de traspaso"].slice(0,separadorPrecio))
-                let precioMaximo = valorizar(j["Valor de traspaso"].slice(separadorPrecio + 2))
-                let partidosTitular = 0
-                let partidosSuplentes = 0
-
-                if(j.Part.indexOf(" ") !== -1){
-                    let separadorPartidos = j.Part.indexOf(" ")
-                    partidosTitular = j.Part.slice(0,separadorPartidos)
-                    partidosSuplentes = j.Part.slice(separadorPartidos + 2, -1)
+            jugadoresHTML.forEach(j => {
+                let salarioFormat = j.Sueldo.slice(0,-6)
+                let miles = salarioFormat.indexOf(".")
+                let nacimientoFormat = j["Nacim."].slice(0,j["Nacim."].indexOf(" "))
+                let fechaNacimientoDecimal = fechar(nacimientoFormat)
+                let finalDeContratoDecimal = j.Final === "-" ? 0 : fechar(j.Final)
+                let titular = 0
+                let suplente = 0
+                if(j.Part.includes(" ")){
+                    titular = j.Part.slice(0,j.Part.indexOf(" "))
+                    suplente = j.Part.slice(j.Part.indexOf(" ") + 2, -1)
                 }else{
-                    partidosTitular = isNaN(parseInt(j.Part)) ? 0 : parseInt(j.Part)
+                    titular = j.Part
                 }
+                const separadorPrecio = j["Valor de traspaso"].indexOf("-")
+                let precio = 0
+                if(separadorPrecio !== -1){
+                    let precioMinimo = valorizar(j["Valor de traspaso"].slice(0,separadorPrecio))
+                    let precioMaximo = valorizar(j["Valor de traspaso"].slice(separadorPrecio + 2))
 
-                let interes = j["Interés del jugador"].slice(28)
-                interes === "" && (interes = "desconocido")
-
-                const valorEstimado = (precioMinimo + (precioMaximo - precioMinimo) / 2) * 0.75
-                let jugadorAnalizado = {
+                    precio = `$${precioMinimo.toLocaleString()} - $${precioMaximo.toLocaleString()}`
+                }else{
+                    precio = `$${valorizar(j["Valor de traspaso"]).toLocaleString()}`
+                }
+                let aniosRestantes = j.Final === "-" ? 0 : parseInt(j.Final.slice(-4)) - parseInt(temporadaActual)
+                let jugador = {
                     jugador: j.Nombre,
-                    sueldo: (isNaN(j.Sueldo.slice(0,-6)) || j.Sueldo === "N/D") ? 0 : j.Sueldo.slice(0,-6).length > 3 ? parseFloat(j.Sueldo.slice(0,-6)) * 1000 : parseInt(j.Sueldo.slice(0,-6)),
-                    aumentoAnual: parseInt(j["Aumento de sueldo anual"].slice(0,-1)),
-                    aumentoAscenso: parseInt(j["Sub Sueldo Asc"].slice(0,-1)),
-                    bajadaDescenso: parseInt(j["Baj. Sueldo Desc."].slice(0,-1)),
-                    posicion: j["Posición"],
-                    partidos: parseInt(partidosTitular) + parseInt(partidosSuplentes),
-                    fechaNacimiento,
-                    finContrato: j.Final,
-                    edadFinContrato: parseInt((fechaDecimal - fechaDecimalNacimiento) / 365.25),
-                    edadFinTemporada: parseInt((fechaDecimalFT - fechaDecimalNacimiento) / 365.25),
-                    juegoReal: j["Tiempo de juego real"],
+                    salario: miles > -1 ? parseInt(parseFloat(salarioFormat) * 1000) : parseInt(salarioFormat),
+                    finalDeContrato: j.Final,
+                    finalDeContratoDecimal,
+                    fechaNacimiento: nacimientoFormat,
+                    fechaNacimientoDecimal,
+                    edad: j.Final === "-" ? "-" : parseInt((finalDeContratoDecimal - fechaNacimientoDecimal) / 365.25),
                     minutosAcordados: j["Minutos acordados"],
-                    interes,
-                    transferible: j["Situación de fichaje"],
-                    cedible: j["Situación de cesión"],
-                    canteraClub: j["Situación de cantera"].includes("club") ? "si" : "no",
-                    canteraPais: j["Situación de cantera"].includes("club") ? "si" : j["Situación de cantera"].includes("país") ? "si" : "no",
+                    minutosReal: j["Tiempo de juego real"],
                     felicidadMinutos: j["Felicidad con los minutos de juego"],
-                    calificacionMedia: parseFloat(j["Media"]) || 0,
-                    valorEstimado,
+                    canteraClub: j["Situación de cantera"].includes("club") ? "club" : "",
+                    canteraPais: j["Situación de cantera"].includes("país") || j["Situación de cantera"].includes("club") ? "pais" : "",
+                    partidos: isNaN(parseInt(titular) + parseInt(suplente)) ? 0 : parseInt(titular) + parseInt(suplente),
+                    precio,
+                    aumentoAnual: parseFloat(j["Aumento de sueldo anual"].slice(0,-1)) / 100 + 1,
                     aniosRestantes,
-                    sub21: j["Situación del jugador"].includes("S-21"),
-                    retiro: j["Situación del jugador"].includes("Ret")
-                }
-                jugadorAnalizado.sueldoAumentoAnual = aniosRestantes > 0 ? (jugadorAnalizado.sueldo * (1 + jugadorAnalizado.aumentoAnual / 100)) : 0
-                jugadorAnalizado.sueldoAumentoAscenso = aniosRestantes > 0 ? (jugadorAnalizado.sueldoAumentoAnual * (1 + jugadorAnalizado.aumentoAscenso / 100)) : 0
-                jugadorAnalizado.sueldoBajadaDescenso = aniosRestantes > 0 ? (jugadorAnalizado.sueldoAumentoAnual * (1 - jugadorAnalizado.bajadaDescenso / 100)) : 0
-                tempJugadores.push(jugadorAnalizado);
-                
+                    posicion: j["Posición"]
+                    }
+                tempJugadores.push(jugador)
             })
             setJugadores(tempJugadores);
-
+            
         };
         
         reader.readAsText(file);
     };
-
+    
+    jugadores.sort((a,b) => a.finalDeContratoDecimal - b.finalDeContratoDecimal)
 
 
     return (
@@ -197,6 +183,7 @@ export const AnalisisContrato = () => {
                     onChange={handleFileUpload}
                 />
             </div>
+            {jugadores.length > 0 && <GraficosContratos jugadores={jugadores} />}
             <ListadoContratos jugadores={jugadores} />
         </div>
     );
