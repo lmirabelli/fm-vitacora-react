@@ -21,23 +21,15 @@ import { PrincipalPlantel } from './componentes/Planteles/Principal/Principal';
 import { AgregarPlantel } from './componentes/Planteles/AgregarPlantel/AgregarPlantel';
 import { PlantelIndividual } from './componentes/Planteles/PlantelIndividual/PlantelIndividual';
 import { AgregarEstadisticas } from './componentes/Estadisticas/AgregarEstadisticas/AgregarEstadisticas';
-import { EstadisticasEspecificas } from './componentes/Estadisticas/EstadisticasEspecifica/EstadisticasEspecifica';
 import { Rivales } from './componentes/partidos/Rivales/Rivales';
 import { EstadisticasPartidos } from './componentes/partidos/EstadisticasPartidos/EstadisticasPartidos';
 import { Rendimientos } from './componentes/partidos/Rendimientos/Rendimientos';
-import { GolesImportancia } from './componentes/Estadisticas/GolesImportancia/GolesImportancia';
-import { GolesMultiples } from './componentes/Estadisticas/GolesMultiples/GolesMultiples';
-import { GolesStats } from './componentes/Estadisticas/GolesStats/GolesStats';
-import { Tiempo } from './componentes/Estadisticas/Tiempo/Tiempo';
-import { Veteranos } from './componentes/Estadisticas/Veteranos/Veteranos';
 import { AgregarCampeon } from './componentes/Campeones/AgregarCampeon/AgregarCampeon';
 import { PrincipalCampeones } from './componentes/Campeones/PrincipalCampeones/PrincipalCampeones';
 import { Configuracion } from './componentes/Configuracion/Configuracion';
 import { EditarEscudo } from './componentes/Configuracion/EditarEscudo/EditarEscudo';
 import { Agradecimientos } from './componentes/Agradecimientos/Agradecimientos';
 import { Resultados } from './componentes/partidos/Resultados/Resultados';
-import { EstadisticasPenales } from './componentes/Estadisticas/EstadisticasPenales/EstadisticasPenales';
-import { Block100 } from './componentes/Estadisticas/Block100/Block100';
 import { Copas } from './componentes/Copas/Copas';
 import { CopaIndividual } from './componentes/Copas/CopaIndividual/CopaIndividual';
 import { CompeticionIndividual } from './componentes/partidos/CompeticionIndividual/CompeticionIndividual';
@@ -47,6 +39,7 @@ import { AgregarLigas } from './componentes/Ligas/AgregarLigas/AgregarLigas';
 import { CampeonIdividual } from './componentes/Campeones/PrincipalCampeones/CampeonIndividual/CampeonIndividual';
 import { AnalisisContrato } from './componentes/AnalisisContrato/AnalisisContrato';
 import { LigasIndividual } from './componentes/Ligas/LigasIndividual/LigasIndividual';
+import { EstadisticasGenerales } from './componentes/Estadisticas/EstadisticasGenerales/EstadisticasGenerales';
 
 
 
@@ -86,15 +79,7 @@ function App() {
           <Route path='/planteles/:temporada/:equipo' element={<PlantelIndividual />} />
           {/* ESTADISTICAS */}
           <Route path='/estadisticas/agregar' element={<AgregarEstadisticas />} />
-          <Route path='/estadisticas/goles/importancia' element={<GolesImportancia />} />
-          <Route path='/estadisticas/goles/multiples' element={<GolesMultiples />} />
-          <Route path='/estadisticas/goles/minutos' element={<Tiempo />} />
-          <Route path='/estadisticas/goles/veteranos' element={<Veteranos />} />
-          <Route path='/estadisticas/goles/block100' element={<Block100 />} />
-          <Route path='/estadisticas/goles/rivales'  element={<GolesStats stats={"rivales"} />} />
-          <Route path='/estadisticas/goles/asistentes'  element={<GolesStats stats={"asistentes"} />} />
-          <Route path='/estadisticas/penales' element={<EstadisticasPenales />} />
-          <Route path='/estadisticas/:id' element={<EstadisticasEspecificas />} />
+          <Route path='/estadisticas/generales' element={<EstadisticasGenerales />} />
           {/* CAMPEON */}
           <Route path='/campeones/agregar' element={<AgregarCampeon />} />
           <Route path='/campeones/:id' element={<CampeonIdividual />} />

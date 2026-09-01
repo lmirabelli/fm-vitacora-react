@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { SubNavBar } from "../SubNavBar/SubNavBar";
 import './Individual.css'
 import { EstadisticasIndividual } from "./EstadisticasIndividual/EstadisticasIndividual";
+import { ContenedorDorsales } from "./ContenedorDorsales/ContenedorDorsales";
 
 export const Individual = () => {
     let id = useParams().id;
@@ -35,7 +36,7 @@ export const Individual = () => {
         );
     }
 
-    let { jugador, partidos, campeones,estadisticasTotales } = data;
+    let { jugador, partidos, campeones,estadisticasTotales,historialDorsales } = data;
 
     return (
         <div className="standard">
@@ -53,6 +54,7 @@ export const Individual = () => {
                     <img src={jugador.escudoCantera.escudo} alt={jugador.cantera} />
                 </div>
             </div>
+            <ContenedorDorsales historialDorsales={historialDorsales} />
             <div className="contenedor-etapas" style={{background: `${jugador.bandera.colorSecundario}80`}}>
                 <h2 style={{color: `${jugador.bandera.colorPrimario}`}}>ETAPAS</h2>
                 <div className="etapa">

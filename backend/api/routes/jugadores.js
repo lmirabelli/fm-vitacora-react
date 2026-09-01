@@ -16,6 +16,7 @@ const jsonPaises = path.join(__dirname, "../../basededatos/banderas.json");
 const jsonEscudos = path.join(__dirname, "../../basededatos/escudos.json");
 const jsonEstadisticas = path.join(__dirname, "../../basededatos/estadisticas.json");
 const jsonCampeones = path.join(__dirname, "../../basededatos/campeones.json");
+const jsonPlanteles = path.join(__dirname, "../../basededatos/planteles.json");
 
 router.post('/agregar', (req, res) => {
     
@@ -363,10 +364,12 @@ router.get('/:id', (req, res) => {
         const listaDeEstadisticas = services.cargarBaseDeDatos(jsonEstadisticas)
         const listaDePartidos = services.cargarBaseDeDatos(jsonPartidos)
         const listaDeCampeones = services.cargarBaseDeDatos(jsonCampeones)
+        const listaDePlanteles = services.cargarBaseDeDatos(jsonPlanteles)
 
         let jugadordata = listaDeJugadores.filter(a => a.id == id)
         let jugadoresEstructurados = []
         let temporadasDelJugador = []
+        let historialDorsales = []
         jugadordata.forEach(j => {
             let jugProcesado = services.estructurarJugadores(j,listaDePaises,listaDeEscudos)
             jugadoresEstructurados.push(jugProcesado)
@@ -408,6 +411,13 @@ router.get('/:id', (req, res) => {
                 buscarEquipo.mvp = eq.mvp
             }
         });
+        listaDePlanteles.forEach( p => {
+            let equipo = services.busquedaEscudo(listaDeEscudos,p.equipo)
+            let buscarJugador = p.jugadores.find(j => j.id === id)
+            if(buscarJugador){
+                historialDorsales.push({dorsal: buscarJugador.dorsal, temporada: p.temporada, equipo: equipo})
+            }
+        })
 
         let partidos = []
         listaDePartidos.forEach( p => {
@@ -498,7 +508,7 @@ router.get('/:id', (req, res) => {
 
         })
 
-        res.status(200).json({ jugador,partidos,campeones,estadisticasTotales});
+        res.status(200).json({ jugador,partidos,campeones,estadisticasTotales,historialDorsales});
     } catch (err) {
         res.status(400).json({ mensaje: 'error al cargar los Jugadores', error: err.message });
     }

@@ -4,7 +4,6 @@ import './Partidos.css'
 
 
 export const ListadoPartidos = ({lista}) => {
-    console.log(lista)
 
     const asignarResultado = (gf,gc) => {
 

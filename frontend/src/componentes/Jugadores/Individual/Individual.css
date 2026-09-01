@@ -4,6 +4,7 @@
     gap: 6px;
     grid-template-areas:
     'csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior csuperior'
+    'cdorsales cdorsales cdorsales cdorsales cdorsales cdorsales cdorsales cdorsales cdorsales cdorsales'
     'cetapas cetapas cetapas cetapas cetapas ctitulos ctitulos ctitulos ctitulos ctitulos'
     'cstats cstats cstats cstats cstats cstats cstats cstats cstats cstats'
     'cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos cpartidos'
@@ -75,6 +76,47 @@
     }
     .contenedor-estadisticas{
         grid-area: cstats;
+    }
+    .contenedor-dorsales{
+        grid-area: cdorsales;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: var(--color-blanco-contraste);
+        backdrop-filter: blur(32px);
+        border-radius: 12px;
+        box-shadow: var(--iluminacion);
+        padding: 12px 0;
+        .dorsal{
+            width: 64px;
+            margin: 0 12px;
+            padding-top: 12px;
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                h6{
+                    font-size: 8px;
+                    margin-top: -12px;
+                }
+            }
+            .equipo{
+                margin-bottom: -12px;
+                img{
+                    height: 16px;
+                }
+            }
+            .muestra-dorsal{
+                background-color: var(--color-fondo);
+                border: 4px solid var(--color-borde);
+                border-radius: 12px;
+                color: var(--color-borde);
+                font-family: var(--fuente-resultado);
+                font-size: 40px;
+            }
+        }
     }
 
     .contenedor-etapas, .contenedor-titulos {

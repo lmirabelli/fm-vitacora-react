@@ -2,8 +2,9 @@
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
     .tabla-posicion{
-        width: 25%;
+        width: 24%;
         background-color: var(--color-blanco-contraste);
         box-shadow: var(--iluminacion);
         backdrop-filter: blur(12px);
@@ -27,8 +28,12 @@
             div{
                 font-family: var(--fuente-resultado);
                 font-size: 12px;
-                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
                 text-transform: capitalize;
+                text-wrap: nowrap;
             }
         }
     }

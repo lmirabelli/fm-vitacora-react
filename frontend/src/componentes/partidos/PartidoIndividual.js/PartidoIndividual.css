@@ -13,8 +13,7 @@
     "otrosPartidos otrosPartidos jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
     "statsVS statsVS jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
     "statsVS statsVS jugadores jugadores jugadores jugadores estJug estJug estJug estJug"
-    "pk pk pk pk pk pk pk pk pk pk"
-    "todos todos todos todos todos todos todos todos todos todos";
+    "pk pk pk pk pk todos todos todos todos todos";
 
     .partido-cabecera{
         grid-area: cabecera;
@@ -60,6 +59,7 @@
             border-radius: 4px;
             box-shadow: var(--iluminacion);
             backdrop-filter: blur(2px);
+            font-size: 12px;
             div{
                 font-family: var(--fuente-resultado);
                 text-align: center;
@@ -90,5 +90,8 @@
 
     .todos-partidos{
         grid-area: todos;
+        div{
+            font-size: 12px;
+        }
     }
 }
