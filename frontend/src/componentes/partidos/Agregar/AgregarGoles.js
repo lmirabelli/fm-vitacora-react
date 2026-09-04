@@ -1,21 +1,22 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AgregarPenales } from './AgregarPenales';
+import { useDatabaseList } from '../../../services/conexion';
 import './Agregar.css'
 
 export const AgregarGoles = () => {
     const location = useLocation();
-    const data = location.state || {};
+    const dataState = location.state || {};
     const navigate = useNavigate()
 
     const [dataGoles, setDataGoles] = useState({
         goles: [] 
     });
-
+    
     useEffect(() => {
-        if (data.gf && data.gf > 0) {
+        if (dataState.gf && dataState.gf > 0) {
 
-            const golesArray = Array(Number(data.gf)).fill({
+            const golesArray = Array(Number(dataState.gf)).fill({
                 min: '',
                 goleador: '',
                 asistente: '',
@@ -27,8 +28,15 @@ export const AgregarGoles = () => {
                 goles: golesArray
             });
         }
-    }, [data.gf]);
-
+    }, [dataState.gf]);
+    const { data, loading, error } = useDatabaseList("http://localhost:4001/partidos/ultimoPartido");
+    if (loading) {
+        return <div className='aviso'>cargando...</div>;
+    }
+    if (error) {
+        return <div className='aviso'>Error al cargar los datos: {error?.message}</div>;
+    }
+    const {ultimoPartido} = data
     const handleChange = (e) => {
         const { id, value } = e.target;
 
@@ -62,7 +70,7 @@ export const AgregarGoles = () => {
         }));
         
         const datosEnviar = {
-            ...data,
+            ...dataState,
             golesDetalle: golesFormateados
         };
         
@@ -85,17 +93,22 @@ export const AgregarGoles = () => {
         <div className="standard">
             <AgregarPenales 
                 data={{
-                    dia: data.dia,
-                    mes: data.mes,
-                    anio: data.anio,
-                    gf: data.golesFavor,
-                    rival: data.rival
+                    dia: dataState.dia,
+                    mes: dataState.mes,
+                    anio: dataState.anio,
+                    gf: dataState.golesFavor,
+                    rival: dataState.rival
                 }}
             />
+            <div className="contenedor-jugadores">
+                {ultimoPartido.jugadores.map((j,idx) => (
+                    <div className='jugador-info'>{j.nombre}</div>
+                ))}
+            </div>
             <form onSubmit={agregarGoles}>
                 <div className='modulo-formulario'>
-                    <h2>Goles vs {data.rival}</h2>
-                    <p>{data.dia}.{data.mes}.{data.anio}</p>
+                    <h2>Goles vs {dataState.rival}</h2>
+                    <p>{dataState.dia}.{dataState.mes}.{dataState.anio}</p>
                     {dataGoles.goles.length > 0 ? (
                         dataGoles.goles.map((gol, idx) => (
                             <div key={idx} className='gol-formulario'>

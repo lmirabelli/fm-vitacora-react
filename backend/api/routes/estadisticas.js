@@ -135,6 +135,7 @@ router.get('/', (req,res) => {
     try{
 
         let listaDeEstadisticas = services.cargarBaseDeDatos(archivoEstadisticas)
+        let listaDePartidos = services.cargarBaseDeDatos(archivoPartidos)
         let listaDeJugadores = services.cargarBaseDeDatos(archivoJugadores)
         let listaDeBanderas = services.cargarBaseDeDatos(archivoBanderas)
         let listaDeEscudos = services.cargarBaseDeDatos(archivoEscudos)
@@ -273,9 +274,9 @@ router.get('/', (req,res) => {
         })
 
         estadisticas.sort((a,b) => (b.partidos + b.minutos / 1000000) -  (a.partidos + a.minutos / 1000000))
-        let sinEstadisticas = estadisticas.filter(a => a.partidos == 0)
         let tablaEstadisticas = estadisticas.filter(a => a.partidos > 0)
-        res.status(200).json({sinEstadisticas, tablaEstadisticas});
+        let cantidadPartidos = listaDePartidos.length
+        res.status(200).json({tablaEstadisticas,cantidadPartidos});
     }catch (err){
     console.log(`error al calcular las estadisticas ${err}`)
         res.status(400)

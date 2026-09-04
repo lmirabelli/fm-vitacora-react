@@ -2,8 +2,6 @@ import { Link } from "react-router-dom"
 
 export const GolesStats = ({listaFiltrada}) => {
 
-
-    console.log(listaFiltrada)
     return(
         <>
                 <div className={`jugador-stats`}>

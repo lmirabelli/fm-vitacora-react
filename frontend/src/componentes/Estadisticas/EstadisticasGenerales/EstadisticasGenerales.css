@@ -36,6 +36,13 @@
     border-radius: 12px;
     backdrop-filter: blur(16px);
     box-shadow: var(--iluminacion);
+    .promedio-stats{
+        width: 100%;
+        display: block;
+        font-family: var(--fuente-resultado);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
     h2{
         margin: 12px 0;
     }
